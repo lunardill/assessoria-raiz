@@ -45,7 +45,7 @@ Elegante, terroso, premium e consultivo. Visual que transmite solidez, autoridad
 
 ## Logo
 
-- **Arquivo principal:** `dados/logo.png` *(logo com fundo verde-floresta — mover para marca/ quando quiser organizar)*
+- **Arquivo principal:** `marca/logo.png` *(logo com fundo verde-floresta)*
 - **Variações:** salvas no Google Drive
 - **Descrição:** Texto "RAIZ" em serif, com ilustração de raízes abaixo, em creme/dourado sobre fundo verde-floresta escuro
 - **Onde usar:** propostas, apresentações, materiais comerciais
