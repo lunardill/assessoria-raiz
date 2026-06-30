@@ -1,4 +1,4 @@
-# Guia de Design — DobraLabs
+# Guia de Design — Assessoria Raiz
 
 > Você pode editar esse arquivo a qualquer momento.
 > As skills de carrossel, proposta e slide leem este arquivo antes de criar qualquer visual.
@@ -7,71 +7,46 @@
 
 ## Cores
 
-- **Fundo principal:** branco (#FFFFFF)
-
-- **Cor de destaque / CTA:** amarelo/alaranjado (acento da marca)
-
-- **Texto principal:** preto / quase preto
-
-- **Fundo alternativo / cards:** branco com borda (ver bordas abaixo)
-
-- **Cor proibida:** sem cor proibida definida ainda
+- **Fundo principal:** Verde-floresta escuro (aproximado: #2C4A3C) — confirmar hex exato com o designer ou arquivo de marca
+- **Cor de destaque / elementos sobre fundo escuro:** Creme/dourado (aproximado: #E8D5A3) — confirmar hex exato
+- **Fundo alternativo / versão clara:** branco ou creme claro
+- **Cor proibida:** cores neon, azul genérico, paleta de agência comum (laranja + azul, etc)
 
 ---
 
 ## Tipografia
 
-- **Títulos e destaques:** Instrument Serif
-
-- **Corpo, subtítulos e botões:** Bricolage Grotesque
-
-- **Peso do título:** Instrument Serif tem peso único (regular), usar tamanho grande pra destaque
+- **Títulos e destaques:** serif elegante (identificar fonte exata com o designer ou arquivo de marca)
+- **Corpo e subtítulos:** a confirmar
 
 ---
 
 ## Estilo geral
 
-Base branco e preto com respiro/whitespace generoso, acento amarelo/alaranjado pontual.
-Visual clean, bold mas acessível, com personalidade ("laboratório nerd"). Grid organizado.
+Elegante, terroso, premium e consultivo. Visual que transmite solidez, autoridade e profissionalismo — sem parecer agência genérica de tráfego pago. Paleta escura com acentos em creme/dourado. Sem frescura, sem excesso de elementos.
 
 ---
 
 ## Elementos-chave
 
-- Bordas: cantos arredondados; usar dashed borders (tracejadas) em alguns elementos/cards
-- Border-radius dos cards: arredondado
-- Botões: cantos arredondados, acento amarelo/alaranjado
-- Sombras: leves ou nenhuma (visual clean)
+- Estilo: premium, sóbrio, consultivo
+- Evitar: gradientes coloridos, cores berrantes, visual de agência genérica de performance
+- Comunicação visual: reforçar posicionamento consultivo, não agressivo
 
 ---
 
 ## O que NUNCA fazer
 
-- Não poluir com cor; manter base branco/preto e usar o amarelo/alaranjado com parcimônia
-- Não usar fontes fora de Instrument Serif (títulos) e Bricolage Grotesque (corpo)
+- Usar paleta de cores genérica de agência (azul + laranja, etc)
+- Visual que pareça agência de tráfego pago comum
+- Excesso de elementos ou informação desnecessária
 
 ---
 
 ## Logo
 
-- **Arquivo:** marca/logo-dobralabs-escuro.png *(logo escuro, pra fundo claro)*
-- **Versão pra fundo escuro:** marca/logo-dobralabs-completo-branco.png *(logo branco)*
-- **Onde usar:** slide final do carrossel (CTA), header de propostas, slides de apresentação
+- **Arquivo principal:** `dados/logo.png` *(logo com fundo verde-floresta — mover para marca/ quando quiser organizar)*
+- **Variações:** salvas no Google Drive
+- **Descrição:** Texto "RAIZ" em serif, com ilustração de raízes abaixo, em creme/dourado sobre fundo verde-floresta escuro
+- **Onde usar:** propostas, apresentações, materiais comerciais
 - **Tamanho sugerido:** largura entre 120-200px nos HTMLs
-
----
-
-## Perfil do autor
-
-> Usado no estilo "tweet" do carrossel. Preenchido automaticamente no setup.
-
-- **Nome:** Eduardo
-- **Handle:** @ratosdeia
-- **Foto:** *(adicione em marca/foto-perfil.jpg quando tiver)*
-- **Badge verificado:** não
-
----
-
-## Observações adicionais
-
-Marca: DobraLabs. Canal de conteúdo: Ratos de IA.

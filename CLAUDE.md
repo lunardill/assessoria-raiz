@@ -1,42 +1,51 @@
-# DobraLabs — Claude Code OS
+# Assessoria Raiz — Claude Code OS
 
 ## O que é esse workspace
-Workspace de trabalho do Eduardo (DobraLabs). Aqui ficam os projetos de clientes (dev de software e consultoria), a produção de conteúdo do canal Ratos de IA, propostas, reuniões e relatórios.
+Workspace de operações da Assessoria Raiz. Aqui ficam os clientes, documentação interna, propostas, contratos, financeiro e materiais de trabalho do Lucas.
 
 **Estrutura de pastas:**
 - `_contexto/` — memória do sistema (não apagar)
-- `marca/` — identidade visual e logos da DobraLabs
-- `clientes/` — uma pasta por cliente (dev e consultoria); `_modelo-cliente/` é o template
-- `conteudo/` — produção do Ratos de IA (`roteiros/`, `carrosseis/`, `ideias/`)
-- `propostas/` — propostas avulsas antes de virar cliente
-- `reunioes/` — atas e anotações de reunião
-- `relatorios/` — relatórios e análises
-- `dados/` — drop zone pra arquivos analisar (CSV, XLSX, TXT, PDF)
+- `clientes/` — uma pasta por cliente com todos os documentos relacionados
+- `financeiro/` — controle financeiro e faturamento
+- `administrativo/` — processos e documentação interna
+- `contratos/` — contratos e minutas
+- `conteudo/` — materiais, ebooks, apresentações
+- `dados/` — drop zone pra arquivos analisar (CSV, XLSX, PDF, imagens)
 - `templates/skills/` — templates de skills prontos pra personalizar com /mapear
 - `templates/ferramentas/catalogo.md` — APIs e ferramentas disponíveis pra usar em skills
 - `tarefas.md` — lista de tarefas corrente
 
 ## Sobre o negócio
-DobraLabs presta serviços de desenvolvimento de software e consultoria pra clientes, e mantém o canal Ratos de IA no YouTube. Operação solo: o Eduardo toca tudo.
+A Assessoria Raiz é uma assessoria de crescimento comercial especializada em tráfego pago e consultoria de vendas para lojas de veículos. Atua com Meta Ads, Google Ads e melhoria do processo comercial. O diferencial é olhar o negócio como um todo — marketing, vendas, atendimento e processo comercial em sincronia.
+
+**Sócios:**
+- Lucas Lunardi — Comercial, Administrativo, Financeiro, Estratégia Comercial
+- Matheus Faria — Operação, Estratégia de Marketing, Sucesso do Cliente
+- Serviços audiovisuais terceirizados
+
+## ICP e posicionamento
+Foco de prospecção: lojas de veículos, revendas, multimarcas e seminovos. A carteira também inclui outros nichos. O posicionamento é de assessoria de crescimento comercial, não apenas agência de tráfego pago.
 
 ## O que mais fazemos aqui
-- Conteúdo pra redes sociais (foco no YouTube Ratos de IA)
-- Propostas comerciais e apresentações comerciais
-- Relatórios e análises
-- Muitas reuniões (atas e follow-ups)
-
-## Clientes e contexto
-Atende clientes externos de dev de software e consultoria, e usa o sistema também pra gerir o próprio negócio. Cada cliente tem sua pasta em `clientes/[nome-cliente]/`.
+- Prospecção comercial e gestão do pipeline de vendas
+- Propostas comerciais e apresentações
+- Contratos e documentação de clientes
+- Revisões estratégicas e relatórios mensais
+- Desenvolvimento de processos internos e metodologias
+- Criação de materiais (ebooks, apresentações, landing pages)
+- Gestão financeira e administrativa
 
 ## Tom de voz
-Informal e direto, como quem fala. Evitar travessão (—), frases-fragmento curtas em série, e dicotomias do tipo "não é isso, é aquilo". Detalhes em `_contexto/preferencias.md`.
+Direto, consultivo, profissional mas próximo. Sem formalidade excessiva. Orientado a vendas e tomada de decisão. Transmite autoridade sem arrogância.
+
+Evitar: travessão (—), palavra "tá" em contexto profissional, respostas genéricas, formalidade excessiva, frases longas, jargões vazios de marketing, validação sem senso crítico, cara de IA.
 
 ## Ferramentas conectadas
-- [ ] Google Drive
 - [ ] Gmail
-- [ ] Canva
-- [ ] Meta Ads (skill /meta-ads-ratos)
-- [ ] Google Ads (skill /google-ads-ratos)
+- [ ] Google Calendar
+- [ ] Google Drive
+- [ ] Meta Ads (/meta-ads-ratos)
+- [ ] Google Ads (/google-ads-ratos)
 
 *(Marcar conforme for instalando os MCPs)*
 
@@ -64,28 +73,58 @@ Antes de executar qualquer tarefa, verificar se existe uma skill relevante em `.
 Se encontrar, seguir as instruções da skill.
 Se não encontrar, executar a tarefa normalmente.
 
-Ao concluir uma tarefa que não tinha skill mas parece repetível, perguntar se o usuário quer transformar em skill. Não perguntar pra tarefas pontuais.
+Ao concluir uma tarefa que não tinha skill mas parece repetível (o usuário provavelmente vai pedir de novo no futuro), perguntar:
 
----
+> "Isso pode virar uma skill pra próxima vez. Quer que eu crie?"
 
-## Regras do sistema
-
-- Cada cliente tem sua pasta em `clientes/[nome-cliente]/` (briefing.md + proposta.html)
-- Propostas de cliente salvar em `clientes/[nome-cliente]/proposta.html`
-- Conteúdo do Ratos de IA vai em `conteudo/`
-- Atas de reunião vão em `reunioes/`
-- Relatórios e análises vão em `relatorios/`
+Não perguntar pra tarefas pontuais ou perguntas simples. Só quando o padrão de repetição for claro.
 
 ---
 
 ## Aprender com correções
 
-Quando o usuário corrigir algo ou der uma instrução que parece permanente ("na verdade é assim", "não faça mais isso", "prefiro assim", "sempre que...", "evita..."), perguntar se quer salvar. Se sim:
+Quando o usuário corrigir algo, melhorar uma resposta ou dar uma instrução que parece permanente (frases como "na verdade é assim", "não faça mais isso", "prefiro assim", "sempre que...", "evita...", "da próxima vez..."), perguntar:
+
+> "Quer que eu salve isso pra não precisar repetir?"
+
+Se sim, identificar onde faz mais sentido salvar:
 
 - **Sobre o negócio** → `_contexto/empresa.md`
-- **Preferências e estilo** → `_contexto/preferencias.md`
-- **Prioridades e foco atual** → `_contexto/estrategia.md`
+- **Sobre preferências e estilo** → `_contexto/preferencias.md`
+- **Sobre prioridades e foco atual** → `_contexto/estrategia.md`
 - **Regra de comportamento nessa pasta** → este `CLAUDE.md`
 - **Mudança visual** → `marca/design-guide.md`
 
-Salvar só a linha nova, sem reformatar o arquivo inteiro.
+Salvar com uma linha nova clara, sem reformatar o arquivo inteiro. Confirmar o que foi salvo mostrando a linha adicionada.
+
+---
+
+## Manter contexto atualizado
+
+Ao terminar uma tarefa que mudou algo relevante no projeto (novo cliente, nova skill, mudança de foco, novo processo, ferramenta instalada), perguntar:
+
+> "Isso mudou algo no teu contexto. Quer que eu atualize os arquivos de memória?"
+
+Mostrar o que vai mudar antes de salvar. Não reformatar o arquivo inteiro, só adicionar ou editar a linha relevante.
+
+---
+
+## Regras do sistema
+
+- Clientes: criar pasta em `clientes/[nome-cliente]/` com briefing.md, proposta.html, contrato.md e subpastas `reunioes/` e `relatorios/`
+- Usar `clientes/_modelo-cliente/` como base pra novos clientes
+- Contratos avulsos e minutas vão em `contratos/`
+- Conteúdo e materiais da agência vão em `conteudo/`
+- Arquivos pra analisar vão em `dados/`
+
+---
+
+## Criação de skills
+
+Quando o usuário pedir pra criar uma nova skill:
+
+1. Verificar se existe um template relevante em `templates/skills/`
+2. Perguntar: "Essa skill é específica pra esse projeto ou vai ser útil em qualquer projeto?"
+   - Específica desse negócio → `.claude/skills/nome-da-skill/SKILL.md`
+   - Útil em qualquer projeto → `~/.claude/skills/nome-da-skill/SKILL.md`
+3. Ler `_contexto/empresa.md` e `_contexto/preferencias.md` pra calibrar ao contexto do negócio

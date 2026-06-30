@@ -1,17 +1,16 @@
-# Foco Atual — Eduardo
+# Foco Atual — Assessoria Raiz
 
 ## Fase
-Crescimento. Escalando o canal próprio e organizando a operação de serviços ao mesmo tempo.
+Crescimento e organização da agência. Estruturando entregáveis, cargos, SLAs, checklists e metodologias para facilitar escala.
 
 ## Prioridade principal
-1. Aumentar a produção de conteúdo pro YouTube (Ratos de IA).
-2. Organizar os projetos dos clientes de desenvolvimento de software e consultoria.
+Consolidar o posicionamento especializado em lojas de veículos e fortalecer o processo comercial — prospecção ativa, qualificação e fechamento.
 
 ## O que pode esperar
-Como o foco agora é produção de conteúdo e organização de clientes, não priorizar sugestões fora desses dois eixos sem necessidade.
+Tarefas de criação de conteúdo amplo ou posicionamento generalista não são foco agora. O foco é operação, processo e crescimento da carteira de clientes.
 
 ## Contexto com prazo
-[Sem datas/eventos fixos registrados ainda. Atualize quando tiver prazos relevantes.]
+Nenhuma data específica registrada.
 
 ---
 *Atualize esse arquivo quando suas prioridades mudarem.*
