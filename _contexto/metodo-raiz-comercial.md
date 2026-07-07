@@ -1,0 +1,85 @@
+# Método RAIZ — Playbook Comercial
+
+Referência de como a Assessoria Raiz conduz reunião de triagem, apresenta o Método RAIZ e fecha negociação. Baseado em transcrições reais de reuniões (Lucas Lunardi). Usado por `/diagnostico-comercial` e `/proposta-comercial` pra manter a linguagem e o raciocínio de venda fiéis ao que já funciona.
+
+---
+
+## Os 4 pilares em detalhe (o que entra em cada um)
+
+### 1. Raiz Firme
+- Configuração de ferramentas: Meta Ads (principal), Google Tag Manager, Google Analytics
+- Elaboração de estratégia: 2 a 3 reuniões só pra isso, alinhada aos objetivos do cliente, não genérica
+- Campanhas segmentadas por carro/perfil — "a pessoa que compra um Jetta e a que compra uma Spin são dois perfis diferentes"
+- Rotina diária de análise e ajuste — subir anúncio assim que carro entra no estoque, pausar assim que vende
+
+### 2. Alinhamento e Transparência
+- Suporte direto via WhatsApp (grupo)
+- Relatório semanal — leitura rápida do resultado da semana
+- Relatório mensal completo — dados de tráfego E comercial juntos, pra identificar gaps na operação (não só métrica de anúncio)
+- Reunião estratégica mensal — o que funcionou, o que não funcionou, banco de aprendizado do negócio específico do cliente
+
+### 3. Impulsionamento Estratégico
+- Direcionamento de Instagram — "antes de convidar visita, precisa organizar a casa"
+- Swipe file — pasta de referências validadas de criativos/formatos que funcionam
+- Pack Raiz — templates prontos de anúncio (foto + preço + descrição na identidade visual do cliente)
+
+### 4. Zelo Contínuo
+- Acompanhamento próximo e personalizado
+- Framing: "somos um segundo cérebro pra você, não só quem administra o anúncio"
+
+---
+
+## Frases e analogias-chave
+
+- **Planta/semente:** "o negócio ainda é uma semente, precisa de raiz firme no solo pra pegar nutriente e dar fruto"
+- **Engrenagens:** "o tráfego é só uma engrenagem dentro do motor que é o seu negócio. Nosso papel é fazer todas as engrenagens girarem livres"
+- **Acelerador:** "o tráfego é um acelerador — se a empresa está bagunçada, ele acelera a bagunça"
+- **Gasto vs investimento:** "se você gasta e não retorna, é gasto. Se retorna, é investimento"
+- **Diagnóstico médico:** "pra eu falar do meu [serviço], eu preciso entender o teu [negócio]. É a mesma coisa que ir no médico com dor no braço e ele te mandar remédio pro estômago"
+- **Crescimento em degraus:** nunca promete pular de 12 para 20 vendas de uma vez — sobe gradual (12→15→18→20), "assim a gente trabalha com número, não com achismo"
+- **Compradores, não curiosos:** o objetivo não é o lead mais barato possível, é o lead com real intenção de compra
+- **Fechamento:** "fazemos negócios criarem raízes, crescerem com propósito e colherem frutos"
+
+---
+
+## Prova social e credibilidade (usar quando o lead questionar experiência/especialização)
+
+- Sócios certificados em Meta e Google Ads pela comunidade Sobral de tráfego (Pedro Sobral)
+- Top 96 das maiores agências de performance da América Latina
+- Mais de R$10 milhões gerados em faturamento para 60+ empresas do setor automotivo
+- Método validado especificamente pra lojas de veículos, não genérico
+
+---
+
+## Precificação — técnica de ancoragem
+
+Antes de revelar o preço real, apresentar o valor de cada entrega separada (setup, tráfego, criativo) somado, ex: R$4.000/mês. Depois revelar o preço real do pacote combinado como desconto sobre esse valor (ex: R$1.497/mês = "50% de economia"). Nunca apresentar o preço isolado sem esse contraste antes.
+
+---
+
+## Contrato e objeção de prazo
+
+Padrão: contrato de 12 meses, porque "no longo prazo tudo funciona melhor".
+
+Quando o lead resiste ao prazo longo (objeção comum), flexibilizar pra 90 dias com cláusula de renovação automática:
+- Funciona como período de experiência (analogia: "45+45 dias, tipo experiência CLT")
+- Nos últimos 30 dias, se o cliente não estiver satisfeito e avisar, o projeto encerra ao final dos 90 dias
+- Se estiver tudo bem, renova automático por mais 3 meses
+
+---
+
+## Técnica de fechamento
+
+Isolar objeção repetidamente perguntando: "isso aqui te atende? O que ficou faltando pra você tomar a decisão?" — insiste até identificar exatamente o que falta (preço, prazo, concorrência) em vez de aceitar um "vou pensar" vago.
+
+Reaproveitar as palavras literais que o lead usou na reunião de triagem durante a apresentação — mostra que a proposta foi construída sob medida, não é discurso genérico.
+
+---
+
+## Princípios inegociáveis (nunca fazer diferente)
+
+- Nunca prometer taxa de conversão específica — "cada negócio é um negócio, eu não controlo todos os pontos"
+- Nunca vender só tráfego isolado — sempre venda o processo completo (tráfego + comercial + conteúdo + acompanhamento)
+- Nunca prometer salto grande de resultado de uma vez — crescimento é em degraus, sustentável
+- Dado substitui achismo — CAC, número de leads, ticket médio sempre entram na conversa
+- Adaptar o escopo em tempo real quando o lead revela uma necessidade que o pacote padrão não cobre (ex: incluir script de pré-venda quando percebe que é o gap do cliente)

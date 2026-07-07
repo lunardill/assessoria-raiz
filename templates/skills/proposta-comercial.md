@@ -14,6 +14,7 @@ description: >
 - **Identidade visual:** `marca/design-guide.md`
 - **Contexto do negócio:** `_contexto/empresa.md`
 - **Tom de voz:** `_contexto/preferencias.md`
+- **Playbook comercial:** `_contexto/metodo-raiz-comercial.md` — pilares do Método RAIZ, frases-chave, prova social, técnica de ancoragem de preço e princípios inegociáveis. Usar pra escrever a proposta com a linguagem real da Raiz, não genérica
 
 ---
 

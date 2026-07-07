@@ -15,8 +15,9 @@ description: >
 
 - `_contexto/empresa.md` — Metodo RAIZ, ICP, processo comercial (SPIN Selling, BANT, DEF)
 - `_contexto/preferencias.md` — tom de voz
+- `_contexto/metodo-raiz-comercial.md` — playbook comercial detalhado (pilares, frases-chave, tecnica de fechamento, o que nunca fazer)
 
-Ler os dois antes de gerar qualquer diagnostico ou responder qualquer pergunta comercial.
+Ler os tres antes de gerar qualquer diagnostico ou responder qualquer pergunta comercial.
 
 ---
 
@@ -38,10 +39,10 @@ Ler o material (mesmo cru ou desorganizado) e montar um documento com estas 8 se
 2. **Situacao atual** — por que estao buscando ajuda agora
 3. **Dores principais** — com a frase-chave do cliente entre aspas, literal
 4. **Numeros** — vendas/leads/investimento atual e metas, sempre que mencionados na call
-5. **Oportunidade da proposta** — pilares do que oferecer, cada um ligado a uma dor levantada
-6. **Objecoes provaveis** — e como responder cada uma
+5. **Oportunidade da proposta** — pilares do Metodo RAIZ (ver `_contexto/metodo-raiz-comercial.md`) que fazem mais sentido pras dores levantadas, cada um ligado a uma dor especifica
+6. **Objecoes provaveis** — e como responder cada uma, usando as tecnicas e frases do playbook
 7. **Abordagem recomendada pra reuniao de proposta** — frase de abertura sugerida + estrutura do plano a apresentar
-8. **Posicionamento de fechamento** — a frase-sintese de como vender a proposta (nao vender como "gestao de trafego", vender pelo resultado que o lead realmente quer)
+8. **Posicionamento de fechamento** — a frase-sintese de como vender a proposta (nao vender como "gestao de trafego", vender pelo resultado que o lead realmente quer, seguindo as analogias e principios do playbook)
 
 **Se o material for uma call rica** (transcricao com idas e vindas, nao so respostas curtas), adicionar uma 9a secao, **Sinais de venda**:
 - Perfil e nivel de consciencia do prospect
