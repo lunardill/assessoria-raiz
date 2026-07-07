@@ -39,7 +39,7 @@ Ler o material (mesmo cru ou desorganizado) e montar um documento com estas 8 se
 2. **Situacao atual** — por que estao buscando ajuda agora
 3. **Dores principais** — com a frase-chave do cliente entre aspas, literal
 4. **Numeros** — vendas/leads/investimento atual e metas, sempre que mencionados na call
-5. **Oportunidade da proposta** — pilares do Metodo RAIZ (ver `_contexto/metodo-raiz-comercial.md`) que fazem mais sentido pras dores levantadas, cada um ligado a uma dor especifica
+5. **Oportunidade da proposta** — pilares do Metodo RAIZ (ver `_contexto/metodo-raiz-comercial.md`) que fazem mais sentido pras dores levantadas, cada um ligado a uma dor especifica. Incluir tambem uma recomendacao sobre os entregaveis modulares (treinamento comercial, Google Meu Negocio, producao de criativos presencial) com o porque, seguindo a secao "Entregaveis modulares" do playbook — sempre como sugestao pro Lucas/Matheus validar, nunca como decisao fechada. Pra producao de criativos presencial, so sugerir se o lead for de Caxias do Sul, Rio Branco do Sul ou Itaperucu; fora disso, so mencionar se o usuario confirmar que tem terceirizado na regiao
 6. **Objecoes provaveis** — e como responder cada uma, usando as tecnicas e frases do playbook
 7. **Abordagem recomendada pra reuniao de proposta** — frase de abertura sugerida + estrutura do plano a apresentar
 8. **Posicionamento de fechamento** — a frase-sintese de como vender a proposta (nao vender como "gestao de trafego", vender pelo resultado que o lead realmente quer, seguindo as analogias e principios do playbook)
