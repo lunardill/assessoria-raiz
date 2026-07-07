@@ -76,6 +76,20 @@ Reaproveitar as palavras literais que o lead usou na reunião de triagem durante
 
 ---
 
+## Sinais de alerta — quando a venda trava ou não fecha
+
+Baseado num caso real onde a venda não fechou (Serrana Multimarcas, dois sócios formados em administração):
+
+- **Dor real fora do escopo do serviço.** Se a dor principal do lead é financeira/capital de giro (ex: "meu problema não é vender, é ter dinheiro para repor estoque mais rápido"), tráfego pago e comercial não resolvem isso diretamente. Diagnosticar a dor certa na triagem não basta — se o serviço não ataca essa dor específica, é sinal de desqualificação ou de que a oferta precisa ser reformulada, não só reapresentada com o pitch padrão
+- **Lead sofisticado que já faz o básico internamente.** Donos com formação/experiência que já rodam a própria estratégia enxergam o pitch dos 4 pilares como "melhorar o que a gente já faz", não como diferencial. Pitch genérico perde força aqui — precisa mostrar o que especificamente eles não conseguem replicar sozinhos (dado de mercado agregado de 60+ lojas, não just "a gente já opera com diversas lojas")
+- **Tentativa de remover entregável pra baixar preço** (ex: "eu dispensaria o treinamento") é sinal de baixo comprometimento com o valor da oferta completa, não só sensibilidade a preço
+- **Ancoragem de preço não resolve objeção de fluxo de caixa.** Se a objeção real é "não tenho capital sobrando agora", mostrar desconto (4000 → 1497) não muda a decisão, porque o problema não é percepção de valor, é caixa disponível
+- **Reunião termina sem próximo passo com data e hora marcada** é sinal de fechamento fraco. Nas vendas que fecharam bem, sempre saiu com um horário específico marcado ("amanhã às 11h"). Terminar em "vamos conversar e te aviso" sem prazo é normalmente sinal de que a venda esfriou
+
+**O que fazer diferente quando aparecer esse padrão:** se a dor central for financeira/capital e não estiver clara uma forma de conectar o serviço a acelerar isso (ex: leads mais qualificados = giro mais rápido do estoque específico), ser direto sobre isso na call em vez de insistir no pitch padrão. Melhor perder a venda de forma honesta do que forçar um encaixe que não existe.
+
+---
+
 ## Princípios inegociáveis (nunca fazer diferente)
 
 - Nunca prometer taxa de conversão específica — "cada negócio é um negócio, eu não controlo todos os pontos"

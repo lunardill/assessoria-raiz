@@ -51,6 +51,7 @@ Ler o material (mesmo cru ou desorganizado) e montar um documento com estas 8 se
 - Objecao oculta — a que ele nao disse direto
 - Temperatura do lead — interesse / confianca / urgencia, nota de 0 a 10 pra cada, com justificativa curta
 - Frases dele pra reaproveitar na proposta
+- Alerta de encaixe — a dor principal do lead e algo que o Metodo RAIZ resolve de fato, ou e um problema fora do escopo (financeiro puro, capital de giro, etc)? Se for lead sofisticado que ja roda a propria estrategia, sinalizar tambem, porque o pitch padrao dos 4 pilares perde forca nesse perfil (ver secao "Sinais de alerta" em `_contexto/metodo-raiz-comercial.md`)
 
 **Regra critica:** nunca inventar numero, frase ou dado que nao esta no material. Se uma secao nao tiver informacao suficiente, escrever "nao abordado na call" em vez de forcar conteudo.
 
