@@ -80,7 +80,7 @@ Reaproveitar as palavras literais que o lead usou na reunião de triagem durante
 
 Nem toda proposta leva o pacote completo. Alguns entregáveis são opcionais e a decisão de incluir ou não **não segue critério fixo** — é julgamento do especialista (Lucas ou Matheus) em cima dos sinais da call. Uma skill pode sugerir com base no que foi levantado, mas a decisão final é sempre humana.
 
-- **Treinamento comercial** — dispensar quando a call mostra que o time de vendas do lead já é forte e estruturado (ex: dono/vendedor experiente, processo de pré-venda já existe). Incluir quando aparece dor clara de conversão, falta de script, ou vendedor sem preparo
+- **Treinamento comercial** — entra em praticamente toda proposta (99% dos planos de ação), porque o comercial é considerado o ponto principal de qualquer negócio, independente do lead já ter um time bom ou não. Só teria sentido dispensar em caso raro e explícito — na dúvida, incluir
 - **Google Meu Negócio** — incluir quando fizer sentido pro tipo de negócio (loja física que depende de busca local). Dispensar quando o lead já tem ficha forte, avaliação boa e isso teria pouco impacto no caso específico
 - **Produção e captação de criativos presencial** — só disponível pra clientes de Caxias do Sul (cidade do Lucas) ou Rio Branco do Sul / Itaperuçu (cidade do Matheus). Em outras cidades, às vezes há terceirizados pontuais que ajudam, mas não é padrão — nunca oferecer essa entrega de forma automática pra lead fora dessas cidades sem confirmar antes se há alguém disponível na região
 
