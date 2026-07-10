@@ -4,9 +4,11 @@ CONTRATANTE:
 Duoz Organizadores Ltda, pessoa jurídica de direito privado, com sede na Rua Da Paz N° 572, Pavilhão, Granja Uniao, Flores da Cunha - Rio Grande do Sul, CEP 95270-000, inscrita sob o CNPJ n° 27.699.399/0001-05, neste ato representada por Gláucia Zen, CPF n° 004.410.510-06, doravante simplesmente chamada de CONTRATANTE;
 
 CONTRATADO:
-JCL Mídias, pessoa jurídica de direito privado, com sede na Avenida Colina N° 925, São Cristóvão, CEP 95058-100, Caxias do Sul – Rio Grande do Sul, inscrita sob o CNPJ n° 57.174.364/0001-05, neste ato representada por Lucas Lunardi, CPF n° 054.775.380-23, doravante simplesmente chamado de CONTRATADO.
+Assessoria Raiz Ltda, pessoa jurídica de direito privado, com sede na Avenida Colina N° 925, São Cristóvão, CEP 95058-100, Caxias do Sul – Rio Grande do Sul, inscrita sob o CNPJ n° 57.174.364/0001-05, anteriormente registrada sob a razão social JCL Mídias, neste ato representada por Lucas Lunardi, CPF n° 054.775.380-23, doravante simplesmente chamado de CONTRATADO.
 
-CONSIDERANDO que as partes firmaram, em 07 de maio de 2025, o Contrato de Prestação de Serviço de Gestão de Tráfego Pago (doravante "Contrato Original");
+CONSIDERANDO que as partes firmaram, em 07 de maio de 2025, o Contrato de Prestação de Serviço de Gestão de Tráfego Pago, sob a razão social então vigente do CONTRATADO, JCL Mídias, mesmo CNPJ n° 57.174.364/0001-05 (doravante "Contrato Original");
+
+CONSIDERANDO que, no período de vigência do Contrato Original, o CONTRATADO alterou sua razão social para Assessoria Raiz Ltda, mantendo o mesmo CNPJ, sede e representante legal, não havendo, portanto, sucessão ou transferência contratual a terceiros;
 
 CONSIDERANDO que, em razão de reorganização interna do setor comercial do CONTRATANTE e de indisponibilidade momentânea para absorver o volume de leads gerados, as partes acordaram, em reunião realizada em 08 de junho de 2026, a redução gradual do investimento em mídia seguida da suspensão temporária das atividades objeto do Contrato Original;
 
@@ -58,7 +60,7 @@ Gláucia Zen
 CPF n.º 004.410.510-06
 
 CONTRATADO:
-JCL Mídias, neste ato representada por:
+Assessoria Raiz Ltda, neste ato representada por:
 
 ____________________________________________
 Lucas Lunardi
