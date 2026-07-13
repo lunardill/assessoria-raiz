@@ -74,6 +74,8 @@ Isolar objeção repetidamente perguntando: "isso aqui te atende? O que ficou fa
 
 Reaproveitar as palavras literais que o lead usou na reunião de triagem durante a apresentação — mostra que a proposta foi construída sob medida, não é discurso genérico.
 
+Nunca usar "faz sentido?" como pergunta de validação ou fechamento, soa vendedor e o cliente sente. Usar a técnica de isolamento de objeção já documentada acima ("isso aqui te atende? O que ficou faltando pra você tomar a decisão?") em vez disso.
+
 ---
 
 ## Entregáveis modulares — o que varia por negócio
