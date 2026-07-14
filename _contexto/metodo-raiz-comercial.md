@@ -104,7 +104,7 @@ A lógica da reunião de renovação é sempre a mesma: mostrar o quão perto ou
 
 ### Quem comanda a reunião
 
-Renovação é reunião **comercial, não operacional**. Quem comanda a call é sempre o vendedor (Lucas ou Matheus, dependendo de quem fechou ou de quem toca a carteira), mesmo com o time operacional junto na sala. O operacional apoia com dado e domínio técnico, mas não conduz.
+Renovação é reunião **comercial, não operacional**. Quem comanda a call é sempre o **Lucas**, papel comercial da sociedade, independente de quem fechou a venda originalmente. Matheus (operação, estratégia de marketing, sucesso do cliente) participa e apoia com dado e domínio técnico da conta, mas não conduz.
 
 ### Linha do tempo de preparação (contrato de 12 meses)
 

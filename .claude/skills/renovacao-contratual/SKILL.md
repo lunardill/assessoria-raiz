@@ -49,6 +49,8 @@ Reunir, perguntando o que faltar:
 
 ### Passo 2 — Checar a timeline de preparação
 
+Quem conduz a reunião é sempre o Lucas, papel comercial da sociedade, independente de quem fechou a venda originalmente. Matheus (operação/sucesso do cliente) participa e apoia com dado, mas não comanda.
+
 Contra a data de vencimento do contrato:
 
 - **3 meses antes** — o comercial já deveria estar acompanhando de perto as interações com o cliente
