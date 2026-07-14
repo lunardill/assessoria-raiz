@@ -19,6 +19,7 @@ Ler antes de montar qualquer roteiro:
 - `_contexto/empresa.md` — Método RAIZ, ICP, processo comercial
 - `_contexto/preferencias.md` — tom de voz
 - `_contexto/metodo-raiz-comercial.md` — seção **"Metodologia de renovação (contratos de 12 meses)"** é a referência central desse fluxo. As outras seções (pilares, frases-chave, técnica de fechamento, princípios inegociáveis) também se aplicam
+- **Google Drive (MCP conectado)** — usado pra localizar e ler a planilha de visão geral do cliente (investimento em tráfego x retorno em vendas). Ver `templates/ferramentas/catalogo.md` pra referência de uso
 
 ## Diferença pra /diagnostico-comercial
 
@@ -42,7 +43,9 @@ Reunir, perguntando o que faltar:
 4. Se já existe algo novo definido pro próximo ciclo (novo entregável, nova praça, mais investimento) ou se a renovação é sem mudança de escopo
 5. Data de vencimento do contrato atual
 
-**Regra crítica:** nunca inventar número. Se um dado não foi fornecido, perguntar, não estimar. Comparar meta declarada numa call de triagem (aspiração, sem base real) com resultado operacional real é um erro, tratar como dados de naturezas diferentes.
+**Dados de investimento e retorno — buscar na planilha de visão geral do cliente antes de perguntar pro usuário.** Cada cliente tem uma planilha de visão geral no Google Drive com o histórico de investimento em tráfego e retorno em vendas. Usar as ferramentas de Google Drive conectadas (busca por nome do cliente, algo como "[nome do cliente] visão geral" ou "[nome do cliente] overview") pra localizar e ler essa planilha direto, em vez de pedir esses números um por um pro usuário digitar. Só perguntar diretamente se a planilha não for encontrada, o acesso falhar, ou os dados na planilha não cobrirem o que falta (ex: faturamento total do negócio, que normalmente não está na planilha de tráfego).
+
+**Regra crítica:** nunca inventar número. Se um dado não foi fornecido nem pela planilha nem pelo usuário, perguntar, não estimar. Comparar meta declarada numa call de triagem (aspiração, sem base real) com resultado operacional real é um erro, tratar como dados de naturezas diferentes.
 
 ### Passo 2 — Checar a timeline de preparação
 
