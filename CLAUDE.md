@@ -43,7 +43,7 @@ Evitar: travessão (—), palavra "tá" em contexto profissional, respostas gen�
 ## Ferramentas conectadas
 - [ ] Gmail
 - [ ] Google Calendar
-- [ ] Google Drive
+- [x] Google Drive
 - [ ] Meta Ads (/meta-ads-ratos)
 - [ ] Google Ads (/google-ads-ratos)
 
