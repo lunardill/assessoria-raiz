@@ -90,6 +90,76 @@ Quando o `/diagnostico-comercial` sugerir entregáveis modulares, apresentar com
 
 ---
 
+## Metodologia de renovação (contratos de 12 meses)
+
+Baseado em aula externa sobre renovação + modelo de relatório real (Agência Mestre). Complementa o resto do playbook, que é focado em venda nova — isso aqui é especificamente pra virada de contrato com cliente existente.
+
+### O framework: Ponto A, Ponto B, Ponto C
+
+- **Ponto A** — onde o cliente estava antes do projeto começar
+- **Ponto B** — o destino que o cliente definiu como meta lá na triagem original
+- **Ponto C** — o próximo destino, o que vem depois de B
+
+A lógica da reunião de renovação é sempre a mesma: mostrar o quão perto ou o quão além do Ponto B o projeto chegou, e a partir disso vender o Ponto C. Se já bateu o destino que o cliente queria, a reunião não é sobre comemorar isso e parar, é sobre vender o próximo destino.
+
+### Quem comanda a reunião
+
+Renovação é reunião **comercial, não operacional**. Quem comanda a call é sempre o vendedor (Lucas ou Matheus, dependendo de quem fechou ou de quem toca a carteira), mesmo com o time operacional junto na sala. O operacional apoia com dado e domínio técnico, mas não conduz.
+
+### Linha do tempo de preparação (contrato de 12 meses)
+
+- **3 meses antes do fim do projeto** — o comercial já começa a acompanhar de perto as interações com o cliente: participa de reuniões, interage mais nos grupos, fica por perto. Não é pra aparecer do nada 15 dias antes do vencimento
+- **45 dias antes do fim** — o comercial pede ao operacional um relatório do projeto: o quanto perto ou o quanto além do Ponto B chegamos, e a sugestão do operacional pra melhor escopo dos próximos 12 meses. **Nunca aceitar do operacional uma sugestão de reduzir escopo**
+- Operacional apresenta esse relatório pro comercial antes da reunião com o cliente — o comercial precisa entender o que está passando pela cabeça de quem executa antes de entrar na sala
+- Marca a reunião de renovação com o cliente. Reunião de renovação é longa, entre 1h30 e 2h, bem mais robusta que uma call de alinhamento comum
+
+### Estrutura da apresentação: sempre do macro pro micro
+
+1. Panorama dos 12 meses inteiros
+2. Quebra em trimestres (Q1, Q2, Q3, Q4) — como foi cada um, pontos de dificuldade e resultado
+3. Pra onde o projeto está caminhando — relembrar as principais vitórias antes de virar pro próximo ciclo
+
+Se algum trimestre ou mês teve queda, mostrar com transparência e explicar o motivo (sazonalidade, eventualidade de sistema, etc.), sem esconder o dado ruim no meio dos bons.
+
+### Pitch da renovação: sempre duas opções, nunca uma só
+
+Nunca apresentar só "renova nas mesmas condições" nem só "só existe o pacote maior". Sempre oferecer duas rotas:
+
+1. **Mesmo escopo, mesmo ritmo** — o projeto chega no Ponto C de forma natural, só que mais devagar
+2. **Escopo maior, ritmo acelerado** — chega no mesmo Ponto C mais rápido
+
+Frase-modelo pra apresentar a escolha: *"Seguindo nesse ritmo que a gente está trabalhando, o projeto pode sim alcançar esse ponto C. Agora a gente está no ponto B, que era o que a gente estava buscando lá no início. A gente vai chegar a ele de forma natural porque os números já mostram isso, mas a gente pode fazer com que esse C chegue de forma mais rápida, com um escopo mais acelerado. E aí, qual é o teu objetivo? Acelerar o projeto sabendo tudo que você já sabe hoje, vendo como funcionou, ou seguir no mesmo ritmo que a gente está caminhando?"*
+
+**Nunca diminuir o escopo do projeto na proposta**, a não ser que a redução parta do próprio cliente por uma necessidade interna dele (nesse caso é escolha dele, não sugestão de vocês).
+
+### Cuidado com o prazo de assinatura
+
+Aditivo ou contrato novo pode levar até 15 dias entre leitura e assinatura. Isso importa especialmente em contratos sem renovação automática, pra o projeto não parar no meio do processo. Rodar a linha do tempo de preparação (3 meses / 45 dias antes) existe justamente pra não estourar esse prazo.
+
+Se o cliente responder com "vou pensar" ou "vou avaliar" e o contrato vencer nesse meio tempo, mas ele continuar pedindo entregas como se o contrato estivesse ativo: **não fazer**. Só seguir entregando com contrato assinado. Isso também funciona como incentivo real pro cliente assinar logo.
+
+### Quando o projeto não teve resultado
+
+Cenário mais arriscado, com chance maior de a renovação não acontecer. Se existir um motivo real e defensável pra explicar por que não teve resultado, mostrar isso com transparência e, se for genuinamente possível reverter, mostrar o caminho de reversão. Não forçar um discurso de recuperação que não tem lastro real.
+
+### Estrutura de relatório visual de renovação (referência de modelo)
+
+Ordem que funciona bem num deck de renovação:
+
+1. Capa com nome do cliente e "Overview Geral - Projeto [ano]"
+2. Introdução: "como conquistamos resultados"
+3. Funil comparativo antes vs. depois lado a lado (visitas, leads, oportunidades, vendas, faturamento, com % de variação em cada etapa)
+4. Evolução mês a mês do faturamento, do funil, dos leads, das oportunidades e das vendas — sempre em gráfico de linha, com nota de contexto honesta nos pontos de queda
+5. Transição pra projeção: "o que podemos esperar nos próximos 12 meses"
+6. Objetivos numéricos e específicos pro próximo ciclo (não genéricos)
+7. Projeção de vendas e faturamento pro próximo ciclo
+8. Ponte pro próximo escopo: o que precisa crescer (mídia, canal, processo) pra sustentar essa projeção
+9. Justificativa de evolução de escopo, sempre com o porquê explícito
+10. Os dois modelos de escopo lado a lado (mesmo ritmo vs. acelerado), cada um com sua lista de entregáveis e valor
+11. Fechamento com uma pergunta direta de decisão, não com "faz sentido?"
+
+---
+
 ## Sinais de alerta — quando a venda trava ou não fecha
 
 Baseado num caso real onde a venda não fechou (Serrana Multimarcas, dois sócios formados em administração):
