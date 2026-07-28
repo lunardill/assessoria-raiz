@@ -40,9 +40,12 @@ O trecho também precisa fazer sentido sozinho, sem depender do resto da reuniã
    - **Timestamp** (início e fim, conforme aparece na transcrição)
    - **Gancho sugerido** — frase de abertura pro post, no estilo que o Lucas já usa (direto, muitas vezes contra-intuitivo). Não usar travessão nem "tá"
    - **Por que funciona** — qual(is) critério(s) da lista acima esse trecho atende
-   - **Resumo do trecho** — 1-2 frases do que é dito, não o texto completo
-6. Mostrar a lista ordenada pro usuário no chat
-7. Perguntar um nome curto pra identificar a reunião (cliente, tema, ou "sem nome") e salvar o relatório completo em `conteudo/cortes/AAAA-MM-DD-[nome].md`
+   - **Texto completo** — a transcrição literal, palavra por palavra, do início ao fim do corte. Nunca resumir ou parafrasear essa parte
+6. Ler `references/descricoes-headlines.md` e, pra cada corte, gerar:
+   - **5 opções de headline visual** — frases curtas pra sobrepor no vídeo, que interrompem o scroll. Sempre 5, cada uma testando um ângulo diferente (contra-intuitivo, dado, pergunta, confronto, identificação), nunca 5 variações da mesma frase
+   - **Descrição do post** — a copy que vai na legenda, seguindo a metodologia do arquivo de referência (provoca, não repete o vídeo)
+7. Mostrar a lista ordenada pro usuário no chat
+8. Perguntar um nome curto pra identificar a reunião (cliente, tema, ou "sem nome") e salvar o relatório completo em `conteudo/cortes/AAAA-MM-DD-[nome].md`
 
 ## Formato do relatório salvo
 
@@ -52,7 +55,18 @@ O trecho também precisa fazer sentido sozinho, sem depender do resto da reuniã
 ## 1. [Gancho sugerido]
 **Timestamp:** [00:14:32 – 00:15:40]
 **Por que funciona:** [critério(s)]
-**Resumo:** [1-2 frases]
+**Texto completo:**
+[transcrição literal do trecho]
+
+**Headlines visuais (5 opções):**
+1. [opção 1]
+2. [opção 2]
+3. [opção 3]
+4. [opção 4]
+5. [opção 5]
+
+**Descrição do post:**
+[copy seguindo references/descricoes-headlines.md]
 
 ## 2. [Gancho sugerido]
 ...

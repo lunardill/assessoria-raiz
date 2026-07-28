@@ -81,7 +81,7 @@ Quando o usuário trouxer uma situação com cliente (inadimplência, pedido de 
 
 ## Regras gerais
 
-- Tom segue `_contexto/preferencias.md` no chat: direto, sem travessão, sem "tá". Dentro do texto do contrato em si, manter o juridiquês formal necessário — contrato não é texto de marketing, precisão importa mais que fluidez
+- Tom segue `_contexto/preferencias.md` no chat: direto, sem travessão, sem "tá". No texto do contrato em si, escrever em linguagem simples e direta, não em juridiquês. Evitar termos em latim (ex: "pro rata die"), expressões arcaicas ("doravante", "outrossim") e frases que só um advogado entenderia de primeira. O contrato precisa manter validade jurídica e precisão técnica, mas se existe um jeito mais simples de dizer a mesma cláusula sem perder o sentido legal, esse é o jeito certo. Cliente tem que conseguir ler o contrato inteiro e entender 100% do que está assinando
 - Nunca inventar artigo de lei, cláusula ou dado que não foi fornecido ou confirmado
 - Nunca aplicar lógica de relação de consumo (CDC) numa relação B2B, a não ser que o usuário sinalize que o caso é diferente
 - Sempre reconhecer quando o caso passa do escopo (ver seção Escopo) e dizer isso com clareza, em vez de forçar uma resposta

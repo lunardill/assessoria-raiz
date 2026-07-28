@@ -18,6 +18,22 @@ dados/*.pdf
 dados/*.json
 !dados/README.md
 
+# Vídeos e áudios brutos (gravações de reunião, etc) — grandes demais pro GitHub
+dados/*.mov
+dados/*.MOV
+dados/*.mp4
+dados/*.MP4
+dados/*.mkv
+dados/*.MKV
+dados/*.avi
+dados/*.AVI
+dados/*.mp3
+dados/*.MP3
+dados/*.wav
+dados/*.WAV
+dados/*.m4a
+dados/*.M4A
+
 # Pastas de trabalho do usuário (geradas pelo /setup, conteúdo pessoal)
 clientes/
 propostas/
