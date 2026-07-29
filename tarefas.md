@@ -2,6 +2,7 @@
 
 ## Em andamento
 - [x] Rodar /syncar pra conectar o workspace ao GitHub — https://github.com/lunardill/assessoria-raiz
+- [x] Setup do Mac terminou definitivamente (2026-07-28)
 
 ## MCPs pra instalar
 - [ ] Gmail — `claude mcp add gmail -- npx -y @gongrzhe/server-gmail-autoauth-mcp`
