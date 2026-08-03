@@ -1,4 +1,4 @@
-# Plano de Ação — Evento PRO 2026 (Subida PRO)
+# Plano de Ação — Evento PRO 2026 (Subido PRO)
 
 Origem: 12 palestras, 49 ações levantadas. A síntese completa dos frameworks de cada palestra está em [administrativo/evento-pro-2026-aprendizados.md](administrativo/evento-pro-2026-aprendizados.md). A priorização abaixo foi refeita duas vezes depois de entrevistar o Lucas sobre o estado real da operação: primeiro sobre CRM, preço e churn, depois sobre os 3 gargalos que ele mesmo identificou em 2026-08-03.
 
