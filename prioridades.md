@@ -14,7 +14,7 @@ O exercício do farol é o gargalo dos gargalos: ele trava a contratação (não
 
 Captação roda em paralelo desde já, porque não depende de CS nem do farol pra começar — é a Semana 2 do plano anterior antecipada.
 
-Preço e a correção da métrica de churn continuam valendo: preço porque é decisão rápida sem dependência técnica, churn porque virou pré-requisito pra remunerar o CS certo depois de contratado. O número de churn atual não fecha: 5,1% ao ano não é compatível com LTV médio de 7,5 meses (essa combinação exigiria churn mensal na casa de 13%, não 5,1% anual) — precisa ser redefinido antes de virar critério de remuneração.
+Preço continua valendo como decisão rápida sem dependência técnica. Churn também segue como pré-requisito pra remunerar o CS certo, mas por outro motivo do que eu tinha entendido antes: a taxa de 5,1% é a média simples dos 7 meses de 2026 (jan a jul), e essa média esconde uma piora recente real — o churn mensal foi 0%, 5%, 0%, 11%, 0%, 5%, 15% mês a mês, com abril e julho bem acima da média do ano. O LTV de 7,5 meses bate muito mais com o ritmo de julho (15% ao mês, que implica permanência média de ~6,7 meses) do que com a média anual de 5,1%. Ou seja, o número não tá errado, mas a média tá escondendo justamente a tendência que importa pra decidir a urgência da contratação.
 
 Separei o que é ação de agência do que é desenvolvimento pessoal. Ambos importam, mas só o primeiro bloco entra na operação.
 
@@ -40,7 +40,7 @@ Roda em paralelo com a ação zero, não depende dela.
 
 ## Gargalo 2 — Retenção (falta de acompanhamento próximo)
 
-- [ ] Redefinir a métrica de churn: esclarecer o que hoje é medido como "5,1% ao ano" e recalcular junto com o LTV real (palestra 01 — Sobral / palestra 09 — Bruno Choran)
+- [ ] Acompanhar churn por janela móvel de 3 meses, não só pela média do ano — a média de 5,1% esconde a alta de abril (11%) e julho (15%), que é o ritmo que realmente bate com o LTV de 7,5 meses. É essa tendência recente que deveria orientar a urgência da contratação de CS, não a média do ano inteiro (palestra 01 — Sobral / palestra 09 — Bruno Choran)
 - [ ] Configurar o funil de 7 etapas com critério de entrada/saída escrito por etapa, direto no CRM existente — você mesmo edita (palestra 11 — Matheus Barbosa)
 - [ ] Estruturar follow-up com data e motivo dentro do funil (D0 resumo+proposta em até 2h, D2 follow leve, D5 prova nova, D10 breakup com downsell) — cobre a ausência de CS até a contratação sair (palestra 11 — Matheus Barbosa)
 - [ ] Contratar CS — resultado direto da ação zero, é o que resolve o gargalo de forma estrutural, não só paliativa
