@@ -1,44 +1,66 @@
 # Plano de Ação — Evento PRO 2026 (Subida PRO)
 
-Origem: 12 palestras, 49 ações levantadas. Priorizado cruzando com o foco atual (processo comercial, prospecção, consolidação do posicionamento em lojas de veículos). Depois de rever os slides fotografados de cada palestra (não só as anotações escritas), a síntese completa com os frameworks está em [administrativo/evento-pro-2026-aprendizados.md](administrativo/evento-pro-2026-aprendizados.md).
+Origem: 12 palestras, 49 ações levantadas. A síntese completa dos frameworks de cada palestra está em [administrativo/evento-pro-2026-aprendizados.md](administrativo/evento-pro-2026-aprendizados.md). A priorização abaixo foi refeita duas vezes depois de entrevistar o Lucas sobre o estado real da operação: primeiro sobre CRM, preço e churn, depois sobre os 3 gargalos que ele mesmo identificou em 2026-08-03.
+
+## Os 3 gargalos reais da operação hoje
+
+- **Captação de demanda**: volume baixo de leads. Não é qualidade, não é depender de um canal só — é quantidade insuficiente entrando.
+- **Retenção**: falta de acompanhamento próximo. Sem CS, ninguém cuida ativamente da relação com o cliente no dia a dia.
+- **Contratação**: antes de definir a vaga, falta analisar o exercício do farol — 2 semanas de dados de uso do tempo (Lucas e Matheus) já coletadas e nunca analisadas. Sem essa análise não dá pra confirmar que a contratação certa é CS, nem montar o cargo direito.
 
 ## Por que essa ordem
 
-Depois de conferir o estado real de cada frente (não só o framework das palestras), três coisas mudaram:
+O exercício do farol é o gargalo dos gargalos: ele trava a contratação (não dá pra montar cargo/remuneração sem saber onde o tempo de vocês realmente vai) e a contratação provável — um CS — é o que resolve estruturalmente a retenção (falta de acompanhamento próximo). Os dados já existem, só falta analisar, então é rápido e desbloqueia duas frentes ao mesmo tempo. Por isso vira ação zero, antes de qualquer outra coisa.
 
-1. **Preço vem antes de operação, e sem risco conhecido.** A ordem certa das 5 alavancas de lucro (palestra 09, Bruno Choran) é: aumentar preço → baixar custo de entrega → consertar quem não performa → aumentar volume → baixar custo de estrutura. O ticket girou devagar de R$1.500 pra R$1.800 nos últimos contratos, sem nunca ter sido testado de forma deliberada nem ter batido em resistência de cliente. É a ação de maior retorno com menor esforço técnico — não depende de CRM, dev ou ninguém além de você.
-2. **O número de churn atual não é confiável.** Churn de 5,1% ao ano não é matematicamente compatível com um LTV médio de 7,5 meses — essa combinação exigiria um churn mensal na casa de 13%, não 5,1% anual. Antes de usar esse número pra qualquer decisão (remuneração de CS atrelada a LTV, projeção de crescimento), a métrica precisa ser redefinida e recalculada. Isso vira o primeiro passo da ação "nova métrica de MRR Churn", não um item qualquer do Tier 2.
-3. **O CRM já existe** — foi feito sob medida pra vocês. Não é "implementar", é ajustar: funil de 7 etapas e critérios de entrada/saída você edita direto no sistema; follow-up automatizado e notificação de lead no zap podem depender do desenvolvedor. E quem executa quase tudo isso é você sozinho, sem CS ainda, com ajuda pontual do Matheus. Por isso o Tier 1 virou sequência por semana em vez de lista simultânea — problema real de agência gerando falha por sobrecarga vira mais um caso de "churn por fator interno", o mesmo problema que apareceu na sua resposta sobre os últimos clientes perdidos.
+Captação roda em paralelo desde já, porque não depende de CS nem do farol pra começar — é a Semana 2 do plano anterior antecipada.
 
-Vale notar: churn dos últimos clientes foi majoritariamente por fatores internos do negócio deles, mas teve casos de falha de comunicação do lado de vocês — isso é exatamente o que funil com critério e follow-up com data e motivo resolvem. Não é reformular o serviço, é reforçar processo.
+Preço e a correção da métrica de churn continuam valendo: preço porque é decisão rápida sem dependência técnica, churn porque virou pré-requisito pra remunerar o CS certo depois de contratado. O número de churn atual não fecha: 5,1% ao ano não é compatível com LTV médio de 7,5 meses (essa combinação exigiria churn mensal na casa de 13%, não 5,1% anual) — precisa ser redefinido antes de virar critério de remuneração.
 
 Separei o que é ação de agência do que é desenvolvimento pessoal. Ambos importam, mas só o primeiro bloco entra na operação.
 
 ---
 
-## Tier 1 — Sequência por semana (execução solo, sem CS)
+## Ação zero — antes de qualquer contratação
 
-**Semana 1 — decisão e diagnóstico, sem dependência técnica**
-- [ ] Definir novo ticket médio e aplicar em propostas novas e renovações a partir de agora (palestra 09 — Bruno Choran / palestra 02 — Zucco)
-- [ ] Redefinir a métrica de churn: esclarecer o que hoje é medido como "5,1% ao ano" e recalcular junto com o LTV real, antes de usar esses números em qualquer outra decisão (palestra 01 — Sobral / palestra 09 — Bruno Choran)
+- [ ] Analisar o exercício do farol: os dois conjuntos de dados (Lucas e Matheus, 2 semanas de uso do tempo) já existem, só falta sentar e analisar. Define se a contratação é mesmo CS e onde estão os gargalos reais de tempo de cada um (palestra 08 — Sobral / palestra 10 — Guilherme Nagel)
 
-**Semana 2 — ajustes que você mesmo edita no CRM**
-- [ ] Configurar o funil de 7 etapas com critério de entrada/saída escrito por etapa, direto no CRM existente (palestra 11 — Matheus Barbosa)
-- [ ] Ajustar primeira mensagem pro lead, tem foto de exemplo salva (palestra 11 — Matheus Barbosa)
+## Gargalo 1 — Captação (volume baixo de leads)
+
+Roda em paralelo com a ação zero, não depende dela.
+
+- [ ] Testar sempre 3 criativos por vez — Matheus executa, não consome tempo do Lucas (palestra 11 — Matheus Barbosa)
 - [ ] Estruturar cadência de prospecção ativa, canal 2 dos 4 motores de captação (palestra 11 — Matheus Barbosa)
-
-**Semana 3 em diante — depende de automação/dev ou mais tempo de construção**
-- [ ] Criar sistema de acompanhamento comercial (zap) com o Claude — checar com o dev do CRM o que dá pra automatizar por fora (palestra 03 — Cássio Prado)
-- [ ] Criar automação no Claude pra notificar lead no zap (palestra 03 — Cássio Prado)
+- [ ] Fazer campanhas segmentadas por estado, uma campanha por estado — expande alcance de tráfego (palestra 11 — Matheus Barbosa)
+- [ ] Masterizar melhor a indicação e criar landing page pro programa de embaixadores — novo canal de volume (palestra 02 — Zucco / palestra 11 — Matheus Barbosa)
+- [ ] Ajustar primeira mensagem pro lead, tem foto de exemplo salva — evita perder o lead que já foi captado (palestra 11 — Matheus Barbosa)
 - [ ] Criar automação pra responder o lead quando chegar, caso não consiga ligar (palestra 11 — Matheus Barbosa)
-- [ ] Usar o Claude pra montar o playbook de vendas (palestra 11 — Matheus Barbosa)
+- [ ] Analisar prospecção via LinkedIn — novo canal (palestra 02 — Zucco)
+- [ ] Estruturar venda de e-mail marketing (palestra 02 — Zucco)
+- [ ] Criar blog, canal 4 de captação e autoridade — canal mais lento pra gerar volume, entra depois dos outros (palestra 11 — Matheus Barbosa)
 
-**Roda em paralelo, é o Matheus que executa**
-- [ ] Testar sempre 3 criativos por vez (palestra 11 — Matheus Barbosa)
+## Gargalo 2 — Retenção (falta de acompanhamento próximo)
+
+- [ ] Redefinir a métrica de churn: esclarecer o que hoje é medido como "5,1% ao ano" e recalcular junto com o LTV real (palestra 01 — Sobral / palestra 09 — Bruno Choran)
+- [ ] Configurar o funil de 7 etapas com critério de entrada/saída escrito por etapa, direto no CRM existente — você mesmo edita (palestra 11 — Matheus Barbosa)
+- [ ] Estruturar follow-up com data e motivo dentro do funil (D0 resumo+proposta em até 2h, D2 follow leve, D5 prova nova, D10 breakup com downsell) — cobre a ausência de CS até a contratação sair (palestra 11 — Matheus Barbosa)
+- [ ] Contratar CS — resultado direto da ação zero, é o que resolve o gargalo de forma estrutural, não só paliativa
+- [ ] Remuneração de CS atrelada ao LTV da conta — só depois da métrica de LTV estar confiável (palestra 10 — Guilherme Nagel)
+
+## Gargalo 3 — Contratação
+
+Depende da ação zero pra começar de verdade.
+
+- [ ] Descritivo de cargo de CS e gestor, junto com remuneração — usar o modelo "departamento alavancado" (supervisor = confiança, sênior = expertise, júnior+IA = operacional) (palestra 10 — Guilherme Nagel / palestra 09 — Bruno Choran)
+- [ ] Usar o Claude pra montar o playbook de vendas — serve tanto pra padronizar quanto pra ramp up rápido de quem for contratado (palestra 11 — Matheus Barbosa)
+- [ ] Colocar regras de aumento de pró-labore e divisão de lucros (palestra 10 — Guilherme Nagel)
+
+## Paralelo — decisão rápida, sem dependência técnica
+
+- [ ] Definir novo ticket médio e aplicar em propostas novas e renovações a partir de agora. Girou devagar de R$1.500 pra R$1.800 sem nunca ter sido testado de forma deliberada nem ter batido em resistência de cliente (palestra 09 — Bruno Choran / palestra 02 — Zucco)
 
 ## Rotina semanal pronta pra implementar (1h/dia, palestra 11 — Matheus Barbosa)
 
-Assim que o CRM e a cadência estiverem de pé, essa é a rotina "máquina sempre cheia":
+Assim que a cadência de prospecção e o funil estiverem de pé, essa é a rotina "máquina sempre cheia":
 
 - **Segunda**: revisa a campanha, corta o pior criativo e sobe um novo, confere verba e custo por lead
 - **Terça**: 20 aberturas D1 de prospecção (lista pronta da semana anterior)
@@ -46,32 +68,26 @@ Assim que o CRM e a cadência estiverem de pé, essa é a rotina "máquina sempr
 - **Quinta**: 20 aberturas D1, convida 1 cliente satisfeito pro programa de indicação
 - **Sexta**: breakups D7, reativação de propostas paradas há 30+ dias
 
-## Tier 2 — Curto prazo (base financeira e de gestão)
+## Automações que dependem de dev ou mais tempo de construção
 
-Ainda não existe CS na equipe hoje — os itens de cargo/remuneração de CS abaixo são pré-requisito pra abrir essa vaga, não ajuste de algo que já existe. Fazem mais sentido depois que a métrica de churn/LTV da Semana 1 estiver correta, porque é ela que vai definir a remuneração.
+- [ ] Criar sistema de acompanhamento comercial (zap) com o Claude — checar com o dev do CRM o que dá pra automatizar por fora (palestra 03 — Cássio Prado)
+- [ ] Criar automação no Claude pra notificar lead no zap (palestra 03 — Cássio Prado)
+
+## Financeiro e gestão (não é gargalo direto hoje, mas sustenta os 3 de cima)
 
 - [ ] Calcular CAC da agência sem considerar tráfego, com custo da operação (palestra 09 — Bruno Choran)
 - [ ] Calcular LTV sobre CAC (palestra 09 — Bruno Choran)
 - [ ] Criar filtro pra ver LTV por período: último mês, 3, 6, ano (palestra 10 — Guilherme Nagel)
-- [ ] Descritivos de cargo de CS e gestor, junto com remuneração — usar o modelo "departamento alavancado" (supervisor = confiança, sênior = expertise, júnior+IA = operacional) (palestra 10 — Guilherme Nagel / palestra 09 — Bruno Choran)
-- [ ] Colocar regras de aumento de pró-labore e divisão de lucros (palestra 10 — Guilherme Nagel)
-- [ ] Remuneração de CS/gestor atrelada ao LTV da conta — só depois da métrica de LTV estar confiável (palestra 10 — Guilherme Nagel)
 - [ ] Fazer reunião de apresentação de resultados entre os sócios (palestra 01 — Sobral)
 - [ ] Estruturar pagamento dos clientes no início do mês — **levar pra mentoria/hotseat antes de executar** (palestra 01 — Sobral)
 - [ ] Estudar estrutura de receita, Renata Cintirion (palestra 10 — Guilherme Nagel)
 
-## Tier 3 — Médio prazo (crescimento e produto)
+## Médio prazo (produto, não é gargalo hoje)
 
 - [ ] Criar Sistema Raiz completo como produto, não só serviço interno (palestra 04 — Thiago Tessman)
-- [ ] Fazer campanhas segmentadas por estado, uma campanha por estado (palestra 11 — Matheus Barbosa)
-- [ ] Analisar prospecção via LinkedIn (palestra 02 — Zucco)
-- [ ] Masterizar melhor a indicação, canal 3 de captação (palestra 02 — Zucco)
-- [ ] Criar landing page pro programa de embaixadores (palestra 11 — Matheus Barbosa)
-- [ ] Estruturar venda de e-mail marketing (palestra 02 — Zucco)
-- [ ] Criar blog, canal 4 de captação e autoridade (palestra 11 — Matheus Barbosa)
 - [ ] Pegar histórico de atendimento, venda e resolução de problema, e treinar a IA a atender como o Lucas atende, revisando a cada 3 meses (palestra 04 — Thiago Tessman)
 
-## Tier 4 — Conteúdo (importante, mas não é foco imediato segundo estrategia.md)
+## Conteúdo (importante, mas não é foco imediato segundo estrategia.md)
 
 - [ ] Criar conteúdos com base no formato validado: testar, validar, replicar, não criar do zero cada vez (palestra 07 — Hanah Franklin)
 - [ ] Gravar conteúdo analisando lojas grandes: posicionamento, Instagram, criativo (palestra 07 — Hanah Franklin)
