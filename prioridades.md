@@ -1,10 +1,15 @@
 # Plano de Ação — Evento PRO 2026 (Subida PRO)
 
-Origem: 12 palestras, 49 ações levantadas. Priorizado cruzando com o foco atual (processo comercial, prospecção, consolidação do posicionamento em lojas de veículos).
+Origem: 12 palestras, 49 ações levantadas. Priorizado cruzando com o foco atual (processo comercial, prospecção, consolidação do posicionamento em lojas de veículos). Depois de rever os slides fotografados de cada palestra (não só as anotações escritas), a síntese completa com os frameworks está em [administrativo/evento-pro-2026-aprendizados.md](administrativo/evento-pro-2026-aprendizados.md).
 
 ## Por que essa ordem
 
-O CRM é a base de quase tudo. Funil de 7 etapas, follow-up com data e motivo, filtro de LTV por período, remuneração atrelada a LTV: nada disso funciona sem o CRM implementado primeiro. Por isso ele abre o Tier 1, mesmo competindo com outras coisas "urgentes".
+Duas coisas mudaram a ordem depois de ver os slides, não só as anotações:
+
+1. **Preço vem antes de operação.** A ordem certa das 5 alavancas de lucro (palestra 09, Bruno Choran) é: aumentar preço → baixar custo de entrega → consertar quem não performa → aumentar volume → baixar custo de estrutura. Vender mais é a penúltima alavanca, não a primeira — por isso ticket médio subiu pro Tier 1.
+2. **Churn é a alavanca real de crescimento, não venda.** Com churn de 20%/mês o crescimento trava sozinho (teto de carteira não se move só vendendo mais); reduzir churn de 20% pra 5% corta o tempo até 80% do teto de 32 pra 8 meses. Por isso MRR Churn subiu de prioridade.
+
+O CRM continua abrindo o Tier 1: funil de 7 etapas, follow-up com data e motivo, filtro de LTV por período, remuneração atrelada a LTV, nada disso funciona sem ele. Mas ele roda em paralelo com a revisão de preço, que não depende de CRM pra começar.
 
 Separei o que é ação de agência do que é desenvolvimento pessoal. Ambos importam, mas só o primeiro bloco entra na operação.
 
@@ -12,7 +17,9 @@ Separei o que é ação de agência do que é desenvolvimento pessoal. Ambos imp
 
 ## Tier 1 — Agora (motor comercial, alta urgência)
 
+- [ ] Rever ticket médio e aumentar preço — é a primeira alavanca de lucro, não a última (palestra 09 — Bruno Choran / palestra 02 — Zucco)
 - [ ] Implementar CRM urgente pros clientes (palestra 02 — Zucco)
+- [ ] Nova métrica pra calcular MRR Churn — é a alavanca real de crescimento, mais do que vender mais (palestra 01 — Sobral / palestra 09 — Bruno Choran)
 - [ ] Criar sistema de acompanhamento comercial (zap) com o Claude (palestra 03 — Cássio Prado)
 - [ ] Criar automação no Claude pra notificar lead no zap (palestra 03 — Cássio Prado)
 - [ ] Ajustar primeira mensagem pro lead, tem foto de exemplo salva (palestra 11 — Matheus Barbosa)
@@ -21,14 +28,22 @@ Separei o que é ação de agência do que é desenvolvimento pessoal. Ambos imp
 - [ ] Estruturar cadência de prospecção ativa, canal 2 dos 4 motores de captação (palestra 11 — Matheus Barbosa)
 - [ ] Testar sempre 3 criativos por vez (palestra 11 — Matheus Barbosa)
 
+## Rotina semanal pronta pra implementar (1h/dia, palestra 11 — Matheus Barbosa)
+
+Assim que o CRM e a cadência estiverem de pé, essa é a rotina "máquina sempre cheia":
+
+- **Segunda**: revisa a campanha, corta o pior criativo e sobe um novo, confere verba e custo por lead
+- **Terça**: 20 aberturas D1 de prospecção (lista pronta da semana anterior)
+- **Quarta**: publica o artigo da semana, roda os follows D2 e D4 da cadência
+- **Quinta**: 20 aberturas D1, convida 1 cliente satisfeito pro programa de indicação
+- **Sexta**: breakups D7, reativação de propostas paradas há 30+ dias
+
 ## Tier 2 — Curto prazo (base financeira e de gestão)
 
 - [ ] Calcular CAC da agência sem considerar tráfego, com custo da operação (palestra 09 — Bruno Choran)
 - [ ] Calcular LTV sobre CAC (palestra 09 — Bruno Choran)
 - [ ] Criar filtro pra ver LTV por período: último mês, 3, 6, ano (palestra 10 — Guilherme Nagel)
-- [ ] Nova métrica pra calcular MRR Churn (palestra 01 — Sobral)
-- [ ] Rever ticket médio, precisa subir (palestra 02 — Zucco)
-- [ ] Descritivos de cargo de CS e gestor, junto com remuneração (palestra 10 — Guilherme Nagel)
+- [ ] Descritivos de cargo de CS e gestor, junto com remuneração — usar o modelo "departamento alavancado" (supervisor = confiança, sênior = expertise, júnior+IA = operacional) (palestra 10 — Guilherme Nagel / palestra 09 — Bruno Choran)
 - [ ] Colocar regras de aumento de pró-labore e divisão de lucros (palestra 10 — Guilherme Nagel)
 - [ ] Remuneração de CS/gestor atrelada ao LTV da conta (palestra 10 — Guilherme Nagel)
 - [ ] Fazer reunião de apresentação de resultados entre os sócios (palestra 01 — Sobral)
