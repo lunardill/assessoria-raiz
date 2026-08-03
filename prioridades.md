@@ -14,7 +14,12 @@ O exercício do farol é o gargalo dos gargalos: ele trava a contratação (não
 
 Captação roda em paralelo desde já, porque não depende de CS nem do farol pra começar — é a Semana 2 do plano anterior antecipada.
 
-Preço continua valendo como decisão rápida sem dependência técnica. Churn também segue como pré-requisito pra remunerar o CS certo, mas por outro motivo do que eu tinha entendido antes: a taxa de 5,1% é a média simples dos 7 meses de 2026 (jan a jul), e essa média esconde uma piora recente real — o churn mensal foi 0%, 5%, 0%, 11%, 0%, 5%, 15% mês a mês, com abril e julho bem acima da média do ano. O LTV de 7,5 meses bate muito mais com o ritmo de julho (15% ao mês, que implica permanência média de ~6,7 meses) do que com a média anual de 5,1%. Ou seja, o número não tá errado, mas a média tá escondendo justamente a tendência que importa pra decidir a urgência da contratação.
+Preço continua valendo como decisão rápida sem dependência técnica. Churn segue como pré-requisito pra remunerar o CS certo, e depois de olhar a planilha de clientes (não só a de churn mensal), o quadro ficou mais grave do que o "5,1% ao ano" sugeria:
+
+- A taxa de 5,1% é a média simples dos 7 meses de 2026, e essa média esconde piora recente real: o churn mensal foi 0%, 5%, 0%, 11%, 0%, 5%, 15% mês a mês, com abril e julho bem acima da média do ano.
+- O "LTV Médio" de 7,83 que vocês usam mistura cliente que já saiu com cliente ainda ativo (o tempo de quem tá ativo não é o LTV dele, é só quanto durou até agora). Calculando só com quem hoje não paga (14 clientes Inativo confirmados + 2 Congelado, que contam como churn enquanto não voltam), a permanência média real é **6,6 meses** — perto do que a taxa de julho já indicava (≈6,7 meses), então os métodos convergem.
+- Olhando a base toda: **16 de 35 clientes que já passaram pela carteira (46%) estão hoje sem pagar.** É um retrato bem mais duro do que a média anual de 5,1%.
+- Os cancelamentos de 2026 (Efatah Veículos, Eduardo Veículos, Susana Store, R.E Imports, Mediari Cobranças) saíram todos entre 3 e 4 meses de contrato — um padrão que cheira mais a problema dos primeiros 90 dias (onboarding, expectativa, primeiro resultado) do que falta de acompanhamento ao longo do contrato inteiro. Vale investigar isso separado de "contratar CS", porque CS sozinho pode não resolver se o problema é como o cliente é recebido logo no início.
 
 Separei o que é ação de agência do que é desenvolvimento pessoal. Ambos importam, mas só o primeiro bloco entra na operação.
 
@@ -40,7 +45,9 @@ Roda em paralelo com a ação zero, não depende dela.
 
 ## Gargalo 2 — Retenção (falta de acompanhamento próximo)
 
-- [ ] Acompanhar churn por janela móvel de 3 meses, não só pela média do ano — a média de 5,1% esconde a alta de abril (11%) e julho (15%), que é o ritmo que realmente bate com o LTV de 7,5 meses. É essa tendência recente que deveria orientar a urgência da contratação de CS, não a média do ano inteiro (palestra 01 — Sobral / palestra 09 — Bruno Choran)
+- [ ] Acompanhar churn por janela móvel de 3 meses, não só pela média do ano — abril (11%) e julho (15%) são o ritmo real, não a média de 5,1% (palestra 01 — Sobral / palestra 09 — Bruno Choran)
+- [ ] Corrigir o cálculo de LTV Médio pra usar só clientes com data de saída (Inativo + Congelado), não misturar com o tempo de quem ainda tá ativo — o número certo hoje é ~6,6 meses, não 7,83 (palestra 09 — Bruno Choran)
+- [ ] Investigar o padrão de cancelamento rápido dos clientes de 2026 (Efatah, Eduardo Veículos, Susana Store, R.E Imports, Mediari — todos saíram entre 3 e 4 meses): é problema dos primeiros 90 dias, não de acompanhamento ao longo do contrato — pode precisar de ação diferente de "contratar CS"
 - [ ] Configurar o funil de 7 etapas com critério de entrada/saída escrito por etapa, direto no CRM existente — você mesmo edita (palestra 11 — Matheus Barbosa)
 - [ ] Estruturar follow-up com data e motivo dentro do funil (D0 resumo+proposta em até 2h, D2 follow leve, D5 prova nova, D10 breakup com downsell) — cobre a ausência de CS até a contratação sair (palestra 11 — Matheus Barbosa)
 - [ ] Contratar CS — resultado direto da ação zero, é o que resolve o gargalo de forma estrutural, não só paliativa
