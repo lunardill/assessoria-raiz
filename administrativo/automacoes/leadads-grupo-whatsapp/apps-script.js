@@ -15,10 +15,16 @@
  */
 
 const NOME_ABA = "Leads Forms"; // mesma aba usada pelo script de e-mail
-const COLUNA_NOME = 17;      // Q — nome_completo
-const COLUNA_TELEFONE = 18;  // R — telefone
-const COLUNA_CAMPANHA = 8;   // H — campaign_name
-const COLUNA_ANUNCIO = 4;    // D — ad_name
+const COLUNA_HORARIO = 2;      // B — created_time
+const COLUNA_ANUNCIO = 4;      // D — ad_name
+const COLUNA_CONJUNTO = 6;     // F — adset_name
+const COLUNA_CAMPANHA = 8;     // H — campaign_name
+const COLUNA_CARROS_MES = 13;  // M — em média, quantos carros a loja vende por mês?
+const COLUNA_INVESTIMENTO = 14; // N — quanto está disposto a investir em tráfego pago?
+const COLUNA_INSTAGRAM = 15;   // O — qual é o instagram da sua loja de carros?
+const COLUNA_EMAIL = 16;       // P — email
+const COLUNA_NOME = 17;        // Q — nome_completo
+const COLUNA_TELEFONE = 18;    // R — telefone
 
 function enviarWhatsappNovoLead(e) {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(NOME_ABA);
@@ -33,24 +39,50 @@ function enviarWhatsappNovoLead(e) {
   for (let linha = ultimaLinhaWhatsapp + 1; linha <= linhaAtual; linha++) {
     const nome = sheet.getRange(linha, COLUNA_NOME).getValue();
     const telefoneRaw = sheet.getRange(linha, COLUNA_TELEFONE).getValue();
+    const email = sheet.getRange(linha, COLUNA_EMAIL).getValue();
+    const instagram = sheet.getRange(linha, COLUNA_INSTAGRAM).getValue();
+    const carrosMes = sheet.getRange(linha, COLUNA_CARROS_MES).getValue();
+    const investimento = sheet.getRange(linha, COLUNA_INVESTIMENTO).getValue();
     const campanha = sheet.getRange(linha, COLUNA_CAMPANHA).getValue();
+    const conjunto = sheet.getRange(linha, COLUNA_CONJUNTO).getValue();
     const anuncio = sheet.getRange(linha, COLUNA_ANUNCIO).getValue();
+    const horarioRaw = sheet.getRange(linha, COLUNA_HORARIO).getValue();
 
     if (!nome && !telefoneRaw) continue; // linha vazia, pula
 
     const telefone = String(telefoneRaw).replace(/[^\d]/g, "");
+    const horario = formatarData(horarioRaw);
 
     const mensagem =
       "🚨 *Lead novo!*\n\n" +
       "*Nome:* " + nome + "\n" +
       "*Telefone:* " + telefone + "\n" +
+      "*E-mail:* " + email + "\n" +
+      "*Instagram da loja:* " + instagram + "\n\n" +
+      "*Carros vendidos/mês:* " + carrosMes + "\n" +
+      "*Investimento em tráfego:* " + investimento + "\n\n" +
       "*Campanha:* " + campanha + "\n" +
-      "*Anúncio:* " + anuncio;
+      "*Conjunto de anúncio:* " + conjunto + "\n" +
+      "*Anúncio:* " + anuncio + "\n" +
+      "*Preenchido em:* " + horario;
 
     enviarMensagemWhatsapp(mensagem, props);
   }
 
   props.setProperty("ultimaLinhaWhatsapp", linhaAtual.toString());
+}
+
+function formatarData(valor) {
+  if (valor instanceof Date) {
+    return Utilities.formatDate(valor, Session.getScriptTimeZone(), "dd/MM/yyyy HH:mm");
+  }
+  // valor vem como texto tipo "2026-05-08T09:05:22-05:00"
+  const texto = String(valor);
+  const match = texto.match(/(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/);
+  if (match) {
+    return match[3] + "/" + match[2] + "/" + match[1] + " " + match[4] + ":" + match[5];
+  }
+  return texto;
 }
 
 function enviarMensagemWhatsapp(mensagem, props) {
