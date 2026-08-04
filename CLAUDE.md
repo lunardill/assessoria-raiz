@@ -46,6 +46,7 @@ Evitar: travessão (—), palavra "tá" em contexto profissional, respostas gen�
 - [x] Google Drive
 - [ ] Meta Ads (/meta-ads-ratos)
 - [ ] Google Ads (/google-ads-ratos)
+- [x] Z-API (WhatsApp, número comercial) — notificação de lead no grupo "Avisos Leads - RAIZ", ver `administrativo/automacoes/leadads-grupo-whatsapp/`
 
 *(Marcar conforme for instalando os MCPs)*
 

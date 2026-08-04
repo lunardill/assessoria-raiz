@@ -78,7 +78,7 @@ Assim que a cadência de prospecção e o funil estiverem de pé, essa é a roti
 ## Automações que dependem de dev ou mais tempo de construção
 
 - [ ] Criar sistema de acompanhamento comercial (zap) com o Claude — checar com o dev do CRM o que dá pra automatizar por fora (palestra 03 — Cássio Prado)
-- [ ] Criar automação no Claude pra notificar lead no zap (palestra 03 — Cássio Prado)
+- [x] Criar automação no Claude pra notificar lead no zap (palestra 03 — Cássio Prado) — feito em 2026-08-04: Google Apps Script na planilha de leads + Z-API (número comercial) avisa o grupo "Avisos Leads - RAIZ" em até 1 minuto após lead novo cair. Ainda não inclui mensagem automática pro lead (decisão consciente, ver `administrativo/automacoes/leadads-grupo-whatsapp/`)
 
 ## Financeiro e gestão (não é gargalo direto hoje, mas sustenta os 3 de cima)
 
