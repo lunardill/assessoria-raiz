@@ -1,33 +1,36 @@
 /**
  * Notificação de Lead no Grupo do WhatsApp — Assessoria Raiz
  *
- * Vigia a planilha de leads do Meta (primeira aba) e manda um aviso no grupo
- * "Avisos Leads - RAIZ" via Z-API toda vez que uma linha nova aparece.
+ * Roda ao lado do script existente "Notificação de Leads Meta" (Código.gs,
+ * função enviarEmailNovoLead) no MESMO projeto Apps Script da planilha.
+ * Não usa nem modifica nada do script de e-mail — segue o mesmo padrão dele
+ * (controle de última linha via PropertiesService), mas com chave própria,
+ * pra não colidir com a dele.
  *
  * Configuração necessária (Extensões > Propriedades do projeto > Propriedades do script):
  *   ZAPI_INSTANCE_ID, ZAPI_TOKEN, ZAPI_CLIENT_TOKEN, ZAPI_GROUP_ID
  *   (valores em administrativo/automacoes/leadads-grupo-whatsapp/.env, neste repositório)
  *
- * Gatilho: configurar um gatilho de tempo (a cada 5 minutos) chamando checarLeadsNovos.
+ * Gatilho: configurar um gatilho de tempo (a cada 5 minutos) chamando enviarWhatsappNovoLead.
  */
 
+const NOME_ABA = "Leads Forms"; // mesma aba usada pelo script de e-mail
 const COLUNA_NOME = 17;      // Q — nome_completo
 const COLUNA_TELEFONE = 18;  // R — telefone
 const COLUNA_CAMPANHA = 8;   // H — campaign_name
 const COLUNA_ANUNCIO = 4;    // D — ad_name
 
-function checarLeadsNovos() {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
+function enviarWhatsappNovoLead(e) {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(NOME_ABA);
+  const linhaAtual = sheet.getLastRow();
+
   const props = PropertiesService.getScriptProperties();
+  const ultimaLinhaWhatsapp = Number(props.getProperty("ultimaLinhaWhatsapp") || 0);
 
-  const ultimaLinhaProcessada = Number(props.getProperty("lastRow") || 1); // linha 1 = cabecalho
-  const ultimaLinhaAtual = sheet.getLastRow();
+  if (linhaAtual <= ultimaLinhaWhatsapp) return; // não cresceu, não é lead novo
 
-  if (ultimaLinhaAtual <= ultimaLinhaProcessada) {
-    return; // nada novo
-  }
-
-  for (let linha = ultimaLinhaProcessada + 1; linha <= ultimaLinhaAtual; linha++) {
+  // Processa todas as linhas novas desde a última checada (não só a última)
+  for (let linha = ultimaLinhaWhatsapp + 1; linha <= linhaAtual; linha++) {
     const nome = sheet.getRange(linha, COLUNA_NOME).getValue();
     const telefoneRaw = sheet.getRange(linha, COLUNA_TELEFONE).getValue();
     const campanha = sheet.getRange(linha, COLUNA_CAMPANHA).getValue();
@@ -44,13 +47,13 @@ function checarLeadsNovos() {
       "*Campanha:* " + campanha + "\n" +
       "*Anúncio:* " + anuncio;
 
-    enviarWhatsApp(mensagem, props);
+    enviarMensagemWhatsapp(mensagem, props);
   }
 
-  props.setProperty("lastRow", String(ultimaLinhaAtual));
+  props.setProperty("ultimaLinhaWhatsapp", linhaAtual.toString());
 }
 
-function enviarWhatsApp(mensagem, props) {
+function enviarMensagemWhatsapp(mensagem, props) {
   const instanceId = props.getProperty("ZAPI_INSTANCE_ID");
   const token = props.getProperty("ZAPI_TOKEN");
   const clientToken = props.getProperty("ZAPI_CLIENT_TOKEN");
@@ -79,18 +82,20 @@ function enviarWhatsApp(mensagem, props) {
  * Rode essa função manualmente UMA VEZ pra testar sem esperar lead novo.
  * Não mexe no controle de "última linha", só manda uma mensagem de teste pro grupo.
  */
-function testarEnvio() {
+function testarEnvioWhatsapp() {
   const props = PropertiesService.getScriptProperties();
-  enviarWhatsApp("✅ Teste de conexão — automação de leads configurada com sucesso.", props);
+  enviarMensagemWhatsapp("✅ Teste de conexão — automação de leads configurada com sucesso.", props);
 }
 
 /**
  * Rode essa função manualmente UMA VEZ, na primeira configuração, pra marcar
  * a linha atual como "já processada" (evita mandar aviso de TODOS os leads antigos de uma vez).
+ * Nome diferente de propósito do "inicializarUltimaLinha" que já existe no script de e-mail,
+ * pra não colidir.
  */
-function inicializarUltimaLinha() {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
+function inicializarUltimaLinhaWhatsapp() {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(NOME_ABA);
   const props = PropertiesService.getScriptProperties();
-  props.setProperty("lastRow", String(sheet.getLastRow()));
-  Logger.log("Última linha marcada como processada: " + sheet.getLastRow());
+  props.setProperty("ultimaLinhaWhatsapp", String(sheet.getLastRow()));
+  Logger.log("Última linha marcada como processada (WhatsApp): " + sheet.getLastRow());
 }
