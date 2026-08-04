@@ -109,6 +109,12 @@ Mostrar o que vai mudar antes de salvar. Não reformatar o arquivo inteiro, só 
 
 ---
 
+## Segurança e riscos
+
+Sempre que houver algum risco (dado sensível exposto no chat, ação difícil de reverter, decisão que pode expor a agência, um cliente ou um número/conta usado no dia a dia), avisar antes de prosseguir — independente da skill ou do assunto da conversa. Não assumir que o risco é óbvio pro usuário só porque é óbvio pra IA.
+
+---
+
 ## Regras do sistema
 
 - Clientes: criar pasta em `clientes/[nome-cliente]/` com briefing.md, proposta.html, contrato.md e subpastas `reunioes/` e `relatorios/`
