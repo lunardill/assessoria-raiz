@@ -1,16 +1,21 @@
 # Plano de Ação — Evento PRO 2026 (Subido PRO)
 
+## Prioridades de estudo
+
+- [ ] Aula da Isa Godoy sobre como contratar gestor de tráfego — base pra fechar o descritivo de cargo e o processo seletivo do gestor de tráfego + CS
+- [ ] Financeiro da agência 10x, Fábio Ricotta — base pra calibrar remuneração e estrutura de custo da nova contratação
+
 Origem: 12 palestras, 49 ações levantadas. A síntese completa dos frameworks de cada palestra está em [administrativo/evento-pro-2026-aprendizados.md](administrativo/evento-pro-2026-aprendizados.md). A priorização abaixo foi refeita duas vezes depois de entrevistar o Lucas sobre o estado real da operação: primeiro sobre CRM, preço e churn, depois sobre os 3 gargalos que ele mesmo identificou em 2026-08-03.
 
 ## Os 3 gargalos reais da operação hoje
 
 - **Captação de demanda**: volume baixo de leads. Não é qualidade, não é depender de um canal só — é quantidade insuficiente entrando.
-- **Retenção**: falta de acompanhamento próximo. Sem CS, ninguém cuida ativamente da relação com o cliente no dia a dia.
-- **Contratação**: antes de definir a vaga, falta analisar o exercício do farol — 2 semanas de dados de uso do tempo (Lucas e Matheus) já coletadas e nunca analisadas. Sem essa análise não dá pra confirmar que a contratação certa é CS, nem montar o cargo direito.
+- **Retenção**: falta de acompanhamento próximo. Sem alguém dedicado a isso, ninguém cuida ativamente da relação com o cliente no dia a dia — vai ser resolvido pelo gestor de tráfego que assumir também o papel de CS.
+- **Contratação**: a vaga já foi definida em mentoria (2026-08-10) — gestor de tráfego que assume também CS, não um CS separado. Falta analisar o exercício do farol — 2 semanas de dados de uso do tempo (Lucas e Matheus) já coletadas e nunca analisadas — pra calibrar carga horária e remuneração do cargo, não mais pra confirmar se a vaga é CS.
 
 ## Por que essa ordem
 
-O exercício do farol é o gargalo dos gargalos: ele trava a contratação (não dá pra montar cargo/remuneração sem saber onde o tempo de vocês realmente vai) e a contratação provável — um CS — é o que resolve estruturalmente a retenção (falta de acompanhamento próximo). Os dados já existem, só falta analisar, então é rápido e desbloqueia duas frentes ao mesmo tempo. Por isso vira ação zero, antes de qualquer outra coisa.
+O exercício do farol é o gargalo dos gargalos: ele trava a contratação (não dá pra montar cargo/remuneração sem saber onde o tempo de vocês realmente vai) e a contratação definida em mentoria — gestor de tráfego que assume também CS — é o que resolve estruturalmente a retenção (falta de acompanhamento próximo). Os dados já existem, só falta analisar, então é rápido e desbloqueia duas frentes ao mesmo tempo. Por isso vira ação zero, antes de qualquer outra coisa.
 
 Captação roda em paralelo desde já, porque não depende de CS nem do farol pra começar — é a Semana 2 do plano anterior antecipada.
 
@@ -27,7 +32,7 @@ Separei o que é ação de agência do que é desenvolvimento pessoal. Ambos imp
 
 ## Ação zero — antes de qualquer contratação
 
-- [ ] Analisar o exercício do farol: os dois conjuntos de dados (Lucas e Matheus, 2 semanas de uso do tempo) já existem, só falta sentar e analisar. Define se a contratação é mesmo CS e onde estão os gargalos reais de tempo de cada um (palestra 08 — Sobral / palestra 10 — Guilherme Nagel)
+- [ ] Analisar o exercício do farol: os dois conjuntos de dados (Lucas e Matheus, 2 semanas de uso do tempo) já existem, só falta sentar e analisar. Define carga horária e remuneração da contratação (gestor de tráfego + CS, decidido em mentoria em 2026-08-10) e onde estão os gargalos reais de tempo de cada um (palestra 08 — Sobral / palestra 10 — Guilherme Nagel)
 
 ## Gargalo 1 — Captação (volume baixo de leads)
 
@@ -50,14 +55,14 @@ Roda em paralelo com a ação zero, não depende dela.
 - [ ] Investigar o padrão de cancelamento rápido dos clientes de 2026 (Efatah, Eduardo Veículos, Susana Store, R.E Imports, Mediari — todos saíram entre 3 e 4 meses): é problema dos primeiros 90 dias, não de acompanhamento ao longo do contrato — pode precisar de ação diferente de "contratar CS"
 - [ ] Configurar o funil de 7 etapas com critério de entrada/saída escrito por etapa, direto no CRM existente — você mesmo edita (palestra 11 — Matheus Barbosa)
 - [ ] Estruturar follow-up com data e motivo dentro do funil (D0 resumo+proposta em até 2h, D2 follow leve, D5 prova nova, D10 breakup com downsell) — cobre a ausência de CS até a contratação sair (palestra 11 — Matheus Barbosa)
-- [ ] Contratar CS — resultado direto da ação zero, é o que resolve o gargalo de forma estrutural, não só paliativa
-- [ ] Remuneração de CS atrelada ao LTV da conta — só depois da métrica de LTV estar confiável (palestra 10 — Guilherme Nagel)
+- [ ] Contratar gestor de tráfego que assume também CS — decidido em mentoria (2026-08-10); resolve o gargalo de retenção de forma estrutural, não só paliativa
+- [ ] Remuneração do gestor de tráfego/CS atrelada ao LTV da conta — só depois da métrica de LTV estar confiável (palestra 10 — Guilherme Nagel)
 
 ## Gargalo 3 — Contratação
 
-Depende da ação zero pra começar de verdade.
+Vaga já definida em mentoria (2026-08-10): gestor de tráfego que assume também o papel de CS, não CS separado. A ação zero agora serve pra calibrar carga horária e remuneração, não pra confirmar a contratação.
 
-- [ ] Descritivo de cargo de CS e gestor, junto com remuneração — usar o modelo "departamento alavancado" (supervisor = confiança, sênior = expertise, júnior+IA = operacional) (palestra 10 — Guilherme Nagel / palestra 09 — Bruno Choran)
+- [ ] Descritivo de cargo único de gestor de tráfego + CS, junto com remuneração — usar o modelo "departamento alavancado" (supervisor = confiança, sênior = expertise, júnior+IA = operacional) (palestra 10 — Guilherme Nagel / palestra 09 — Bruno Choran)
 - [ ] Usar o Claude pra montar o playbook de vendas — serve tanto pra padronizar quanto pra ramp up rápido de quem for contratado (palestra 11 — Matheus Barbosa)
 - [ ] Colocar regras de aumento de pró-labore e divisão de lucros (palestra 10 — Guilherme Nagel)
 
