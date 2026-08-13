@@ -14,17 +14,16 @@
  * Gatilho: configurar um gatilho de tempo (a cada 5 minutos) chamando enviarWhatsappNovoLead.
  */
 
-const NOME_ABA = "Leads Forms"; // mesma aba usada pelo script de e-mail
+const NOME_ABA = "Novo Forms"; // trocou de "Leads Forms" em 13/08/2026 — form antigo parou de receber lead, formulário novo é o Novo Forms
 const COLUNA_HORARIO = 2;      // B — created_time
 const COLUNA_ANUNCIO = 4;      // D — ad_name
 const COLUNA_CONJUNTO = 6;     // F — adset_name
 const COLUNA_CAMPANHA = 8;     // H — campaign_name
-const COLUNA_CARROS_MES = 13;  // M — em média, quantos carros a loja vende por mês?
-const COLUNA_INVESTIMENTO = 14; // N — quanto está disposto a investir em tráfego pago?
-const COLUNA_INSTAGRAM = 15;   // O — qual é o instagram da sua loja de carros?
-const COLUNA_EMAIL = 16;       // P — email
-const COLUNA_NOME = 17;        // Q — nome_completo
-const COLUNA_TELEFONE = 18;    // R — telefone
+// COLUNA_CARROS_MES e COLUNA_INVESTIMENTO removidas — essas perguntas não existem mais no formulário novo
+const COLUNA_INSTAGRAM = 13;   // M — qual é o instagram da sua loja de carros?
+const COLUNA_EMAIL = 14;       // N — email
+const COLUNA_NOME = 15;        // O — full_name
+const COLUNA_TELEFONE = 16;    // P — phone_number
 
 function enviarWhatsappNovoLead(e) {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(NOME_ABA);
@@ -41,8 +40,6 @@ function enviarWhatsappNovoLead(e) {
     const telefoneRaw = sheet.getRange(linha, COLUNA_TELEFONE).getValue();
     const email = sheet.getRange(linha, COLUNA_EMAIL).getValue();
     const instagram = sheet.getRange(linha, COLUNA_INSTAGRAM).getValue();
-    const carrosMes = sheet.getRange(linha, COLUNA_CARROS_MES).getValue();
-    const investimento = sheet.getRange(linha, COLUNA_INVESTIMENTO).getValue();
     const campanha = sheet.getRange(linha, COLUNA_CAMPANHA).getValue();
     const conjunto = sheet.getRange(linha, COLUNA_CONJUNTO).getValue();
     const anuncio = sheet.getRange(linha, COLUNA_ANUNCIO).getValue();
@@ -59,8 +56,6 @@ function enviarWhatsappNovoLead(e) {
       "*Telefone:* " + telefone + "\n" +
       "*E-mail:* " + email + "\n" +
       "*Instagram da loja:* " + instagram + "\n\n" +
-      "*Carros vendidos/mês:* " + carrosMes + "\n" +
-      "*Investimento em tráfego:* " + investimento + "\n\n" +
       "*Campanha:* " + campanha + "\n" +
       "*Conjunto de anúncio:* " + conjunto + "\n" +
       "*Anúncio:* " + anuncio + "\n" +
