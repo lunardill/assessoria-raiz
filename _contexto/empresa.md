@@ -42,3 +42,10 @@ Prospecção via cold call e WhatsApp. Qualificação com SPIN Selling, BANT e m
 - CRM próprio com desenvolvedor disponível para alterações
 - Foco em previsibilidade, processos claros e escalabilidade
 - Interesse constante em automações, IA e ferramentas de eficiência
+
+## Captação de leads (atualizado 13/08/2026)
+Formulário de leads do Meta trocou de "Leads Forms" pra "Novo Forms" (aba nova, mesma planilha "Assessoria Raiz - Dados"). Leads Forms ficou congelada como histórico, não recebe lead novo desde 11/08/2026.
+- Aba Pipeline (mesma planilha): linhas 2-54 são histórico fixo (valor colado); linha 55 em diante espelha a Novo Forms ao vivo por fórmula, incluindo data automática
+- Notificação de lead novo (e-mail pra assessoriaraizz@gmail.com + grupo WhatsApp "Avisos Leads - RAIZ" via Z-API) migrada pra ler a Novo Forms — scripts em `administrativo/automacoes/leadads-grupo-whatsapp/` e no Código.gs do projeto Apps Script da planilha. Os dois têm alerta de falha por e-mail se a automação quebrar.
+- Regra importante: nunca apagar linha da Novo Forms depois que tiver lead real — o controle de "lead já notificado" é por número de linha (PropertiesService), e apagar linha desalinha o contador e pode fazer lead sumir sem avisar ninguém. Se precisar remover lead ruim/duplicado, faz isso na Pipeline, não na fonte.
+- Aba Outbound (mesma planilha) ganhou painel de funil espelhando a estrutura do inbound (Pipeline), adaptado pra prospecção ativa (sem etapa de qualificação, com breakdown de status Ganho/Perdido/Ativo)
