@@ -1,0 +1,97 @@
+# Método de Conteúdo — Assessoria Raiz
+
+Base estratégica pra criação de conteúdo, vinda da palestra da Hanah Franklin no Evento PRO 2026. Serve de fundação pra skill `/conteudo` (ou nome equivalente) e pra qualquer roteiro criado manualmente.
+
+Fonte: `administrativo/evento-pro-2026-aprendizados.md` (palestra 07) + anotações completas em `07 - Hanah Franklin.md`.
+
+---
+
+## Público e intencionalidade
+
+**Quem:** donos e gerentes de lojas de veículos, revendas, multimarcas e seminovos.
+
+**O que ele precisa saber pra decidir comprar:** que a Raiz entende a dor dele e tem a solução que ele procura.
+
+---
+
+## Banco de argumentos — as 3 conclusões
+
+Todo conteúdo bom precisa gerar essas 3 conclusões no público. Aqui estão as respostas específicas do ICP da Raiz, que alimentam qualquer roteiro.
+
+### 1. "Ele me entende!" (Identificação)
+
+**Como o público descreve os próprios problemas?**
+A grande maioria joga a culpa no mercado, descreve como problemas difíceis de resolver. Poucos assumem que poderiam melhorar — o ego é grande, difícil admitir que estão fazendo algo errado.
+
+**O que ele já testou e não funcionou?**
+Varia de empresa pra empresa: tráfego pago sozinho, atendimento com IA, delegar funções pra funcionários. Ponto em comum: tentaram tocar todos os setores da empresa ao mesmo tempo e ficaram sem tempo — sem tempo pra atender melhor os leads, administrar a empresa, cuidar do negócio. Isso aparece com mais força quando o próprio dono tenta tocar o tráfego pago sozinho: sem tempo pra gerenciar, se atualizar, executar. Resultado: dinheiro jogado fora.
+
+**Quais resultados ele gostaria de ter?**
+Atrair leads bons, levar mais gente pra loja, perder menos tempo com desqualificado, ter tempo pra administrar melhor a empresa, vender mais.
+
+### 2. "Ele sabe o que fala!" (Confiança)
+
+**Qual história prova que a Raiz é a melhor opção?**
+Fazer lojas terem clareza de retorno sobre investimento, previsibilidade de venda e alavancagem real. Fazer todas as engrenagens da empresa trabalharem em sincronia — não só tráfego pago isolado. Diferencial contra a maioria das agências: elas acham que se o lead chegou e a loja não vendeu, o problema é da loja. A Raiz não pensa assim.
+
+**Qual opinião gera confiança?**
+Transparência: não existe fórmula mágica, não se promete resultado, promete-se evolução constante. Lead bom sem atendimento bom não resolve nada. A maioria acha que atende bem, mas atende de qualquer jeito.
+
+**Qual atitude gera confiança?**
+É um processo até o dono da loja perceber que a Raiz realmente manja (esbarra de novo no ego dele) — mas quando percebe, passa a respeitar e confiar.
+
+### 3. "Vai funcionar no meu caso!" (Prova)
+
+**Já gerou resultado pra cliente parecido?** Sim, pra lojas de vários portes.
+**Já atendeu cliente em situação pior?** Sim.
+**Existe case que ele se identifique?** Sim.
+
+---
+
+## Estrutura de roteiro — IHC
+
+Regra: sem começo-meio-fim definido não existe padrão. Sem padrão não existe formato. Sem formato, depende de sorte.
+
+**Formato criativo = estrutura de roteiro + visual.**
+
+1. **Identificação** — objetivo: fazer a pessoa parar e pensar "isso tem a ver comigo". Como: "eu já passei por isso" / "já me senti assim" / "conheço isso" / "isso me lembrou fulano".
+2. **História** — objetivo: gerar conexão emocional e provar o ponto que vai vender a seguir. Como: história que prova o ponto / alguém fazendo do jeito errado sem resultado / caso de referência que valida o que a Raiz vende.
+3. **Conteúdo** — objetivo: entregar a direção, a "moral da história". Pode ser: o ensinamento, a reflexão, a mudança de crença, ou o serviço em si.
+
+Comece sempre pelo gatilho de abertura (cultura pop ou conflito universal), depois vá pro conteúdo.
+
+---
+
+## Gatilhos de abertura
+
+**Temas de cultura pop** (prendem atenção): celebridades, filme/série, memes, livros, personagens, músicas.
+
+**Temas de conflitos universais:**
+- Relacionamento: namoro, casamento, ciúmes, traição
+- Família: filhos, mãe/pai, segurança da família, ver os pais envelhecendo, ter ou não filhos
+- Sonhos: quebras de expectativa, conquistas pessoais, medo do fracasso, medo de opiniões
+- Outros: religião, preconceitos, escola/faculdade
+
+---
+
+## Testa, valida, replica
+
+Um formato só vira "formato" quando você repete o que funcionou. Postou e não funcionou → esquece. Postou e funcionou → repete e cria padrão. Repetir cria marca.
+
+Exercício prático de formato: analisar lojas grandes (posicionamento, Instagram, criativo, conteúdo). Aquela loja específica provavelmente não fecha com a Raiz, mas quem assiste ao conteúdo pode fechar.
+
+**Banco de formatos virais validados (referência, não obrigação):** https://trello.com/b/BWowty9n/brinde-formatos-criativos-validados
+
+**Status do formato próprio da Raiz:** ainda em teste. Nenhum formato fixo definido — testar até encontrar o que funciona pro nicho de lojas de veículos. Registrar aqui embaixo cada formato testado e o resultado.
+
+## Formatos testados
+
+| Data | Formato | Resultado | Repetir? |
+|------|---------|-----------|----------|
+| — | — | — | — |
+
+---
+
+## Frequência
+
+Indefinida. Sob demanda — Lucas aciona quando quiser produzir.
