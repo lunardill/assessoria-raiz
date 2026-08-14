@@ -35,7 +35,7 @@ Lojas de veículos, revendas, multimarcas e seminovos. Perfil ideal: pelo menos 
 Evitar: clientes imediatistas, desorganizados, que não seguem combinados, que não aceitam melhorar processo comercial. Não atender apostas/bets.
 
 ## Processo comercial
-Prospecção via cold call e WhatsApp. Qualificação com SPIN Selling, BANT e método DEF. Foco em diagnosticar o momento do cliente antes de vender.
+Prospecção via cold call e WhatsApp. Método de venda consultiva real usado: método DEF (curso Vendas Pro, Neto Simões) — SPIN Selling e BANT são só referência de mercado, não o que é aplicado na prática. Detalhamento completo do DEF em `_contexto/metodo-def.md`, usado pela skill `/vendedor`. Foco em diagnosticar o momento do cliente antes de vender.
 
 ## Contexto adicional
 - Sistema Raiz: plataforma interna criada com Claude Code para gestão da agência (organização, financeiro, operação)

@@ -14,7 +14,14 @@
 - [ ] /google-ads-ratos — gestão de Google Ads (30 subcomandos). Repo: github.com/duduesh/google-ads-ratos
 
 ## Próximos passos
-- [ ] Rodar /mapear pra criar skills personalizadas pra rotina da Assessoria Raiz
 - [ ] Confirmar hex exato das cores da marca no design-guide
 - [ ] Confirmar fonte utilizada nos materiais da marca
 - [ ] Mover logo.png de dados/ para marca/ quando quiser organizar
+
+## Método DEF — completar anotações (curso Vendas Pro em andamento)
+- [ ] Módulo 4 — Método DEF pra outbound/prospecção ativa
+- [ ] Módulo 7 — Gatilhos mentais
+Mandar as anotações desses módulos quando terminar, pra atualizar `_contexto/metodo-def.md` e a skill `/vendedor`.
+
+## Processos pra mapear depois
+- [ ] (nenhum pendente no momento — voltar a rodar /mapear quando quiser organizar mais processos)
