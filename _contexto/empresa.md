@@ -42,6 +42,7 @@ Prospecção via cold call e WhatsApp. Qualificação com SPIN Selling, BANT e m
 - CRM próprio com desenvolvedor disponível para alterações
 - Foco em previsibilidade, processos claros e escalabilidade
 - Interesse constante em automações, IA e ferramentas de eficiência
+- Lucas tem acesso a todas as contas da agência (GitHub, Vercel, Supabase, Meta, Google etc.) e consegue gerar tokens/credenciais direto, sem depender do Matheus pra liberar acesso
 
 ## Captação de leads (atualizado 13/08/2026)
 Formulário de leads do Meta trocou de "Leads Forms" pra "Novo Forms" (aba nova, mesma planilha "Assessoria Raiz - Dados"). Leads Forms ficou congelada como histórico, não recebe lead novo desde 11/08/2026.
