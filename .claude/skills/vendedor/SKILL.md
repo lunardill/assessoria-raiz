@@ -46,6 +46,13 @@ o que ele já respondeu ou pensa em responder.
 
 ## Passo a passo
 
+0. **Sempre pedir o contexto completo antes de dar qualquer direção.** Se o Lucas só resumiu a
+   situação em texto, perguntar se ele tem print da conversa com o lead, áudio, ou mais detalhes do
+   histórico antes de montar a recomendação. O tom, a hesitação e a escolha de palavra exatas do lead
+   mudam o diagnóstico (perfil de cliente, se é objeção real ou impeditivo, força do fechamento) — um
+   resumo pode esconder isso. Só pular esse pedido se o Lucas já mandou o material completo (print,
+   transcrição, áudio) junto com a pergunta.
+
 1. **Identificar o perfil de cliente** (Enganado, Decidido, Empoderado, Curioso — ver
    `_contexto/metodo-def.md`) pelos sinais da situação descrita, quando der pra inferir. Isso muda o
    quanto vale a pena investir esforço nessa negociação.
