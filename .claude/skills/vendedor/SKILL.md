@@ -78,6 +78,10 @@ o que ele já respondeu ou pensa em responder.
 ## Regras
 
 - Tom segue `_contexto/preferencias.md`: direto, sem travessão, sem "tá", sem jargão vazio de venda.
+- Nas frases sugeridas pro cliente/lead, nunca usar termo técnico ou estrangeirismo (ex: "timing").
+  Soa impessoal e gera repulsa no cliente — reforça o que o próprio DEF já ensina sobre script
+  ("linguagem falada, não gramatical, do jeito que você fala de verdade", nível de uma criança de 8
+  anos). Usar sempre linguagem coloquial e pessoal nas frases prontas.
 - Nunca inventar frase, técnica ou dado que não está nos arquivos de método ou que o Lucas não
   descreveu na situação.
 - Quando a situação envolver risco contratual/jurídico real (ameaça de cancelamento formal,
