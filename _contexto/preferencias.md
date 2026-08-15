@@ -7,6 +7,7 @@ Direto, consultivo, profissional mas próximo. Transmite autoridade sem arrogân
 - Travessão (—) — em qualquer contexto: respostas, apresentações, textos
 - Palavra "tá" em contexto profissional
 - Respostas genéricas ou com cara de IA
+- Padrão de frase "não é sobre X, é sobre Y" e malabarismo de frase em espelho (ex: "cuidando disso enquanto você cuida do que só você pode cuidar") — tique de copy de curso/texto de IA, ninguém fala assim. Preferir frase curta e direta
 - Formalidade excessiva
 - Frases muito longas
 - Jargões vazios de marketing
