@@ -103,6 +103,12 @@ Falar direto pra câmera enquanto faz uma ação cotidiana simples (fazer café,
 
 **Status do formato próprio da Raiz:** ainda em teste. Nenhum formato fixo definido — testar até encontrar o que funciona pro nicho de lojas de veículos. Registrar aqui embaixo cada formato testado e o resultado.
 
+**Primeiro teste definido:**
+- Objetivo intencional: provar que dono de loja tocando tráfego pago sozinho perde tempo (pra atender, administrar, se atualizar) e joga dinheiro fora.
+- Formato escolhido pra testar primeiro: **Trivial** (menor fricção de produção, valida mensagem antes de investir em formato mais caro).
+
+**Nota sobre "analisar lojas grandes":** é uma ideia de conteúdo possível entre outras, não o formato nem a linha norteadora fixa. Formato e ideia de conteúdo são escolhas independentes — cada teste combina um objetivo + um formato + uma ideia específica.
+
 ## Formatos testados
 
 | Data | Formato | Resultado | Repetir? |
