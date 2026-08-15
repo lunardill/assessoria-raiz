@@ -60,6 +60,8 @@ Regra: sem começo-meio-fim definido não existe padrão. Sem padrão não exist
 
 Comece sempre pelo gatilho de abertura (cultura pop ou conflito universal), depois vá pro conteúdo.
 
+**Nota de tom:** a mecânica IHC não é presa a um tom específico — dá pra aplicar num roteiro solto de UGC (gancho visual → jornada/prova disfarçada de narrativa → moral cedo + CTA) ou num roteiro institucional. Pra Raiz, a estrutura se mantém, mas o tom segue `_contexto/preferencias.md` sempre: direto, consultivo, sem gíria excessiva. Nunca copiar o estilo "gente/mano/pô/beijos" de exemplos de referência trazidos de fora.
+
 ---
 
 ## Gatilhos de abertura
