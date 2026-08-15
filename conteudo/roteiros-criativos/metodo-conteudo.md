@@ -84,6 +84,23 @@ Exercício prático de formato: analisar lojas grandes (posicionamento, Instagra
 
 **Banco de formatos virais validados (referência, não obrigação):** https://trello.com/b/BWowty9n/brinde-formatos-criativos-validados
 
+## Os 5 formatos do Trello
+
+### 1. Tela dividida
+Pega um roteiro que já viralizou (com análise pronta do porquê funcionou) e recria uma ideia nova com o mesmo potencial — mesma estrutura, mesmos gatilhos narrativos (conflito universal, contraste, familiaridade, efeito ahaa, debate mental), tema adaptado pro nicho. **Regra dura: proibido inventar histórias, personagens ou situações fictícias.** Se o roteiro original usa pessoa/marca real, tem que usar outra pessoa/marca real, conhecida e verificável, com fonte checável. Nunca copiar o tema literal — copiar os motivos pelos quais funcionou. Ver prompt completo de adaptação em [prompt-adaptacao-roteiro.md](prompt-adaptacao-roteiro.md).
+
+### 2. Tela verde
+Só o corpo da pessoa em cena, com imagens relacionadas entrando atrás do que está sendo falado. Elementos: fala acelerada e ritmada, cortar os respiros/pausas ao máximo pra dar agilidade, tema relevante (conhecido por todos ou uma ideia absurda que chama atenção), gancho visual que gera identificação ou curiosidade, alinhamento direto entre imagem e fala (quanto mais óbvio o encaixe, melhor). Hack: buscar imagem em vídeos virais do TikTok quando fizer sentido.
+
+### 3. Palestrinha
+Tom de "aula rápida", decodificando sinais ou dilemas comuns um a um, com efeito ahaa a cada item revelado. Abre com uma pergunta ou dilema que gera curiosidade ("decifrar o que ela quis dizer", "príncipe ou princeso"), usa muita linguagem familiar e referência de cultura pop, fecha com moral direta ou CTA. Mesma regra dura do formato 1 (roteiro copia-cola, adaptar estrutura e gatilhos, nunca inventar fatos). Ver prompt completo em [prompt-adaptacao-roteiro.md](prompt-adaptacao-roteiro.md).
+
+### 4. Dinamismo
+Câmera fixa, criador em movimento constante (aproxima, afasta, entra/sai de quadro, muda expressão e postura). O próprio movimento é o gancho visual — o cérebro presta atenção sempre que algo muda no ambiente. Tema segue o mesmo padrão: algo que todo mundo conhece ou situação absurda, puxando conflito universal, cultura pop ou tema do momento.
+
+### 5. Trivial
+Falar direto pra câmera enquanto faz uma ação cotidiana simples (fazer café, cozinhar, se arrumar). A ação banal segura atenção pelo contraste com o tema falado. Produção mais leve dos 5 — não precisa de cenário ou edição elaborada.
+
 **Status do formato próprio da Raiz:** ainda em teste. Nenhum formato fixo definido — testar até encontrar o que funciona pro nicho de lojas de veículos. Registrar aqui embaixo cada formato testado e o resultado.
 
 ## Formatos testados
