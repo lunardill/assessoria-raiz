@@ -115,11 +115,19 @@ Falar direto pra câmera enquanto faz uma ação cotidiana simples (fazer café,
 - **CTA não é obrigatório em todo vídeo.** Depende do objetivo daquele conteúdo específico, não do formato. Alguns fecham só com reflexão/moral (constroem autoridade), outros fecham com oferta direta (quando o objetivo é converter).
 - **Variar é importante — e a maioria dos vídeos NÃO deve ter CTA comercial/de compra.** Se todo conteúdo termina em "compra de mim" ou "chama no direct", o perfil todo vira propaganda e cansa. CTA comercial deve ser exceção, não regra, nesse formato de conteúdo.
 
+## Como marcar um formato como validado
+
+Um acerto isolado não é padrão. Regra fixa: um formato só vira **validado** depois de **3 acertos seguidos/consistentes** com esse formato (reportados pelo Lucas). Antes disso, ele continua como "em teste".
+
+Quando um formato vira validado, ele passa a ser a sugestão padrão pra novos roteiros — sem travar a possibilidade de testar formato novo se o Lucas quiser.
+
+**Nota sobre referências dos formatos 2 (Tela verde), 4 (Dinamismo) e 5 (Trivial):** só existe print do exemplo, sem link do vídeo original. É a referência que temos e vai ficar assim — não pedir link de novo, só perguntar se precisar de mais contexto na hora de gerar um roteiro específico.
+
 ## Formatos testados
 
-| Data | Formato | Objetivo | Resultado | Repetir? |
-|------|---------|----------|-----------|----------|
-| — | Trivial | Dono de loja tocando tráfego sozinho perde tempo/dinheiro | Roteiro escrito, ainda não gravado/postado | — |
+| Data | Formato | Objetivo | Resultado | Status |
+|------|---------|----------|-----------|--------|
+| — | Trivial | Dono de loja tocando tráfego sozinho perde tempo/dinheiro | Roteiro escrito, ainda não gravado/postado | Em teste (0/3) |
 
 ---
 
