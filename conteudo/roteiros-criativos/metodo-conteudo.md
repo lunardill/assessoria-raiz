@@ -109,11 +109,17 @@ Falar direto pra câmera enquanto faz uma ação cotidiana simples (fazer café,
 
 **Nota sobre "analisar lojas grandes":** é uma ideia de conteúdo possível entre outras, não o formato nem a linha norteadora fixa. Formato e ideia de conteúdo são escolhas independentes — cada teste combina um objetivo + um formato + uma ideia específica.
 
+## Regras de tom no roteiro (aprendido no teste 1)
+
+- **Evitar o padrão "não é sobre X, é sobre Y"** e qualquer malabarismo de frase construído em espelho (ex: "cuidando disso enquanto você cuida do que só você pode cuidar"). Ninguém fala assim de verdade, é tique de copy de curso / texto gerado por IA. Preferir frase curta e direta, mesmo que perca um pouco do "efeito".
+- **CTA não é obrigatório em todo vídeo.** Depende do objetivo daquele conteúdo específico, não do formato. Alguns fecham só com reflexão/moral (constroem autoridade), outros fecham com oferta direta (quando o objetivo é converter).
+- **Variar é importante — e a maioria dos vídeos NÃO deve ter CTA comercial/de compra.** Se todo conteúdo termina em "compra de mim" ou "chama no direct", o perfil todo vira propaganda e cansa. CTA comercial deve ser exceção, não regra, nesse formato de conteúdo.
+
 ## Formatos testados
 
-| Data | Formato | Resultado | Repetir? |
-|------|---------|-----------|----------|
-| — | — | — | — |
+| Data | Formato | Objetivo | Resultado | Repetir? |
+|------|---------|----------|-----------|----------|
+| — | Trivial | Dono de loja tocando tráfego sozinho perde tempo/dinheiro | Roteiro escrito, ainda não gravado/postado | — |
 
 ---
 
