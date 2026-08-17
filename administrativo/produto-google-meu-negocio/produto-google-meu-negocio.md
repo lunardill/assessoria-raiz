@@ -20,24 +20,28 @@ Supermercados pequenos, médios e grandes, dentro da rota que o vendedor já per
 
 ## Oferta
 
-### Modelo recorrência (oferecer sempre primeiro)
+O modelo evoluiu desde 2025. No início existiam duas opções apresentadas na hora do fechamento (avulso e recorrência). A experiência mostrou que vender só o pagamento único convertia muito mais na rua — então hoje é um funil de duas etapas, não duas opções concorrentes no mesmo pitch.
 
-- **Valor mínimo sugerido:** R$600/mês para mercado pequeno, R$800 para médio, R$1.000+ para grande porte — negociar pra cima conforme a conversa. *(Ajustar depois de validar com o primeiro fechamento real de 2026.)*
-- Sem prazo fixo, renovação automática
-- Cancelamento com aviso prévio de 15 dias
-- Entregáveis: criação ou atualização completa da ficha do Google, manutenção semanal, resposta de avaliações, cadastro de produtos/serviços, 20 postagens por mês, orientação sobre fotos
-- Pagamento: primeira parcela na hora do fechamento, Pix ou cartão. Nunca boleto.
+### Etapa 1 — Projeto de 30 dias (pagamento único, o que é vendido na rua)
 
-### Modelo avulso (downsell — só oferecer se recusar recorrência)
+Esse é o único produto que o vendedor apresenta. Sem opção de recorrência na mesa nesse momento — isso evita a objeção de "vou ter que pagar todo mês" e mantém a decisão simples pro cliente.
 
+- **Valor sugerido:** R$600 para mercado pequeno, R$800 para médio, R$1.000+ para grande porte — negociar pra cima conforme a conversa. *(Ajustar depois de validar com o primeiro fechamento real de 2026; em 2025 o mínimo praticado era R$500.)*
 - Contrato de 30 dias, sem renovação automática
-- Entregáveis reduzidos: criação/atualização pontual da ficha, 10 postagens, orientação de uso pro próprio cliente manter depois
-- Mesmo valor mínimo do modelo recorrência
-- Pagamento: à vista ou parcelado, nunca boleto
+- Entregáveis: criação ou atualização completa da ficha do Google, manutenção ativa durante os 30 dias, resposta de avaliações, cadastro de produtos/serviços, postagens, orientação sobre fotos
+- Pagamento: à vista (Pix) ou parcelado no cartão. Nunca boleto.
+
+### Etapa 2 — Upsell recorrente (vendido só na reunião de resultados, não na rua)
+
+Depois que o projeto de 30 dias termina, Lucas conduz uma reunião de resultados mostrando o antes e depois — o que foi alterado na ficha, evolução das métricas. É nesse momento, com prova concreta na mesa, que entra a oferta de continuidade.
+
+- **Valor:** R$199/mês
+- Argumento: o Google Meu Negócio precisa de manutenção constante pra não perder o ganho que o projeto trouxe — sem continuidade, a ficha volta a ficar desatualizada
+- Entregáveis (a validar com o volume real): manutenção periódica da ficha, resposta de avaliações, postagens de manutenção — ritmo mais leve que os 30 dias iniciais, que foram um push de setup
 
 ### Regra do parcelamento
 
-Nunca oferecer o parcelamento máximo (12x) de cara. Testar com valor menor primeiro e subir conforme a objeção aparecer. Isso preserva margem de negociação e evita ancorar a conversa lá embaixo.
+Nunca oferecer o parcelamento máximo (12x) de cara na etapa 1. Testar com valor menor primeiro e subir conforme a objeção aparecer. Isso preserva margem de negociação e evita ancorar a conversa lá embaixo.
 
 ### Regra de ouro do fechamento
 
@@ -62,7 +66,7 @@ Puxa a ficha atual do estabelecimento no celular e mostra o que está fraco (fot
 "Qual o ticket médio de compra aqui?" Usa a resposta pra mostrar quanto cada cliente novo represents — reforça o retorno do investimento na cabeça do dono antes de falar preço.
 
 **5. Oferta e fechamento**
-Apresenta o valor já parcelado (regra do parcelamento acima) e fecha ali. Se a pessoa quiser recorrência, cobra a primeira parcela na hora. Se recusar recorrência, oferece o modelo avulso.
+Apresenta o valor único do projeto de 30 dias já parcelado (regra do parcelamento acima) e fecha ali. Não entra em recorrência nesse momento — essa conversa fica pra reunião de resultados, depois que o cliente já viu o antes e depois.
 
 **6. Coleta de dados**
 Antes de sair, coleta os dados pro contrato: nome completo, CPF ou CNPJ, telefone pessoal do responsável (não o WhatsApp de atendimento da loja — isso trava follow-up depois), e-mail. Explica os próximos passos: grupo de WhatsApp, envio de contrato, formulário pra acesso à conta do Google.
@@ -95,6 +99,8 @@ Até 3 tentativas de mensagem por WhatsApp **pessoal** do responsável antes de 
 
 Reunião semanal fixa entre Lucas e o vendedor pra revisar prospecções, dúvidas de objeção e ajustar o script com o que aparece em campo. O script não é lei — ele evolui com o feedback de quem está na rua.
 
+**Reunião de resultados (dia 30 de cada projeto fechado):** conduzida pelo Lucas, não pelo vendedor. Mostra o antes e depois da ficha e as métricas que evoluíram no período, e é o gatilho pra oferecer a continuidade recorrente de R$199/mês. Precisa entrar na agenda assim que um projeto fecha — marcar a data de review já no dia da venda, pra não perder o timing.
+
 ---
 
 ## Upsell natural pra tráfego pago
@@ -107,19 +113,28 @@ Upsell adicional possível dentro do próprio produto (pra cliente maduro, não 
 
 ## Checklist de entrega operacional (Matheus)
 
-Por cliente fechado:
+**Fase 1 — Projeto de 30 dias (todo cliente fechado):**
 
 - [ ] Criar ou atualizar a ficha do Google Meu Negócio
 - [ ] Cadastrar produtos/serviços principais
-- [ ] Publicar conforme o plano contratado (20 posts/mês na recorrência, 10 no avulso)
+- [ ] Publicar conforme o plano dos 30 dias
 - [ ] Responder avaliações semanalmente
-- [ ] Acompanhar métricas básicas (visualizações, chamadas, cliques em rota) pra ter dado real pra mostrar no upsell
+- [ ] Acompanhar métricas (visualizações, chamadas, cliques em rota) desde o dia 1 — é esse dado que vira a reunião de resultados e sustenta o upsell
+- [ ] Registrar o "antes" logo no início (print da ficha original) pra ter comparação clara no dia 30
+
+**Fase 2 — Cliente que virou recorrência (R$199/mês):**
+
+- [ ] Manutenção periódica da ficha
+- [ ] Resposta de avaliações
+- [ ] Postagens de manutenção (ritmo mais leve que o push inicial — definir cadência exata quando o volume aparecer)
 
 ---
 
 ## Pendências pra fechar antes de começar a vender
 
-- [ ] Validar o preço sugerido com o primeiro contato real de 2026
+- [ ] Validar o preço da etapa 1 (pagamento único) com o primeiro contato real de 2026
+- [ ] Definir a cadência exata de entrega da fase recorrente (R$199/mês) — quantas postagens, com que frequência
 - [ ] Definir o CRM/planilha de registro (Sistema Raiz, se já suportar, ou planilha simples pra não travar o início)
-- [ ] Contrato formal — recorrência e avulso (levar pro `/juridico` pra gerar as minutas)
-- [ ] Definir dia e horário da weekly de acompanhamento
+- [ ] Contrato formal — projeto de 30 dias e recorrência (levar pro `/juridico` pra gerar as minutas)
+- [ ] Definir dia e horário da weekly de acompanhamento com o vendedor
+- [ ] Criar o processo de agendamento automático da reunião de resultados no dia 30 de cada projeto fechado
