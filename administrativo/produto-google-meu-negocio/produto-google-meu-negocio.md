@@ -68,6 +68,9 @@ Puxa a ficha atual do estabelecimento no celular e mostra o que está fraco (fot
 **5. Oferta e fechamento**
 Apresenta o valor único do projeto de 30 dias já parcelado (regra do parcelamento acima) e fecha ali. Não entra em recorrência nesse momento — essa conversa fica pra reunião de resultados, depois que o cliente já viu o antes e depois.
 
+**5b. Se não fechar na hora, mas o interesse for real: reunião de fechamento remota**
+Nem todo "não fechei" é um "não". Quando a pessoa fica na dúvida ou quer entender melhor antes de decidir, o vendedor não insiste sozinho — marca uma reunião ali mesmo, presencialmente, direto na agenda do Lucas (o vendedor tem acesso pra isso). Lucas entra depois por Google Meet e conduz a venda com a apresentação completa (estrutura: introdução do problema, print da ficha atual do prospect, volume de busca da região como prova, entregáveis, e a oferta parcelada no fechamento). Esse caminho existe porque o vendedor de rua converte mais gente indo direto ao ponto, mas quem tem mais repertório pra tirar dúvida mais a fundo e fechar objeção complexa é o Lucas — dividir assim mantém as duas coisas rodando sem perder venda por falta de aprofundamento.
+
 **6. Coleta de dados**
 Antes de sair, coleta os dados pro contrato: nome completo, CPF ou CNPJ, telefone pessoal do responsável (não o WhatsApp de atendimento da loja — isso trava follow-up depois), e-mail. Explica os próximos passos: grupo de WhatsApp, envio de contrato, formulário pra acesso à conta do Google.
 
@@ -138,3 +141,4 @@ Upsell adicional possível dentro do próprio produto (pra cliente maduro, não 
 - [ ] Contrato formal — projeto de 30 dias e recorrência (levar pro `/juridico` pra gerar as minutas)
 - [ ] Definir dia e horário da weekly de acompanhamento com o vendedor
 - [ ] Criar o processo de agendamento automático da reunião de resultados no dia 30 de cada projeto fechado
+- [ ] Dar ao vendedor (pai do Matheus) acesso à agenda do Lucas pra marcar reunião de fechamento remota direto no local, quando o prospect ficar na dúvida
