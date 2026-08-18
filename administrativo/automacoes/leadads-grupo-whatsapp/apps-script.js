@@ -25,54 +25,72 @@ const COLUNA_EMAIL = 14;       // N — email
 const COLUNA_NOME = 15;        // O — full_name
 const COLUNA_TELEFONE = 16;    // P — phone_number
 
+// Quantas vezes tenta de novo antes de desistir e mandar o e-mail de falha.
+// Existe porque esse erro às vezes é só um engasgo passageiro do Google pra
+// abrir a planilha, não um problema real — vale tentar de novo antes de
+// alarmar (ver e-mail de falha de 18/08/2026, primeira vez que aconteceu).
+const MAX_TENTATIVAS = 3;
+const ESPERA_ENTRE_TENTATIVAS_MS = 5000;
+
 function enviarWhatsappNovoLead(e) {
-  try {
-    const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(NOME_ABA);
-    const linhaAtual = sheet.getLastRow();
-
-    const props = PropertiesService.getScriptProperties();
-    const ultimaLinhaWhatsapp = Number(props.getProperty("ultimaLinhaWhatsapp") || 0);
-
-    if (linhaAtual <= ultimaLinhaWhatsapp) return; // não cresceu, não é lead novo
-
-    // Processa todas as linhas novas desde a última checada (não só a última)
-    for (let linha = ultimaLinhaWhatsapp + 1; linha <= linhaAtual; linha++) {
-      const nome = sheet.getRange(linha, COLUNA_NOME).getValue();
-      const telefoneRaw = sheet.getRange(linha, COLUNA_TELEFONE).getValue();
-      const email = sheet.getRange(linha, COLUNA_EMAIL).getValue();
-      const instagram = sheet.getRange(linha, COLUNA_INSTAGRAM).getValue();
-      const campanha = sheet.getRange(linha, COLUNA_CAMPANHA).getValue();
-      const conjunto = sheet.getRange(linha, COLUNA_CONJUNTO).getValue();
-      const anuncio = sheet.getRange(linha, COLUNA_ANUNCIO).getValue();
-      const horarioRaw = sheet.getRange(linha, COLUNA_HORARIO).getValue();
-
-      if (!nome && !telefoneRaw) continue; // linha vazia, pula
-
-      const telefone = String(telefoneRaw).replace(/[^\d]/g, "");
-      const horario = formatarData(horarioRaw);
-
-      const mensagem =
-        "🚨 *Lead novo!*\n\n" +
-        "*Nome:* " + nome + "\n" +
-        "*Telefone:* " + telefone + "\n" +
-        "*E-mail:* " + email + "\n" +
-        "*Instagram da loja:* " + instagram + "\n\n" +
-        "*Campanha:* " + campanha + "\n" +
-        "*Conjunto de anúncio:* " + conjunto + "\n" +
-        "*Anúncio:* " + anuncio + "\n" +
-        "*Preenchido em:* " + horario;
-
-      enviarMensagemWhatsapp(mensagem, props);
+  for (let tentativa = 1; tentativa <= MAX_TENTATIVAS; tentativa++) {
+    try {
+      processarLeadsNovos();
+      return; // deu certo, não precisa tentar de novo
+    } catch (erro) {
+      if (tentativa < MAX_TENTATIVAS) {
+        Utilities.sleep(ESPERA_ENTRE_TENTATIVAS_MS);
+        continue;
+      }
+      MailApp.sendEmail({
+        to: "assessoriaraizz@gmail.com",
+        subject: "⚠️ Falha na notificação de lead (WhatsApp)",
+        body: "A automação de WhatsApp de leads novos falhou depois de " + MAX_TENTATIVAS + " tentativas.\n\nErro: " + erro.message + "\n\nStack: " + erro.stack
+      });
     }
-
-    props.setProperty("ultimaLinhaWhatsapp", linhaAtual.toString());
-  } catch (erro) {
-    MailApp.sendEmail({
-      to: "assessoriaraizz@gmail.com",
-      subject: "⚠️ Falha na notificação de lead (WhatsApp)",
-      body: "A automação de WhatsApp de leads novos falhou.\n\nErro: " + erro.message + "\n\nStack: " + erro.stack
-    });
   }
+}
+
+function processarLeadsNovos() {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(NOME_ABA);
+  const linhaAtual = sheet.getLastRow();
+
+  const props = PropertiesService.getScriptProperties();
+  const ultimaLinhaWhatsapp = Number(props.getProperty("ultimaLinhaWhatsapp") || 0);
+
+  if (linhaAtual <= ultimaLinhaWhatsapp) return; // não cresceu, não é lead novo
+
+  // Processa todas as linhas novas desde a última checada (não só a última)
+  for (let linha = ultimaLinhaWhatsapp + 1; linha <= linhaAtual; linha++) {
+    const nome = sheet.getRange(linha, COLUNA_NOME).getValue();
+    const telefoneRaw = sheet.getRange(linha, COLUNA_TELEFONE).getValue();
+    const email = sheet.getRange(linha, COLUNA_EMAIL).getValue();
+    const instagram = sheet.getRange(linha, COLUNA_INSTAGRAM).getValue();
+    const campanha = sheet.getRange(linha, COLUNA_CAMPANHA).getValue();
+    const conjunto = sheet.getRange(linha, COLUNA_CONJUNTO).getValue();
+    const anuncio = sheet.getRange(linha, COLUNA_ANUNCIO).getValue();
+    const horarioRaw = sheet.getRange(linha, COLUNA_HORARIO).getValue();
+
+    if (!nome && !telefoneRaw) continue; // linha vazia, pula
+
+    const telefone = String(telefoneRaw).replace(/[^\d]/g, "");
+    const horario = formatarData(horarioRaw);
+
+    const mensagem =
+      "🚨 *Lead novo!*\n\n" +
+      "*Nome:* " + nome + "\n" +
+      "*Telefone:* " + telefone + "\n" +
+      "*E-mail:* " + email + "\n" +
+      "*Instagram da loja:* " + instagram + "\n\n" +
+      "*Campanha:* " + campanha + "\n" +
+      "*Conjunto de anúncio:* " + conjunto + "\n" +
+      "*Anúncio:* " + anuncio + "\n" +
+      "*Preenchido em:* " + horario;
+
+    enviarMensagemWhatsapp(mensagem, props);
+  }
+
+  props.setProperty("ultimaLinhaWhatsapp", linhaAtual.toString());
 }
 
 function formatarData(valor) {
