@@ -166,6 +166,14 @@
   .grid-6 .art{ aspect-ratio:4/5; }
   @media (max-width:640px){ .grid-6{ grid-template-columns:repeat(2,1fr); } }
 
+  /* real result cards */
+  .result-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; margin-top:36px; text-align:left; }
+  .result-card{ background:var(--surface); border:1px solid var(--surface-line); border-radius:10px; padding:20px 22px; }
+  .result-card .model{ font-weight:600; font-size:1rem; margin-bottom:8px; color:var(--ink); }
+  .result-card .meta{ font-family:var(--font-mono); font-size:.76rem; color:#7A857E; display:flex; flex-direction:column; gap:2px; margin-bottom:12px; }
+  .result-card .sale-label{ font-family:var(--font-mono); font-size:.7rem; letter-spacing:.06em; text-transform:uppercase; color:#8B9A92; display:block; margin-bottom:2px; }
+  .result-card .sale{ font-family:var(--font-mono); font-weight:600; font-variant-numeric:tabular-nums; color:var(--accent-strong); font-size:1.15rem; }
+
   /* rumination */
   .callout{
     margin-top:36px;
@@ -345,16 +353,19 @@
 <section class="band-paper">
   <div class="container container--narrow center">
     <div class="kicker">03 · Resultados reais</div>
-    <h2 class="h-section center">Lojas que aplicaram esse método e passaram a ter mais visita — e mais venda</h2>
+    <h2 class="h-section center">Pouco investimento, poucas mensagens, carro vendido</h2>
+    <p style="margin-top:14px; max-width:480px; margin-left:auto; margin-right:auto; color:#5B655F;">Cada card mostra o que foi investido em anúncio, quantas mensagens rolaram no WhatsApp e o valor da venda fechada.</p>
   </div>
-  <div class="container" style="margin-top:36px; max-width:760px;">
-    <div class="grid-6">
-      <div class="art" role="img" aria-label="print de resultado"><span>print de depoimento</span></div>
-      <div class="art" role="img" aria-label="print de resultado"><span>print de depoimento</span></div>
-      <div class="art" role="img" aria-label="print de resultado"><span>print de depoimento</span></div>
-      <div class="art" role="img" aria-label="print de resultado"><span>print de depoimento</span></div>
-      <div class="art" role="img" aria-label="print de resultado"><span>print de depoimento</span></div>
-      <div class="art" role="img" aria-label="print de resultado"><span>print de depoimento</span></div>
+  <div class="container" style="margin-top:0; max-width:820px;">
+    <div class="result-grid">
+      <div class="result-card"><div class="model">Corolla XLI</div><div class="meta"><span>Investimento: R$ 114,10</span><span>11 mensagens no WhatsApp</span></div><span class="sale-label">Venda</span><div class="sale">R$ 60.800,00</div></div>
+      <div class="result-card"><div class="model">Livina</div><div class="meta"><span>Investimento: R$ 107,67</span><span>28 mensagens no WhatsApp</span></div><span class="sale-label">Venda</span><div class="sale">R$ 42.000,00</div></div>
+      <div class="result-card"><div class="model">Celta</div><div class="meta"><span>Investimento: R$ 237,77</span><span>40 mensagens no WhatsApp</span></div><span class="sale-label">Venda</span><div class="sale">R$ 29.900,00</div></div>
+      <div class="result-card"><div class="model">Captur</div><div class="meta"><span>Investimento: R$ 101,36</span><span>4 mensagens no WhatsApp</span></div><span class="sale-label">Venda</span><div class="sale">R$ 72.900,00</div></div>
+      <div class="result-card"><div class="model">C3 Exclusive</div><div class="meta"><span>Investimento: R$ 102,78</span><span>7 mensagens no WhatsApp</span></div><span class="sale-label">Venda</span><div class="sale">R$ 44.800,00</div></div>
+      <div class="result-card"><div class="model">Celta LT 2013</div><div class="meta"><span>Vendido por lead</span></div><span class="sale-label">Venda</span><div class="sale">R$ 32.500,00</div></div>
+      <div class="result-card"><div class="model">Focus SE 2016</div><div class="meta"><span>Vendido por lead</span></div><span class="sale-label">Venda</span><div class="sale">R$ 62.800,00</div></div>
+      <div class="result-card"><div class="model">Veículo vendido</div><div class="meta"><span>Investimento: R$ 381,06</span><span>16 mensagens no WhatsApp</span></div><span class="sale-label">Venda</span><div class="sale">R$ 91.990,00</div></div>
     </div>
   </div>
 </section>
