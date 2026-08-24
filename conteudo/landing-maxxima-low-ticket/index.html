@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Modelo Low Ticket</title>
+<title>Script Visita Garantida</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -155,6 +155,12 @@
   }
   .hero .art{ margin:44px auto 0; max-width:420px; aspect-ratio:4/3; }
 
+  /* funnel comparison */
+  .funnel{ display:flex; flex-direction:column; gap:12px; margin-top:40px; max-width:480px; margin-left:auto; margin-right:auto; }
+  .funnel-row{ display:grid; grid-template-columns:1fr auto; align-items:center; gap:16px; }
+  .funnel-bar{ height:42px; border-radius:6px; display:flex; align-items:center; padding:0 18px; color:#fff; font-family:var(--font-mono); font-size:.8rem; font-weight:600; letter-spacing:.02em; }
+  .funnel-count{ font-family:var(--font-mono); font-variant-numeric:tabular-nums; font-weight:600; color:var(--ink); font-size:1.05rem; }
+
   /* testimonials grid */
   .grid-6{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
   .grid-6 .art{ aspect-ratio:4/5; }
@@ -299,52 +305,56 @@
 <body>
 
 <!--
-  MODELO DE PÁGINA DE VENDAS — LOW TICKET
+  SCRIPT VISITA GARANTIDA — PÁGINA DE VENDAS
   ----------------------------------------
-  Este arquivo é uma réplica, em HTML puro (sem WordPress/Elementor), do
-  template "Template Oficial MAXXIMA". Estrutura e ordem das seções foram
-  mantidas; as imagens do template original foram trocadas por blocos de
-  rascunho (retângulos com legenda) porque apontavam para o site de outra
-  pessoa e podiam sumir a qualquer momento.
-
-  O QUE EDITAR: procure por texto marcado assim -> {entre chaves, com fundo
-  amarelado}. Isso é espaço reservado esperando o conteúdo real do seu
-  produto. Troque também os blocos de rascunho pelas suas fotos/mockups.
+  Texto já preenchido com o conteúdo real do produto (baseado no
+  treinamento comercial da Assessoria Raiz pra lojas de veículos).
+  O que ainda falta é só visual: troque os retângulos de rascunho
+  (marcados "mockup", "print de resultado", "foto", "logo") pelas
+  imagens reais — print de resultado das lojas clientes (anonimizado
+  ou com autorização), foto do Lucas, mockup dos módulos e a logo.
 -->
 
 <!-- 01 · ABERTURA -->
 <section class="band-paper hero">
   <div class="container container--narrow">
     <div class="kicker">01 · Abertura</div>
-    <div class="art brand" aria-hidden="true"><span>logo / marca</span></div>
-    <h1>Descubra como <span class="ph">{promessa principal}</span> em <span class="ph">{tempo específico}</span>, mesmo que <span class="ph">{objeção ou dificuldade}</span>.</h1>
-    <div class="art" role="img" aria-label="Espaço para mockup do produto"><span>mockup do produto<br>(ebook / checklist / curso)</span></div>
+    <div class="art brand" aria-hidden="true"><span>logo</span></div>
+    <h1>Descubra como transformar conversa de WhatsApp em visita marcada na loja, em até 5 dias de cadência, mesmo que o cliente já tenha sumido depois de perguntar o preço.</h1>
+    <div class="art" role="img" aria-label="Espaço para mockup do produto"><span>mockup do Script<br>Visita Garantida</span></div>
   </div>
 </section>
 
-<!-- 02 · PROVA VISUAL -->
+<!-- 02 · O ERRO MAIS COMUM -->
 <section class="band-surface">
   <div class="container container--narrow center">
-    <div class="kicker">02 · Prova visual</div>
-    <h2 class="h-section center">Antes e depois de quem já aplicou o <span class="ph">{nome do produto}</span></h2>
-    <div class="art" style="margin-top:32px; aspect-ratio:16/8;" role="img" aria-label="Espaço para imagem de antes e depois"><span>imagem de antes / depois</span></div>
+    <div class="kicker">02 · O erro mais comum</div>
+    <h2 class="h-section center">O funil que a maioria das lojas usa — e que trava a venda</h2>
+    <p style="margin-top:16px; max-width:480px; margin-left:auto; margin-right:auto; color:#5B655F;">Lead chega no WhatsApp, negocia no WhatsApp, e a venda depende de sorte. O problema é que <b>WhatsApp não é canal de venda, é canal de agendamento.</b></p>
+    <div class="funnel" role="img" aria-label="Funil comercial: de 100 leads, 30 agendam visita, 15 comparecem e de 3 a 5 compram">
+      <div class="funnel-row"><div class="funnel-bar" style="width:100%; background:var(--accent-strong);">Novos leads</div><div class="funnel-count">100</div></div>
+      <div class="funnel-row"><div class="funnel-bar" style="width:66%; background:var(--accent);">Visita agendada</div><div class="funnel-count">30</div></div>
+      <div class="funnel-row"><div class="funnel-bar" style="width:44%; background:#4F9077;">Visita realizada</div><div class="funnel-count">15</div></div>
+      <div class="funnel-row"><div class="funnel-bar" style="width:20%; background:#79AF99;">Vendas</div><div class="funnel-count">3 a 5</div></div>
+    </div>
+    <p style="margin-top:24px; font-family:var(--font-display); font-size:1.15rem; font-weight:600;">Visita agendada e visita realizada são as duas métricas que decidem se você vende ou não.</p>
   </div>
 </section>
 
-<!-- 03 · DEPOIMENTOS -->
+<!-- 03 · RESULTADOS REAIS -->
 <section class="band-paper">
   <div class="container container--narrow center">
-    <div class="kicker">03 · Depoimentos</div>
-    <h2 class="h-section center">Veja quem já <span class="ph">{situação inicial negativa}</span> e, depois do <span class="ph">{nome do produto}</span>, conseguiu <span class="ph">{resultado positivo desejado}</span></h2>
+    <div class="kicker">03 · Resultados reais</div>
+    <h2 class="h-section center">Lojas que aplicaram esse método e passaram a ter mais visita — e mais venda</h2>
   </div>
   <div class="container" style="margin-top:36px; max-width:760px;">
     <div class="grid-6">
-      <div class="art" role="img" aria-label="Print de depoimento"><span>print de depoimento</span></div>
-      <div class="art" role="img" aria-label="Print de depoimento"><span>print de depoimento</span></div>
-      <div class="art" role="img" aria-label="Print de depoimento"><span>print de depoimento</span></div>
-      <div class="art" role="img" aria-label="Print de depoimento"><span>print de depoimento</span></div>
-      <div class="art" role="img" aria-label="Print de depoimento"><span>print de depoimento</span></div>
-      <div class="art" role="img" aria-label="Print de depoimento"><span>print de depoimento</span></div>
+      <div class="art" role="img" aria-label="print de resultado"><span>print de depoimento</span></div>
+      <div class="art" role="img" aria-label="print de resultado"><span>print de depoimento</span></div>
+      <div class="art" role="img" aria-label="print de resultado"><span>print de depoimento</span></div>
+      <div class="art" role="img" aria-label="print de resultado"><span>print de depoimento</span></div>
+      <div class="art" role="img" aria-label="print de resultado"><span>print de depoimento</span></div>
+      <div class="art" role="img" aria-label="print de resultado"><span>print de depoimento</span></div>
     </div>
   </div>
 </section>
@@ -352,21 +362,21 @@
 <!-- 04 · A DOR -->
 <section class="band-surface">
   <div class="container container--narrow center">
-    <div class="kicker">04 · A dor de quem lê</div>
-    <h2 class="h-section center">Você não aguenta mais <span class="ph">{ação repetitiva / dor cotidiana}</span> e ver sempre <span class="ph">{resultado frustrante}</span>.</h2>
+    <div class="kicker">04 · A dor de quem vende carro</div>
+    <h2 class="h-section center">Você responde rápido, manda foto, vídeo, ficha do carro… e mesmo assim o cliente some.</h2>
     <p style="margin-top:20px; font-weight:600;">Por isso, você pensa:</p>
     <p style="margin-top:18px; font-size:1.35rem; font-family:var(--font-display); font-weight:600;">Eu sei…</p>
-    <p style="margin-top:10px; max-width:520px; margin-left:auto; margin-right:auto; font-size:1.05rem; color:#4A544D;">Você não aguenta mais <span class="ph">{dor específica que a persona vive}</span>.</p>
+    <p style="margin-top:10px; max-width:520px; margin-left:auto; margin-right:auto; font-size:1.05rem; color:#4A544D;">Será que eu tô virando só um catálogo de carro pros outros pesquisarem preço?</p>
 
     <div class="callout">
       <div class="art" role="img" aria-label="Ilustração de reflexão"><span>ilustração</span></div>
       <div>
         <h3>Estou certo?</h3>
-        <p>Se você pudesse ter <span class="ph">{resultado ou benefício principal}</span>, sem <span class="ph">{objeção maior}</span>,</p>
+        <p>Se você pudesse fazer esse mesmo lead sair da tela do celular e vir até a loja, sem parecer desesperado e sem precisar baixar o preço,</p>
       </div>
     </div>
 
-    <p style="margin-top:32px; font-size:1.15rem; max-width:480px; margin-left:auto; margin-right:auto;">Se a sua resposta for <b>"SIM"</b>, o <span class="ph">{nome do produto}</span> é para você.</p>
+    <p style="margin-top:32px; font-size:1.15rem; max-width:480px; margin-left:auto; margin-right:auto;">Se a sua resposta for <b>"SIM"</b>, o Script Visita Garantida é para você.</p>
   </div>
 </section>
 
@@ -374,30 +384,38 @@
 <section class="band-dark">
   <div class="container container--narrow center">
     <div class="kicker">05 · Como funciona</div>
-    <h2 class="h-section center">Esses são os 3 passos para <span class="ph">{resultado principal}</span></h2>
+    <h2 class="h-section center">Esses são os 4 pilares que tiram o cliente do WhatsApp e levam ele pra loja</h2>
     <div class="steps">
       <div class="step-card">
         <div class="art" aria-hidden="true"><span>ícone</span></div>
         <div>
-          <div class="step-num">Passo 1</div>
-          <h3><span class="ph">{insira o passo 1}</span></h3>
-          <p><span class="ph">{breve descrição sobre o passo 1}</span></p>
+          <div class="step-num">Pilar 1</div>
+          <h3>Abordagem e rapport</h3>
+          <p>Entenda o real interesse do cliente e responda rápido com a ficha do carro, sem deixar a conversa esfriar.</p>
         </div>
       </div>
       <div class="step-card">
         <div class="art" aria-hidden="true"><span>ícone</span></div>
         <div>
-          <div class="step-num">Passo 2</div>
-          <h3><span class="ph">{insira o passo 2}</span></h3>
-          <p><span class="ph">{breve descrição sobre o passo 2}</span></p>
+          <div class="step-num">Pilar 2</div>
+          <h3>Troca e condições</h3>
+          <p>Descubra se ele tem carro pra dar de entrada e o real potencial de compra, antes de falar em preço.</p>
         </div>
       </div>
       <div class="step-card">
         <div class="art" aria-hidden="true"><span>ícone</span></div>
         <div>
-          <div class="step-num">Passo 3</div>
-          <h3><span class="ph">{insira o passo 3}</span></h3>
-          <p><span class="ph">{breve descrição sobre o passo 3}</span></p>
+          <div class="step-num">Pilar 3</div>
+          <h3>Forma de pagamento</h3>
+          <p>Saiba se é à vista ou financiado, sem cair na armadilha de mandar simulação pelo WhatsApp.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="art" aria-hidden="true"><span>ícone</span></div>
+        <div>
+          <div class="step-num">Pilar 4</div>
+          <h3>Agendamento de visita</h3>
+          <p>Tire o cliente da indecisão oferecendo duas opções de horário, nunca uma pergunta aberta.</p>
         </div>
       </div>
     </div>
@@ -408,12 +426,12 @@
 <section class="band-surface">
   <div class="container container--narrow center">
     <div class="kicker">06 · Benefícios</div>
-    <h2 class="h-section center">Com esse passo a passo você vai:</h2>
+    <h2 class="h-section center">Com esse método você vai:</h2>
     <div class="grid-2">
-      <div class="benefit-card"><div class="art" aria-hidden="true"><span>img</span></div><div><h3>Título</h3><p>Benefício 1 — <span class="ph">{adicione a descrição}</span></p></div></div>
-      <div class="benefit-card"><div class="art" aria-hidden="true"><span>img</span></div><div><h3>Título</h3><p>Benefício 2 — <span class="ph">{adicione a descrição}</span></p></div></div>
-      <div class="benefit-card"><div class="art" aria-hidden="true"><span>img</span></div><div><h3>Título</h3><p>Benefício 3 — <span class="ph">{adicione a descrição}</span></p></div></div>
-      <div class="benefit-card"><div class="art" aria-hidden="true"><span>img</span></div><div><h3>Título</h3><p>Benefício 4 — <span class="ph">{adicione a descrição}</span></p></div></div>
+      <div class="benefit-card"><div class="art" aria-hidden="true"><span>img</span></div><div><h3>Saber em quem focar</h3><p>Identificar em segundos os 4 perfis de cliente e parar de perder tempo com quem nunca vai comprar.</p></div></div>
+      <div class="benefit-card"><div class="art" aria-hidden="true"><span>img</span></div><div><h3>Sair do "mar vermelho"</h3><p>Deixar de disputar atenção com concorrente, família e grupo de amigos dentro do WhatsApp do cliente.</p></div></div>
+      <div class="benefit-card"><div class="art" aria-hidden="true"><span>img</span></div><div><h3>Aumentar visita realizada</h3><p>Ir além de agendar: garantir que o cliente realmente apareça na loja no dia combinado.</p></div></div>
+      <div class="benefit-card"><div class="art" aria-hidden="true"><span>img</span></div><div><h3>Vender sem baixar preço</h3><p>Negociar com o cliente na sua frente, onde a chance de fechar negócio é muito maior.</p></div></div>
     </div>
   </div>
 </section>
@@ -423,25 +441,25 @@
   <div class="container container--narrow center">
     <div class="kicker">07 · O que vem dentro</div>
     <p style="font-family:var(--font-display); font-size:1.3rem; font-weight:600;">E tem mais!</p>
-    <h2 class="h-section center" style="margin-top:6px;">Veja tudo que você vai receber com o <span class="ph">{nome do seu produto}</span></h2>
+    <h2 class="h-section center" style="margin-top:6px;">Veja tudo que você vai receber no Script Visita Garantida</h2>
   </div>
   <div class="container" style="margin-top:20px;">
     <div class="rows">
       <div class="row-card">
-        <div class="art" role="img" aria-label="Mockup do checklist"><span>mockup</span></div>
-        <div><h3>Checklist <span class="ph">{promessa principal}</span></h3><p>Um checklist de ações <span class="ph">{rápidas / simples / práticas}</span> que torna quase impossível você não <span class="ph">{resultado desejado}</span> em <span class="ph">{tempo específico}</span>.</p></div>
+        <div class="art" role="img" aria-label="Mockup do módulo 1"><span>mockup</span></div>
+        <div><h3>Módulo 1 — Os 4 perfis de cliente</h3><p>Aprenda a identificar em segundos quem é Engano, Decidido, Empoderado ou Curioso, e onde vale a pena colocar sua energia.</p></div>
       </div>
       <div class="row-card rev">
-        <div class="art" role="img" aria-label="Mockup do template de exercícios"><span>mockup</span></div>
-        <div><h3>Template de exercícios práticos para <span class="ph">{resultado}</span></h3><p>Um passo a passo para você <span class="ph">{ação principal}</span>, ou seja, <span class="ph">{explicação curta}</span>. Você vai saber exatamente como <span class="ph">{transformação/benefício principal}</span>.</p></div>
+        <div class="art" role="img" aria-label="Mockup do módulo 2"><span>mockup</span></div>
+        <div><h3>Módulo 2 — O funil que funciona</h3><p>A virada de chave: parar de negociar dentro do WhatsApp e usar ele só pra marcar a visita, onde a venda de verdade acontece.</p></div>
       </div>
       <div class="row-card">
-        <div class="art" role="img" aria-label="Mockup do guia de ações"><span>mockup</span></div>
-        <div><h3>Guia de ações para <span class="ph">{resultado}</span></h3><p>Guia completo com exercícios <span class="ph">{simples / rápidos / poderosos}</span> para aplicar <span class="ph">{ainda hoje / em 7 dias}</span> e <span class="ph">{benefício principal}</span>, sem precisar <span class="ph">{objeção comum}</span>.</p></div>
+        <div class="art" role="img" aria-label="Mockup do módulo 3"><span>mockup</span></div>
+        <div><h3>Módulo 3 — O script dos 4 pilares</h3><p>Falas prontas pra copiar: abordagem, troca, forma de pagamento e agendamento, com exemplo real de conversa.</p></div>
       </div>
       <div class="row-card rev">
-        <div class="art" role="img" aria-label="Mockup da lista de erros"><span>mockup</span></div>
-        <div><h3>Lista de erros que te impedem de <span class="ph">{alcançar o resultado esperado}</span></h3><p>Uma lista com os <span class="ph">{número}</span> erros mais comuns que acontecem quando <span class="ph">{situação/dor da persona}</span>.</p></div>
+        <div class="art" role="img" aria-label="Mockup do módulo 4"><span>mockup</span></div>
+        <div><h3>Módulo 4 — A cadência de 5 dias</h3><p>O passo a passo de quantas vezes e por quais canais tentar contato, sem parecer chato e sem deixar o lead esfriar.</p></div>
       </div>
     </div>
   </div>
@@ -457,16 +475,12 @@
   <div class="container" style="margin-top:20px;">
     <div class="rows">
       <div class="row-card">
-        <div class="art" role="img" aria-label="Mockup do manual"><span>mockup</span></div>
-        <div><h3>Manual da <span class="ph">{transformação}</span></h3><p>Neste manual você recebe <span class="ph">{dicas práticas / estratégias simples}</span> para <span class="ph">{transformação desejada}</span> e nunca mais <span class="ph">{dor que a persona quer evitar}</span>.</p></div>
+        <div class="art" role="img" aria-label="Mockup do bônus 1"><span>mockup</span></div>
+        <div><h3>Bônus 1 — Quebra de objeção do financiamento online</h3><p>A fala pronta pra usar quando o cliente insiste em simulação pelo WhatsApp, sem perder a venda e trazendo ele pra loja.</p></div>
       </div>
       <div class="row-card rev">
-        <div class="art" role="img" aria-label="Mockup do calendário"><span>mockup</span></div>
-        <div><h3>Calendário do <span class="ph">{benefício principal}</span></h3><p>O calendário tem toda a programação diária, para você <span class="ph">{benefício/resultado principal}</span> em <span class="ph">{tempo específico}</span>.</p></div>
-      </div>
-      <div class="row-card">
-        <div class="art" role="img" aria-label="Mockup do protocolo"><span>mockup</span></div>
-        <div><h3>Protocolo para <span class="ph">{promessa principal}</span></h3><p>Um passo a passo prático e comprovado para você <span class="ph">{transformação/resultado principal}</span>, mesmo que <span class="ph">{objeção/dificuldade comum}</span>.</p></div>
+        <div class="art" role="img" aria-label="Mockup do bônus 2"><span>mockup</span></div>
+        <div><h3>Bônus 2 — Checklist de mensagem que vende</h3><p>As boas práticas de resposta (nome, agilidade, sem áudio longo, pergunta no fim de cada mensagem) pra aplicar hoje mesmo.</p></div>
       </div>
     </div>
   </div>
@@ -476,20 +490,20 @@
 <section class="band-dark">
   <div class="container container--narrow">
     <div class="kicker center">09 · Para quem é</div>
-    <h2 class="h-section center">O <span class="ph">{nome do seu produto}</span> é para você que:</h2>
+    <h2 class="h-section center">O Script Visita Garantida é para você que:</h2>
     <div class="who-grid">
       <ul class="checklist">
-        <li><svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#7FCBAB" stroke-width="1.5"/><path d="M7 12.5l3 3 7-7" stroke="#7FCBAB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ph">{desejo ou objetivo que a persona tem}</span></li>
-        <li><svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#7FCBAB" stroke-width="1.5"/><path d="M7 12.5l3 3 7-7" stroke="#7FCBAB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ph">{dor ou frustração que a persona enfrenta}</span></li>
-        <li><svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#7FCBAB" stroke-width="1.5"/><path d="M7 12.5l3 3 7-7" stroke="#7FCBAB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ph">{limitação comum que atrapalha}</span></li>
-        <li><svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#7FCBAB" stroke-width="1.5"/><path d="M7 12.5l3 3 7-7" stroke="#7FCBAB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ph">{erro ou perda de dinheiro que costuma acontecer}</span></li>
-        <li><svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#7FCBAB" stroke-width="1.5"/><path d="M7 12.5l3 3 7-7" stroke="#7FCBAB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ph">{promessa clara de benefício desejado}</span></li>
-        <li><svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#7FCBAB" stroke-width="1.5"/><path d="M7 12.5l3 3 7-7" stroke="#7FCBAB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ph">{segmento de pessoas que se encaixa no produto}</span></li>
+        <li><svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#7FCBAB" stroke-width="1.5"/><path d="M7 12.5l3 3 7-7" stroke="#7FCBAB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Sente que o WhatsApp tá cheio de conversa, mas a loja continua vazia</li>
+        <li><svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#7FCBAB" stroke-width="1.5"/><path d="M7 12.5l3 3 7-7" stroke="#7FCBAB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Já perdeu venda que "estava praticamente fechada" porque o cliente sumiu antes de vir na loja</li>
+        <li><svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#7FCBAB" stroke-width="1.5"/><path d="M7 12.5l3 3 7-7" stroke="#7FCBAB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Não sabe diferenciar comprador de verdade de curioso pesquisando preço</li>
+        <li><svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#7FCBAB" stroke-width="1.5"/><path d="M7 12.5l3 3 7-7" stroke="#7FCBAB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Fica sem graça de insistir com o lead, com medo de parecer desesperado</li>
+        <li><svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#7FCBAB" stroke-width="1.5"/><path d="M7 12.5l3 3 7-7" stroke="#7FCBAB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Quer aumentar o número de visitas na loja, não só de conversa no WhatsApp</li>
+        <li><svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#7FCBAB" stroke-width="1.5"/><path d="M7 12.5l3 3 7-7" stroke="#7FCBAB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Quer parar de depender de baixar preço pra fechar negócio</li>
       </ul>
       <div class="art" role="img" aria-label="Ilustração de identificação" style="aspect-ratio:4/5;"><span>ilustração</span></div>
     </div>
     <p class="center" style="margin-top:40px; font-family:var(--font-display); font-size:1.25rem; font-weight:600; color:var(--text-on-dark);">Enfim…</p>
-    <p class="center" style="margin-top:10px; font-size:1.15rem; max-width:480px; margin-left:auto; margin-right:auto; color:var(--text-on-dark);">Se você quer <span class="ph">{desejo da persona}</span>… o <span class="ph">{nome do seu produto}</span> é para você!</p>
+    <p class="center" style="margin-top:10px; font-size:1.15rem; max-width:480px; margin-left:auto; margin-right:auto; color:var(--text-on-dark);">Se você quer transformar conversa em visita e visita em venda… o Script Visita Garantida é para você!</p>
   </div>
 </section>
 
@@ -498,26 +512,26 @@
   <div class="container container--narrow center">
     <div class="kicker">10 · A oferta</div>
     <p style="font-family:var(--font-display); font-size:1.3rem; font-weight:600;">Recapitulando…</p>
-    <h2 class="h-section center" style="margin-top:6px;">Veja tudo que você vai receber no <span class="ph">{nome do produto}</span></h2>
+    <h2 class="h-section center" style="margin-top:6px;">Veja tudo que você vai receber no Script Visita Garantida</h2>
 
     <div class="ledger">
-      <div class="ledger-row"><span class="label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5L20 6" stroke="#1F6F54" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ph">{entregável 1}</span></span><span class="fill"></span><span class="amount">R$ 147,00</span></div>
-      <div class="ledger-row"><span class="label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5L20 6" stroke="#1F6F54" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ph">{entregável 2}</span></span><span class="fill"></span><span class="amount">R$ 147,00</span></div>
-      <div class="ledger-row"><span class="label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5L20 6" stroke="#1F6F54" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ph">{entregável 3}</span></span><span class="fill"></span><span class="amount">R$ 147,00</span></div>
-      <div class="ledger-row"><span class="label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5L20 6" stroke="#1F6F54" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ph">{entregável 4}</span></span><span class="fill"></span><span class="amount">R$ 147,00</span></div>
-      <div class="ledger-row"><span class="label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5L20 6" stroke="#1F6F54" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ph">{bônus 1}</span></span><span class="fill"></span><span class="amount">R$ 97,00</span></div>
-      <div class="ledger-row"><span class="label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5L20 6" stroke="#1F6F54" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ph">{bônus 2}</span></span><span class="fill"></span><span class="amount">R$ 97,00</span></div>
-      <div class="ledger-total"><span>Tudo isso deveria custar</span><span class="amount">R$ 782,00</span></div>
+      <div class="ledger-row"><span class="label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5L20 6" stroke="#1F6F54" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Módulo 1 — Os 4 perfis de cliente</span><span class="fill"></span><span class="amount">R$ 97,00</span></div>
+      <div class="ledger-row"><span class="label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5L20 6" stroke="#1F6F54" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Módulo 2 — O funil que funciona</span><span class="fill"></span><span class="amount">R$ 67,00</span></div>
+      <div class="ledger-row"><span class="label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5L20 6" stroke="#1F6F54" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Módulo 3 — O script dos 4 pilares</span><span class="fill"></span><span class="amount">R$ 197,00</span></div>
+      <div class="ledger-row"><span class="label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5L20 6" stroke="#1F6F54" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Módulo 4 — A cadência de 5 dias</span><span class="fill"></span><span class="amount">R$ 97,00</span></div>
+      <div class="ledger-row"><span class="label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5L20 6" stroke="#1F6F54" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Bônus 1 — Quebra de objeção do financiamento</span><span class="fill"></span><span class="amount">R$ 47,00</span></div>
+      <div class="ledger-row"><span class="label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5L20 6" stroke="#1F6F54" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Bônus 2 — Checklist de mensagem que vende</span><span class="fill"></span><span class="amount">R$ 47,00</span></div>
+      <div class="ledger-total"><span>Tudo isso deveria custar</span><span class="amount">R$ 552,00</span></div>
     </div>
 
-    <p style="margin-top:30px; font-size:1.05rem;">Mas só hoje você pode ter acesso ao <span class="ph">{nome do produto}</span> por um valor muito mais acessível.</p>
+    <p style="margin-top:30px; font-size:1.05rem;">Mas só hoje você pode ter acesso ao Script Visita Garantida por um valor muito mais acessível.</p>
 
     <div class="price-card">
       <div class="art" role="img" aria-label="Stack de produto" style="aspect-ratio:16/9; margin-bottom:22px;"><span>stack do produto</span></div>
       <div class="eyebrow">Por apenas</div>
       <div class="big">9x de R$ 8,80</div>
       <div class="cash">ou R$ 67,00 à vista</div>
-      <a class="btn btn--buy" href="#oferta">Quero comprar agora</a>
+      <a class="btn btn--buy" href="#oferta">Quero o Script Visita Garantida</a>
     </div>
   </div>
 </section>
@@ -538,7 +552,7 @@
       </div>
       <div class="benefit-card" style="flex-direction:column; text-align:center; align-items:center;">
         <div class="art" aria-hidden="true"><span>check</span></div>
-        <div><h3>Tudo pronto!</h3><p>Agora é só aplicar o <span class="ph">{nome do produto}</span> e <span class="ph">{reforçar a promessa}</span>.</p></div>
+        <div><h3>Tudo pronto!</h3><p>Agora é só aplicar o Script Visita Garantida e transformar conversa em visita marcada.</p></div>
       </div>
     </div>
     <style>.band-surface .grid-2{ margin-top:36px; }</style>
@@ -552,9 +566,9 @@
     <div class="authority" style="margin-top:24px;">
       <div class="art" role="img" aria-label="Foto do autor" aria-hidden="false"><span>foto</span></div>
       <div>
-        <h3><span class="ph">{seu nome}</span></h3>
-        <div class="role">Criador do <span class="ph">{nome do seu produto}</span></div>
-        <p><span class="ph">{breve descrição sobre você}</span></p>
+        <h3>Lucas Lunardi</h3>
+        <div class="role">Criador do Script Visita Garantida</div>
+        <p>Sócio da Assessoria Raiz, agência de crescimento comercial especializada em lojas de veículos. Com 4 anos de experiência no nicho automotivo, já atendeu mais de 60 empresas e ajudou a gerar dezenas de milhões de reais em vendas de carro. Esse script é o mesmo treinamento comercial que ele aplica pessoalmente com equipes de venda de loja física.</p>
       </div>
     </div>
   </div>
@@ -568,21 +582,21 @@
     <div class="options">
       <div class="option-card neg">
         <svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#A6503F" stroke-width="1.6"/><path d="M9 9l6 6M15 9l-6 6" stroke="#A6503F" stroke-width="1.8" stroke-linecap="round"/></svg>
-        <div><h3>Opção 1</h3><p>Continuar sofrendo com <span class="ph">{dor da persona}</span>.</p></div>
+        <div><h3>Opção 1</h3><p>Continuar respondendo mensagem o dia inteiro sem saber quantas dessas conversas realmente viram visita.</p></div>
       </div>
       <div class="option-card pos">
         <svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#1F6F54" stroke-width="1.6"/><path d="M8 12.5l2.7 2.7L16.5 9" stroke="#1F6F54" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div><h3>Opção 2</h3><p>Acessar o <span class="ph">{nome do produto}</span> e finalmente <span class="ph">{transformação}</span>.</p></div>
+        <div><h3>Opção 2</h3><p>Aplicar o Script Visita Garantida e transformar conversa de WhatsApp em cliente dentro da loja.</p></div>
       </div>
     </div>
     <p style="margin-top:34px; font-size:1.1rem; color:var(--text-on-dark);">Eu sei (e você também sabe): a opção 2 é a mais inteligente.</p>
-    <p style="margin-top:8px; color:var(--muted-on-dark);">Clique no botão abaixo e acesse agora mesmo o <span class="ph">{nome do produto}</span>.</p>
+    <p style="margin-top:8px; color:var(--muted-on-dark);">Clique no botão abaixo e acesse agora mesmo o Script Visita Garantida.</p>
 
     <div class="price-card" style="margin-top:34px;">
       <div class="eyebrow">Por apenas</div>
       <div class="big">9x de R$ 8,80</div>
       <div class="cash">ou R$ 67,00 à vista</div>
-      <a class="btn btn--buy" href="#ultima-chance">Quero comprar agora</a>
+      <a class="btn btn--buy" href="#ultima-chance">Quero o Script Visita Garantida</a>
     </div>
   </div>
 </section>
@@ -594,16 +608,20 @@
     <h2 class="h-section center">Perguntas frequentes</h2>
     <div class="faq">
       <details>
-        <summary>Pergunta 1</summary>
-        <div class="a"><span class="ph">{resposta da pergunta}</span></div>
+        <summary>Funciona pra qualquer tipo de loja de veículo?</summary>
+        <div class="a">Sim. Funciona pra multimarcas, seminovos e concessionária, independente do porte da equipe.</div>
       </details>
       <details>
-        <summary>Pergunta 2</summary>
-        <div class="a"><span class="ph">{resposta da pergunta}</span></div>
+        <summary>Preciso ter equipe grande de vendas pra aplicar?</summary>
+        <div class="a">Não. O script funciona tanto pra um vendedor sozinho quanto pra equipe maior.</div>
       </details>
       <details>
-        <summary>Pergunta 3</summary>
-        <div class="a"><span class="ph">{resposta da pergunta}</span></div>
+        <summary>Qual é a forma de pagamento?</summary>
+        <div class="a">PIX ou cartão de crédito.</div>
+      </details>
+      <details>
+        <summary>Como vou receber o material?</summary>
+        <div class="a">Direto no seu e-mail, assim que a compra for aprovada.</div>
       </details>
     </div>
   </div>
@@ -612,8 +630,8 @@
 <!-- 15 · RODAPÉ -->
 <footer class="band-dark">
   <div class="container">
-    <p>Termos de uso e política de privacidade | Disclosure — Copyright © <span class="ph">{nome do autor/empresa}</span> – <span class="ph">{nome da marca/negócio}</span> – <span class="ph">{ano}</span></p>
-    <p>Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sai do Facebook, a responsabilidade não é deles e sim do nosso site. A compra desse material não garante nenhum tipo de resultado. Fazemos todos os esforços para indicar claramente e mostrar todas as provas do produto e usamos resultados reais de alunos.</p>
+    <p>Termos de uso e política de privacidade | Disclosure — Copyright © Lucas Lunardi – Assessoria Raiz – 2026</p>
+    <p>Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sai do Facebook, a responsabilidade não é deles e sim do nosso site. A compra desse material não garante nenhum tipo de resultado. Fazemos todos os esforços para indicar claramente e mostrar todas as provas do produto e usamos resultados reais de clientes.</p>
   </div>
 </footer>
 
