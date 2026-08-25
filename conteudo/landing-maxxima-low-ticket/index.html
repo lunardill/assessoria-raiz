@@ -300,7 +300,28 @@
   .ledger-row .fill{ flex:1; border-bottom:1px dotted #C9CFC9; margin:0 8px; transform:translateY(-4px); }
   .ledger-row .amount{ font-family:var(--font-mono); font-variant-numeric:tabular-nums; color:#7A857E; text-decoration:line-through; font-size:.92rem; }
   .ledger-total{ display:flex; justify-content:space-between; padding-top:18px; font-weight:600; }
-  .ledger-total .amount{ font-family:var(--font-mono); font-variant-numeric:tabular-nums; text-decoration:none; color:var(--ink); font-size:1.05rem; }
+  .ledger-total .amount{ position:relative; display:inline-block; font-family:var(--font-mono); font-variant-numeric:tabular-nums; text-decoration:none; color:var(--ink); font-size:1.05rem; }
+  .ledger-total .amount::after{
+    content:"";
+    position:absolute;
+    left:0; top:50%;
+    height:2px;
+    width:0;
+    background:#C0392B;
+    transform:translateY(-50%);
+    animation:strike-loop 3s ease-in-out infinite;
+  }
+  @keyframes strike-loop{
+    0%{ width:0; opacity:1; }
+    35%{ width:100%; opacity:1; }
+    62%{ width:100%; opacity:1; }
+    78%{ width:100%; opacity:0; }
+    79%{ width:0; opacity:0; }
+    100%{ width:0; opacity:1; }
+  }
+  @media (prefers-reduced-motion:reduce){
+    .ledger-total .amount::after{ animation:none; width:100%; opacity:1; }
+  }
 
   .offer-banner{ background:var(--dark); padding:28px 20px; text-align:center; margin:52px 0; }
   .offer-banner p{ margin:0; color:#fff; font-weight:700; font-size:1.4rem; line-height:1.4; max-width:680px; margin-left:auto; margin-right:auto; }
