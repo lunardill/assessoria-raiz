@@ -215,6 +215,14 @@
   .alert-close b{ color:#FFFFFF; font-weight:800; }
   @media (max-width:640px){ .alert-card{ flex-direction:column; align-items:center; text-align:center; padding:28px; } }
 
+  /* checklist of outcomes */
+  .checklist-title b{ color:#2A3FCF; }
+  .check-list{ list-style:none; margin:36px auto 0; padding:0; display:flex; flex-direction:column; gap:14px; max-width:640px; text-align:left; }
+  .check-list li{ display:flex; align-items:flex-start; gap:14px; background:var(--surface); border:1px solid var(--surface-line); border-radius:12px; padding:20px 24px; font-size:1rem; line-height:1.5; color:#3E453F; box-shadow:0 1px 3px rgba(24,36,32,.06); }
+  .check-list li b{ font-weight:700; color:var(--ink); }
+  .check-dot{ width:26px; height:26px; border-radius:50%; background:var(--accent); display:flex; align-items:center; justify-content:center; flex:none; margin-top:2px; }
+  .check-dot svg{ width:14px; height:14px; }
+
   /* steps */
   .steps{ display:flex; flex-direction:column; gap:18px; margin-top:36px; }
   .step-card{
@@ -472,14 +480,13 @@
 <!-- 06 · BENEFÍCIOS -->
 <section class="band-surface">
   <div class="container container--narrow center">
-    <div class="kicker">06 · Benefícios</div>
-    <h2 class="h-section center">Com esse método você vai:</h2>
-    <div class="grid-2">
-      <div class="benefit-card"><div class="art" aria-hidden="true"><span>img</span></div><div><h3>Saber em quem focar</h3><p>Identificar em segundos os 4 perfis de cliente e parar de perder tempo com quem nunca vai comprar.</p></div></div>
-      <div class="benefit-card"><div class="art" aria-hidden="true"><span>img</span></div><div><h3>Sair do "mar vermelho"</h3><p>Deixar de disputar atenção com concorrente, família e grupo de amigos dentro do WhatsApp do cliente.</p></div></div>
-      <div class="benefit-card"><div class="art" aria-hidden="true"><span>img</span></div><div><h3>Aumentar visita realizada</h3><p>Ir além de agendar: garantir que o cliente realmente apareça na loja no dia combinado.</p></div></div>
-      <div class="benefit-card"><div class="art" aria-hidden="true"><span>img</span></div><div><h3>Vender sem baixar preço</h3><p>Negociar com o cliente na sua frente, onde a chance de fechar negócio é muito maior.</p></div></div>
-    </div>
+    <h2 class="h-section center checklist-title">Com o Protocolo Visita Garantida <b>você vai</b>:</h2>
+    <ul class="check-list">
+      <li><span class="check-dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.2l2.8 2.8L12.5 5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Saber em quem focar</b>, identificando em segundos os 4 perfis de cliente e parando de perder tempo com quem nunca vai comprar.</span></li>
+      <li><span class="check-dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.2l2.8 2.8L12.5 5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Sair do "mar vermelho"</b>, sem disputar atenção com concorrente, família e grupo de amigos na tela do cliente.</span></li>
+      <li><span class="check-dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.2l2.8 2.8L12.5 5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Aumentar a visita realizada</b>, garantindo que o cliente realmente apareça na loja no dia combinado.</span></li>
+      <li><span class="check-dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.2l2.8 2.8L12.5 5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Vender sem baixar preço</b>, negociando com o cliente na sua frente, onde a chance de fechar é muito maior.</span></li>
+    </ul>
   </div>
 </section>
 
