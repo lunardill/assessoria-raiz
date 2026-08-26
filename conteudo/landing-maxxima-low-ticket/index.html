@@ -397,7 +397,7 @@
   .strike{ position:relative; display:inline-block; }
   .strike::after{ content:""; position:absolute; left:0; top:50%; height:2px; width:100%; background:#C0392B; transform-origin:left center; transform:translateY(-50%) scaleX(0); animation:strike-loop 3s ease-in-out infinite; will-change:transform, opacity; }
   @media (prefers-reduced-motion:reduce){ .strike::after{ animation:none; transform:translateY(-50%) scaleX(1); opacity:1; } }
-  @media (max-width:720px){ .price-card{ flex-direction:column; padding:16px; gap:16px; } .price-card .price-card-img{ flex-basis:auto; aspect-ratio:16/9; } .price-card-body{ padding:28px 22px; } }
+  @media (max-width:720px){ .price-card{ flex-direction:column; padding:16px; gap:16px; } .price-card .price-card-img{ flex-basis:auto; width:100%; aspect-ratio:4/3; } .price-card-body{ padding:28px 22px; } }
 
   /* authority */
   .authority-name{ font-size:clamp(1.6rem,3.6vw,2.1rem); font-weight:600; text-align:center; margin:0; }
