@@ -222,6 +222,28 @@
   .alert-close b{ color:#FFFFFF; font-weight:800; }
   @media (max-width:640px){ .alert-card{ flex-direction:column; align-items:center; text-align:center; padding:28px; } }
 
+  /* como acessar */
+  .access-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:36px; }
+  .access-step{
+    background:linear-gradient(180deg,#FFFFFF 0%, var(--paper) 100%);
+    border:1px solid var(--paper-line);
+    border-radius:16px;
+    padding:32px 24px;
+    text-align:center;
+  }
+  .access-badge{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:52px; height:52px;
+    border:2px solid var(--accent-strong);
+    border-radius:14px;
+    color:var(--accent-strong);
+    margin-bottom:18px;
+  }
+  .access-badge svg{ width:26px; height:26px; }
+  .access-step h3{ font-size:1.05rem; margin-bottom:8px; }
+  .access-step p{ font-size:.92rem; color:#5B655F; }
+  @media (max-width:720px){ .access-grid{ grid-template-columns:1fr; } }
+
   /* checklist of outcomes */
   .checklist-title b{ color:#2A3FCF; }
   .band-dark .checklist-title b{ color:#fff; }
@@ -608,21 +630,23 @@
 <section class="band-surface">
   <div class="container container--narrow center">
     <h2 class="h-section center">Compre agora e receba seu acesso por e-mail na hora</h2>
-    <div class="grid-2" style="grid-template-columns:repeat(3,1fr);">
-      <div class="benefit-card" style="flex-direction:column; text-align:center; align-items:center;">
-        <div class="art" aria-hidden="true"><span>e-mail</span></div>
-        <div><h3>Faça sua compra</h3><p>Assim que finalizar, você recebe o acesso direto no seu e-mail.</p></div>
+    <div class="access-grid">
+      <div class="access-step">
+        <span class="access-badge"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 6.5l8.5 6 8.5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Acesse seu e-mail</h3>
+        <p>Assim que finalizar sua compra, você vai receber seu acesso no email.</p>
       </div>
-      <div class="benefit-card" style="flex-direction:column; text-align:center; align-items:center;">
-        <div class="art" aria-hidden="true"><span>download</span></div>
-        <div><h3>Baixe todo o material</h3><p>Você recebe tudo, entregáveis e bônus, pra usar quando e como quiser.</p></div>
+      <div class="access-step">
+        <span class="access-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Acesse no e-mail</h3>
+        <p>Você vai receber todos os entregáveis junto com os bônus imediatamente.</p>
       </div>
-      <div class="benefit-card" style="flex-direction:column; text-align:center; align-items:center;">
-        <div class="art" aria-hidden="true"><span>check</span></div>
-        <div><h3>Tudo pronto!</h3><p>Agora é só aplicar o Protocolo Visita Garantida e transformar conversa em visita marcada.</p></div>
+      <div class="access-step">
+        <span class="access-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l6.5 2.3a1 1 0 0 1 .67.94v4.4c0 4.2-2.75 7.32-7.17 9.2-4.42-1.88-7.17-5-7.17-9.2v-4.4a1 1 0 0 1 .67-.94L12 3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Tudo Pronto!</h3>
+        <p>Agora é só aplicar o Protocolo Visita Garantida e transformar sua primeira conversa em visita marcada.</p>
       </div>
     </div>
-    <style>.band-surface .grid-2{ margin-top:36px; }</style>
   </div>
 </section>
 
