@@ -129,17 +129,28 @@
     text-decoration:none;
   }
   .btn--buy{
+    position:relative;
     background:linear-gradient(180deg,#3DCB65 0%, #1FA347 100%);
     color:#fff;
     box-shadow:0 10px 24px -10px rgba(20,76,57,.55);
-    animation:btn-pulse 2.2s infinite;
   }
-  @keyframes btn-pulse{
-    0%{ box-shadow:0 10px 24px -10px rgba(20,76,57,.55), 0 0 0 0 rgba(61,203,101,.55); }
-    70%{ box-shadow:0 10px 24px -10px rgba(20,76,57,.55), 0 0 0 14px rgba(61,203,101,0); }
-    100%{ box-shadow:0 10px 24px -10px rgba(20,76,57,.55), 0 0 0 0 rgba(61,203,101,0); }
+  .btn--buy::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:inherit;
+    border:2px solid rgba(61,203,101,.7);
+    opacity:0;
+    animation:btn-pulse-ring 2.2s ease-out infinite;
+    pointer-events:none;
+    will-change:transform, opacity;
   }
-  @media (prefers-reduced-motion:reduce){ .btn--buy{ animation:none; } }
+  @keyframes btn-pulse-ring{
+    0%{ transform:scale(1); opacity:.6; }
+    70%{ transform:scale(1.2); opacity:0; }
+    100%{ transform:scale(1.2); opacity:0; }
+  }
+  @media (prefers-reduced-motion:reduce){ .btn--buy::after{ animation:none; content:none; } }
 
   /* icon */
   .icon{ width:26px; height:26px; flex:none; }
@@ -335,21 +346,23 @@
     position:absolute;
     left:0; top:50%;
     height:2px;
-    width:0;
+    width:100%;
     background:#C0392B;
-    transform:translateY(-50%);
+    transform-origin:left center;
+    transform:translateY(-50%) scaleX(0);
     animation:strike-loop 3s ease-in-out infinite;
+    will-change:transform, opacity;
   }
   @keyframes strike-loop{
-    0%{ width:0; opacity:1; }
-    35%{ width:100%; opacity:1; }
-    62%{ width:100%; opacity:1; }
-    78%{ width:100%; opacity:0; }
-    79%{ width:0; opacity:0; }
-    100%{ width:0; opacity:1; }
+    0%{ transform:translateY(-50%) scaleX(0); opacity:1; }
+    35%{ transform:translateY(-50%) scaleX(1); opacity:1; }
+    62%{ transform:translateY(-50%) scaleX(1); opacity:1; }
+    78%{ transform:translateY(-50%) scaleX(1); opacity:0; }
+    79%{ transform:translateY(-50%) scaleX(0); opacity:0; }
+    100%{ transform:translateY(-50%) scaleX(0); opacity:1; }
   }
   @media (prefers-reduced-motion:reduce){
-    .ledger-total .amount::after{ animation:none; width:100%; opacity:1; }
+    .ledger-total .amount::after{ animation:none; transform:translateY(-50%) scaleX(1); opacity:1; }
   }
 
   .offer-banner{ background:var(--dark); padding:28px 20px; text-align:center; margin:52px 0; }
@@ -381,8 +394,8 @@
   .price-card .btn{ width:100%; font-size:.92rem; padding:19px 30px; }
   .trust-badges{ width:100%; max-width:380px; margin:0 auto; display:block; }
   .strike{ position:relative; display:inline-block; }
-  .strike::after{ content:""; position:absolute; left:0; top:50%; height:2px; width:0; background:#C0392B; transform:translateY(-50%); animation:strike-loop 3s ease-in-out infinite; }
-  @media (prefers-reduced-motion:reduce){ .strike::after{ animation:none; width:100%; opacity:1; } }
+  .strike::after{ content:""; position:absolute; left:0; top:50%; height:2px; width:100%; background:#C0392B; transform-origin:left center; transform:translateY(-50%) scaleX(0); animation:strike-loop 3s ease-in-out infinite; will-change:transform, opacity; }
+  @media (prefers-reduced-motion:reduce){ .strike::after{ animation:none; transform:translateY(-50%) scaleX(1); opacity:1; } }
   @media (max-width:720px){ .price-card{ flex-direction:column; padding:16px; gap:16px; } .price-card .price-card-img{ flex-basis:auto; aspect-ratio:16/9; } .price-card-body{ padding:28px 22px; } }
 
   /* authority */
