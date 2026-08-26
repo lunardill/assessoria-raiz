@@ -337,6 +337,7 @@
   }
   .ledger-row:last-child{ border-bottom:none; }
   .ledger-row .label{ display:flex; gap:8px; align-items:center; font-size:.92rem; }
+  @media (max-width:640px){ .ledger-row .label{ text-align:left; } }
   .ledger-row .fill{ flex:1; border-bottom:1px dotted #C9CFC9; margin:0 8px; transform:translateY(-4px); }
   .ledger-row .amount{ font-family:var(--font-mono); font-variant-numeric:tabular-nums; color:#7A857E; text-decoration:line-through; font-size:.92rem; }
   .ledger-total{ display:flex; justify-content:space-between; padding-top:18px; font-weight:600; }
