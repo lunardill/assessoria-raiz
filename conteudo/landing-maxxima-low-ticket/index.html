@@ -386,12 +386,26 @@
   @media (max-width:720px){ .price-card{ flex-direction:column; padding:16px; gap:16px; } .price-card .price-card-img{ flex-basis:auto; aspect-ratio:16/9; } .price-card-body{ padding:28px 22px; } }
 
   /* authority */
-  .authority{ display:flex; gap:36px; align-items:center; }
-  .authority .art{ flex:0 0 180px; width:180px; height:180px; border-radius:50%; }
-  .authority h3{ font-size:1.3rem; }
-  .authority .role{ font-family:var(--font-mono); font-size:.8rem; letter-spacing:.04em; color:var(--accent); margin:4px 0 12px; }
-  .authority p{ font-size:.95rem; color:#5B655F; max-width:520px; }
-  @media (max-width:640px){ .authority{ flex-direction:column; text-align:center; } .authority p{ margin:0 auto; } }
+  .authority-name{ font-size:clamp(1.6rem,3.6vw,2.1rem); font-weight:600; text-align:center; margin:0; }
+  .authority-sub{ text-align:center; font-size:1.1rem; color:#5B655F; margin:8px 0 0; }
+  .authority-sub b{ color:var(--accent-strong); }
+  .authority-card{
+    background:var(--surface);
+    border:1px solid var(--surface-line);
+    border-radius:20px;
+    padding:32px;
+    margin-top:28px;
+    display:flex;
+    gap:32px;
+    align-items:flex-start;
+    box-shadow:0 24px 50px -30px rgba(21,33,25,.22);
+  }
+  .authority-card .art{ flex:0 0 220px; width:220px; aspect-ratio:4/5; border-radius:14px; }
+  .authority-card-text{ text-align:left; }
+  .authority-card-text p{ margin:0 0 14px; font-size:1rem; line-height:1.6; color:#3E453F; }
+  .authority-card-text p:last-child{ margin-bottom:0; }
+  .authority-card-text p b{ color:var(--ink); }
+  @media (max-width:640px){ .authority-card{ flex-direction:column; align-items:center; text-align:center; } .authority-card-text{ text-align:center; } }
 
   /* two options */
   .options{ display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:36px; }
@@ -653,13 +667,14 @@
 <!-- 12 · AUTORIDADE -->
 <section class="band-paper">
   <div class="container container--narrow">
-    <div class="kicker center">12 · Quem está por trás</div>
-    <div class="authority" style="margin-top:24px;">
-      <div class="art" role="img" aria-label="Foto do autor" aria-hidden="false"><span>foto</span></div>
-      <div>
-        <h3>Lucas Lunardi</h3>
-        <div class="role">Criador do Protocolo Visita Garantida</div>
-        <p>Sócio da Assessoria Raiz, agência de crescimento comercial especializada em lojas de veículos. Com 4 anos de experiência no nicho automotivo, já atendeu mais de 60 empresas e ajudou a gerar dezenas de milhões de reais em vendas de carro. Esse script é o mesmo treinamento comercial que ele aplica pessoalmente com equipes de venda de loja física.</p>
+    <h3 class="authority-name">Lucas Lunardi</h3>
+    <p class="authority-sub">É o sócio-criador do <b>Protocolo Visita Garantida</b>.</p>
+    <div class="authority-card">
+      <div class="art art-flush" role="img" aria-label="Foto do autor"><span>foto</span></div>
+      <div class="authority-card-text">
+        <p>Há mais de <b>4 anos</b> eu atuo com tráfego pago e consultoria comercial focado em uma coisa só: <b>lojas de veículos</b>. Já atendi <b>mais de 60 empresas</b> pelo Brasil e ajudei a gerar <b>dezenas de milhões de reais em vendas de carro</b>.</p>
+        <p>O Protocolo Visita Garantida nasceu do treinamento comercial que eu aplico pessoalmente com equipes de venda de loja física, ensinando o vendedor a tirar o cliente do WhatsApp e levar pra dentro da loja.</p>
+        <p>Agora, chegou a sua vez de aplicar esse mesmo protocolo pra transformar conversa em visita e visita em venda.</p>
       </div>
     </div>
   </div>
