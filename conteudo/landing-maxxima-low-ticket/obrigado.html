@@ -55,24 +55,24 @@
 
   .progress-wrap{ max-width:480px; margin:0 auto 28px; }
   .progress-track{
-    background:#DCE3EE; border-radius:999px; height:34px; overflow:hidden; position:relative;
+    background:var(--accent-soft); border-radius:999px; height:34px; overflow:hidden; position:relative;
   }
   .progress-fill{
-    height:100%; background:#2C5AA0; border-radius:999px 0 0 999px;
+    height:100%; background:var(--accent-strong); border-radius:999px 0 0 999px;
     display:flex; align-items:center; justify-content:space-between; gap:10px;
     padding:0 14px; min-width:fit-content;
   }
   .progress-label, .progress-pct{
-    color:#fff; font-weight:700; font-size:.72rem; letter-spacing:.03em; text-transform:uppercase;
+    color:#fff; font-weight:700; font-size:.78rem; letter-spacing:.03em; text-transform:uppercase;
     white-space:nowrap; font-family:var(--font-body);
   }
   .warning-title{
-    font-family:var(--font-body); font-weight:700; font-size:clamp(1.1rem,3.4vw,1.4rem);
+    font-family:var(--font-body); font-weight:700; font-size:clamp(1.2rem,3.6vw,1.5rem);
     color:#B3261C; text-align:center; text-transform:uppercase;
     margin:0 0 14px; text-wrap:balance;
   }
   .warning-body{
-    text-align:center; font-size:.98rem; color:var(--ink); margin:0 0 28px;
+    text-align:center; font-size:1.1rem; color:var(--ink); margin:0 0 28px;
     max-width:46ch; margin-inline:auto;
   }
 
@@ -149,7 +149,7 @@
       </div>
 
       <h2 class="warning-title">Atenção, não pule essa etapa.</h2>
-      <p class="warning-body">Você precisa preencher as respostas abaixo para que possa acessar o Protocolo Visita Garantida.</p>
+      <p class="warning-body">Você precisa preencher as respostas abaixo para acessar o Protocolo Visita Garantida.</p>
 
       <form class="form-card" id="qualForm">
         <div class="field">
