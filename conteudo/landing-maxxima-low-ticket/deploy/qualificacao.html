@@ -83,7 +83,7 @@
   .field label{
     display:block; font-weight:600; font-size:.94rem; margin-bottom:8px; color:var(--ink);
   }
-  .field select, .field input[type="text"]{
+  .field select, .field input[type="text"], .field input[type="tel"], .field input[type="email"]{
     width:100%; font-family:var(--font-body); font-size:1rem;
     padding:13px 14px; border-radius:8px; border:1px solid var(--surface-line);
     background:var(--paper); color:var(--ink);
@@ -130,6 +130,18 @@
 
       <form class="form-card" id="qualForm">
         <div class="field">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome completo" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel" required>
+        </div>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="voce@email.com" autocomplete="email" required>
+        </div>
+        <div class="field">
           <label for="temLoja">Você possui uma loja de carros?</label>
           <select id="temLoja" name="temLoja" required>
             <option value="" disabled selected>Selecione uma opção</option>
@@ -173,6 +185,9 @@
     submitBtn.textContent = 'Enviando...';
 
     var payload = {
+      nome: document.getElementById('nome').value.trim(),
+      telefone: document.getElementById('telefone').value.trim(),
+      email: document.getElementById('email').value.trim(),
       temLoja: document.getElementById('temLoja').value,
       instagram: document.getElementById('instagram').value.trim(),
       pagina: 'qualificacao-protocolo-visita-garantida',

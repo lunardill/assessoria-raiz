@@ -20,9 +20,12 @@
 
 const NOME_ABA_QUALIFICACAO = "Respostas";
 const COLUNA_DATA = 1;
-const COLUNA_TEM_LOJA = 2;
-const COLUNA_INSTAGRAM_LOJA = 3;
-const COLUNA_PAGINA = 4;
+const COLUNA_NOME = 2;
+const COLUNA_TELEFONE = 3;
+const COLUNA_EMAIL = 4;
+const COLUNA_TEM_LOJA = 5;
+const COLUNA_INSTAGRAM_LOJA = 6;
+const COLUNA_PAGINA = 7;
 
 const MAX_TENTATIVAS_QUALIFICACAO = 3;
 const ESPERA_ENTRE_TENTATIVAS_QUALIFICACAO_MS = 5000;
@@ -57,6 +60,9 @@ function processarRespostasNovas() {
 
   for (let linha = ultimaLinha + 1; linha <= linhaAtual; linha++) {
     const dataHora = sheet.getRange(linha, COLUNA_DATA).getValue();
+    const nome = sheet.getRange(linha, COLUNA_NOME).getValue();
+    const telefone = sheet.getRange(linha, COLUNA_TELEFONE).getValue();
+    const email = sheet.getRange(linha, COLUNA_EMAIL).getValue();
     const temLoja = sheet.getRange(linha, COLUNA_TEM_LOJA).getValue();
     const instagram = sheet.getRange(linha, COLUNA_INSTAGRAM_LOJA).getValue();
 
@@ -66,10 +72,12 @@ function processarRespostasNovas() {
 
     const mensagem =
       "🎉 *Compra qualificada — Protocolo Visita Garantida*\n\n" +
+      "*Nome:* " + (nome || "não informado") + "\n" +
+      "*Telefone:* " + (telefone || "não informado") + "\n" +
+      "*E-mail:* " + (email || "não informado") + "\n" +
       "*Possui loja de carros?* " + (temLoja || "não informado") + "\n" +
       "*Instagram da loja:* " + (instagram || "não informado") + "\n\n" +
-      "*Respondido em:* " + horario + "\n\n" +
-      "Nome/telefone/e-mail do comprador ficam no painel da Hotmart.";
+      "*Respondido em:* " + horario;
 
     enviarMensagemWhatsappQualificacao(mensagem, props);
   }
