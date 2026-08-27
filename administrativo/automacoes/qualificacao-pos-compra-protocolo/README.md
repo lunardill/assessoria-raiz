@@ -1,7 +1,11 @@
 # Qualificação pós-compra — Protocolo Visita Garantida
 
-Formulário de 2 perguntas na página de obrigado (`conteudo/landing-maxxima-low-ticket/obrigado.html`),
-que grava as respostas direto numa planilha do Google Sheets e avisa o grupo do WhatsApp.
+Formulário de 2 perguntas na página de qualificação (`conteudo/landing-maxxima-low-ticket/qualificacao.html`),
+que grava as respostas direto numa planilha do Google Sheets e avisa o grupo do WhatsApp. Depois de
+responder, a pessoa é redirecionada pra `conteudo/landing-maxxima-low-ticket/obrigado.html`, a página
+final de confirmação.
+
+Fluxo completo: Hotmart → `/qualificacao` (formulário) → `/obrigado` (confirmação, "fica de olho no seu e-mail").
 
 ## Passo a passo pra deixar no ar
 
@@ -28,9 +32,9 @@ que grava as respostas direto numa planilha do Google Sheets e avisa o grupo do 
    - Copia a URL gerada (termina em `/exec`).
 
 5. **Cola a URL na página**
-   - Abre `conteudo/landing-maxxima-low-ticket/obrigado.html`.
+   - Abre `conteudo/landing-maxxima-low-ticket/qualificacao.html`.
    - Procura `COLE_AQUI_A_URL_DO_APPS_SCRIPT` e substitui pela URL do passo 4.
-   - Copia o arquivo atualizado pra `deploy/obrigado.html` e sobe de novo no Cloudflare Pages (mesmo processo do `index.html`).
+   - Copia o arquivo atualizado pra `deploy/qualificacao.html` e sobe de novo no Cloudflare Pages (mesmo processo do `index.html`).
 
 6. **Cria o gatilho do aviso de WhatsApp**
    - No editor do Apps Script: ícone de relógio (Gatilhos) → Adicionar gatilho.
@@ -41,11 +45,12 @@ que grava as respostas direto numa planilha do Google Sheets e avisa o grupo do 
 7. **Testa**
    - Roda manualmente `testarGravacao` (grava uma linha de teste na planilha).
    - Roda manualmente `testarEnvioWhatsappQualificacao` (manda uma mensagem de teste pro grupo).
-   - Abre a página `obrigado.html` local, preenche o formulário e confirma que a linha aparece na planilha.
+   - Abre a página `qualificacao.html` local, preenche o formulário e confirma que a linha aparece na
+     planilha e que ela te leva pra `obrigado.html` no final.
 
 8. **Hotmart**
-   - No produto, configura o redirecionamento pós-compra pra apontar pra URL final de `obrigado.html`
-     (ex: `https://protocolo.assessoriaraiz.com.br/obrigado`).
+   - No produto, configura o redirecionamento pós-compra pra apontar pra URL de `qualificacao.html`
+     (ex: `https://protocolo.assessoriaraiz.com.br/qualificacao`).
 
 ## Observação
 
