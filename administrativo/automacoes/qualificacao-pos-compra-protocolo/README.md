@@ -19,6 +19,11 @@ linha só, sem precisar cruzar dados de fontes diferentes.
    - Cria um arquivo de script e cola o conteúdo de `receber-respostas.gs`.
    - Cria outro arquivo de script (ícone "+" ao lado de "Arquivos") e cola o conteúdo de `avisar-whatsapp.gs`.
    - Salva o projeto.
+   - Se esse projeto Apps Script já tiver outros arquivos de automações antigas (é comum, já
+     aconteceu aqui): todos os nomes usados nesses dois arquivos levam o prefixo `PVG_`/`pvg` bem de
+     propósito, pra não colidir com nada que já exista. A única exceção é a função `doPost` (nome
+     fixo, exigido pelo Apps Script) — se algum arquivo antigo já tiver um `doPost` próprio, avisa
+     que a gente une a lógica dos dois num só.
 
 3. **Configura as credenciais do Z-API**
    - No editor do Apps Script: ⚙️ Configurações do projeto → Propriedades do script → Adicionar propriedade do script.
@@ -38,13 +43,13 @@ linha só, sem precisar cruzar dados de fontes diferentes.
 
 6. **Cria o gatilho do aviso de WhatsApp**
    - No editor do Apps Script: ícone de relógio (Gatilhos) → Adicionar gatilho.
-   - Função: `avisarWhatsappNovaResposta`.
+   - Função: `pvgAvisarWhatsappNovaResposta`.
    - Tipo de evento: baseado em tempo, a cada 5 ou 10 minutos.
-   - Antes de ativar de vez, roda manualmente a função `inicializarUltimaLinhaQualificacao` uma vez (evita avisar de respostas antigas que não existem ainda, mas garante que o contador comece do jeito certo).
+   - Antes de ativar de vez, roda manualmente a função `pvgInicializarUltimaLinha` uma vez (evita avisar de respostas antigas que não existem ainda, mas garante que o contador comece do jeito certo).
 
 7. **Testa**
-   - Roda manualmente `testarGravacao` (grava uma linha de teste na planilha).
-   - Roda manualmente `testarEnvioWhatsappQualificacao` (manda uma mensagem de teste pro grupo).
+   - Roda manualmente `pvgTestarGravacao` (grava uma linha de teste na planilha).
+   - Roda manualmente `pvgTestarEnvioWhatsapp` (manda uma mensagem de teste pro grupo).
    - Abre a página `qualificacao.html` local, preenche o formulário e confirma que a linha aparece na
      planilha e que ela te leva pra `obrigado.html` no final.
 

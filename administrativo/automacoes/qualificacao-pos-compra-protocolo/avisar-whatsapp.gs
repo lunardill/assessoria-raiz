@@ -5,70 +5,73 @@
  * Mesmo padrão do script que já existe em
  * administrativo/automacoes/leadads-grupo-whatsapp/apps-script.js —
  * só que apontando pra essa planilha de qualificação em vez da de leads
- * de anúncio. Cola este arquivo como uma aba NOVA de script dentro do
- * MESMO projeto Apps Script do receber-respostas.gs (mesma planilha).
+ * de anúncio.
+ *
+ * IMPORTANTE: esse projeto Apps Script é compartilhado com outras
+ * automações que já existiam (notificacaoWhatsapp.gs, notificacaoMeetime.gs,
+ * etc.) — todos os nomes aqui (const e function) levam o prefixo PVG_ / pvg
+ * (Protocolo Visita Garantida) justamente pra não colidir com nada que já
+ * exista nos outros arquivos desse mesmo projeto.
  *
  * Configuração necessária (Extensões > Propriedades do projeto > Propriedades do script):
  *   ZAPI_INSTANCE_ID, ZAPI_TOKEN, ZAPI_CLIENT_TOKEN, ZAPI_GROUP_ID
- *   Se for avisar o MESMO grupo "Avisos Leads - RAIZ" de sempre, usa os
- *   mesmos valores que já estão configurados no projeto de leads
- *   (arquivo administrativo/automacoes/leadads-grupo-whatsapp/.env).
+ *   (esses 4 nomes já existem nesse projeto, reaproveitados do script de leads)
  *
  * Gatilho: configurar um gatilho de tempo (a cada 5 ou 10 minutos, por
- * exemplo) chamando avisarWhatsappNovaResposta.
+ * exemplo) chamando pvgAvisarWhatsappNovaResposta.
  */
 
-const NOME_ABA_QUALIFICACAO = "Vendas Hotmart";
-const COLUNA_DATA = 1;
-const COLUNA_NOME = 2;
-const COLUNA_TELEFONE = 3;
-const COLUNA_EMAIL = 4;
-const COLUNA_TEM_LOJA = 5;
-const COLUNA_INSTAGRAM_LOJA = 6;
-const COLUNA_PAGINA = 7;
+const PVG_NOME_ABA_QUALIFICACAO = "Vendas Hotmart";
+const PVG_COLUNA_DATA = 1;
+const PVG_COLUNA_NOME = 2;
+const PVG_COLUNA_TELEFONE = 3;
+const PVG_COLUNA_EMAIL = 4;
+const PVG_COLUNA_TEM_LOJA = 5;
+const PVG_COLUNA_INSTAGRAM_LOJA = 6;
+const PVG_COLUNA_PAGINA = 7;
 
-const MAX_TENTATIVAS_QUALIFICACAO = 3;
-const ESPERA_ENTRE_TENTATIVAS_QUALIFICACAO_MS = 5000;
+const PVG_MAX_TENTATIVAS = 3;
+const PVG_ESPERA_ENTRE_TENTATIVAS_MS = 5000;
 
-function avisarWhatsappNovaResposta() {
-  for (let tentativa = 1; tentativa <= MAX_TENTATIVAS_QUALIFICACAO; tentativa++) {
+function pvgAvisarWhatsappNovaResposta() {
+  for (let tentativa = 1; tentativa <= PVG_MAX_TENTATIVAS; tentativa++) {
     try {
-      processarRespostasNovas();
+      pvgProcessarRespostasNovas();
       return;
     } catch (erro) {
-      if (tentativa < MAX_TENTATIVAS_QUALIFICACAO) {
-        Utilities.sleep(ESPERA_ENTRE_TENTATIVAS_QUALIFICACAO_MS);
+      if (tentativa < PVG_MAX_TENTATIVAS) {
+        Utilities.sleep(PVG_ESPERA_ENTRE_TENTATIVAS_MS);
         continue;
       }
       MailApp.sendEmail({
         to: "assessoriaraizz@gmail.com",
         subject: "⚠️ Falha na notificação de qualificação (WhatsApp)",
-        body: "A automação de WhatsApp da página de obrigado do Protocolo falhou depois de " + MAX_TENTATIVAS_QUALIFICACAO + " tentativas.\n\nErro: " + erro.message + "\n\nStack: " + erro.stack
+        body: "A automação de WhatsApp da página de qualificação do Protocolo falhou depois de " + PVG_MAX_TENTATIVAS + " tentativas.\n\nErro: " + erro.message + "\n\nStack: " + erro.stack
       });
     }
   }
 }
 
-function processarRespostasNovas() {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(NOME_ABA_QUALIFICACAO);
+function pvgProcessarRespostasNovas() {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(PVG_NOME_ABA_QUALIFICACAO);
   const linhaAtual = sheet.getLastRow();
 
   const props = PropertiesService.getScriptProperties();
-  const ultimaLinha = Number(props.getProperty("ultimaLinhaQualificacao") || 1); // linha 1 é cabeçalho
+  const ultimaLinha = Number(props.getProperty("pvgUltimaLinhaQualificacao") || 1); // linha 1 é cabeçalho
 
   if (linhaAtual <= ultimaLinha) return;
 
   for (let linha = ultimaLinha + 1; linha <= linhaAtual; linha++) {
-    const dataHora = sheet.getRange(linha, COLUNA_DATA).getValue();
-    const nome = sheet.getRange(linha, COLUNA_NOME).getValue();
-    const telefone = sheet.getRange(linha, COLUNA_TELEFONE).getValue();
-    const email = sheet.getRange(linha, COLUNA_EMAIL).getValue();
-    const temLoja = sheet.getRange(linha, COLUNA_TEM_LOJA).getValue();
-    const instagram = sheet.getRange(linha, COLUNA_INSTAGRAM_LOJA).getValue();
+    const dataHora = sheet.getRange(linha, PVG_COLUNA_DATA).getValue();
+    const nome = sheet.getRange(linha, PVG_COLUNA_NOME).getValue();
+    const telefone = sheet.getRange(linha, PVG_COLUNA_TELEFONE).getValue();
+    const email = sheet.getRange(linha, PVG_COLUNA_EMAIL).getValue();
+    const temLoja = sheet.getRange(linha, PVG_COLUNA_TEM_LOJA).getValue();
+    const instagram = sheet.getRange(linha, PVG_COLUNA_INSTAGRAM_LOJA).getValue();
 
     if (!dataHora) continue; // linha vazia, pula
 
-    const horario = formatarDataQualificacao(dataHora);
+    const horario = pvgFormatarData(dataHora);
 
     const mensagem =
       "🎉 *Compra qualificada — Protocolo Visita Garantida*\n\n" +
@@ -79,20 +82,20 @@ function processarRespostasNovas() {
       "*Instagram da loja:* " + (instagram || "não informado") + "\n\n" +
       "*Respondido em:* " + horario;
 
-    enviarMensagemWhatsappQualificacao(mensagem, props);
+    pvgEnviarMensagemWhatsapp(mensagem, props);
   }
 
-  props.setProperty("ultimaLinhaQualificacao", linhaAtual.toString());
+  props.setProperty("pvgUltimaLinhaQualificacao", linhaAtual.toString());
 }
 
-function formatarDataQualificacao(valor) {
+function pvgFormatarData(valor) {
   if (valor instanceof Date) {
     return Utilities.formatDate(valor, Session.getScriptTimeZone(), "dd/MM/yyyy HH:mm");
   }
   return String(valor);
 }
 
-function enviarMensagemWhatsappQualificacao(mensagem, props) {
+function pvgEnviarMensagemWhatsapp(mensagem, props) {
   const instanceId = props.getProperty("ZAPI_INSTANCE_ID");
   const token = props.getProperty("ZAPI_TOKEN");
   const clientToken = props.getProperty("ZAPI_CLIENT_TOKEN");
@@ -122,17 +125,17 @@ function enviarMensagemWhatsappQualificacao(mensagem, props) {
  * respostas já existentes como "já processadas" (evita avisar de todas
  * de uma vez quando o gatilho começar a rodar).
  */
-function inicializarUltimaLinhaQualificacao() {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(NOME_ABA_QUALIFICACAO);
+function pvgInicializarUltimaLinha() {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(PVG_NOME_ABA_QUALIFICACAO);
   const props = PropertiesService.getScriptProperties();
-  props.setProperty("ultimaLinhaQualificacao", String(sheet.getLastRow()));
+  props.setProperty("pvgUltimaLinhaQualificacao", String(sheet.getLastRow()));
   Logger.log("Última linha marcada como processada (qualificação): " + sheet.getLastRow());
 }
 
 /**
  * Roda manualmente pra testar o envio sem esperar resposta nova.
  */
-function testarEnvioWhatsappQualificacao() {
+function pvgTestarEnvioWhatsapp() {
   const props = PropertiesService.getScriptProperties();
-  enviarMensagemWhatsappQualificacao("✅ Teste de conexão — automação de qualificação pós-compra configurada com sucesso.", props);
+  pvgEnviarMensagemWhatsapp("✅ Teste de conexão — automação de qualificação pós-compra configurada com sucesso.", props);
 }

@@ -2,6 +2,21 @@
  * Recebe as respostas do formulário da página de qualificação
  * (qualificacao.html) e grava uma linha só, com tudo, na planilha.
  *
+ * IMPORTANTE: esse projeto Apps Script é compartilhado com outras
+ * automações que já existiam (notificacaoWhatsapp.gs, notificacaoMeetime.gs,
+ * etc.) — os nomes de constante/função aqui levam o prefixo PVG_ / pvg
+ * (Protocolo Visita Garantida) pra não colidir com nada que já existisse.
+ *
+ * A função doPost(e) É a exceção — esse nome é fixo, exigido pelo Apps
+ * Script como ponto de entrada de um "App da Web". Se algum dos outros
+ * arquivos desse projeto (notificacaoWhatsapp.gs, notificacaoMeetime.gs,
+ * Código.gs) JÁ tiver uma função doPost própria, vai dar exatamente o
+ * mesmo tipo de erro que já apareceu com COLUNA_NOME — só que nesse caso
+ * não dá pra só renomear, porque doPost precisa ter esse nome exato. Se
+ * acontecer, avisa que a gente resolve juntando a lógica dos dois doPost
+ * num só (usando o campo dos dados recebidos pra decidir qual das duas
+ * coisas fazer).
+ *
  * Como publicar:
  *   1. Cria uma planilha nova no Google Sheets (ex: "Qualificação — Protocolo Visita Garantida").
  *   2. Nela, cria uma aba chamada exatamente "Vendas Hotmart" com o cabeçalho na linha 1:
@@ -17,13 +32,13 @@
  *      senão a URL antiga continua rodando o código velho.
  */
 
-const NOME_ABA_RESPOSTAS = "Vendas Hotmart";
+const PVG_NOME_ABA_RESPOSTAS = "Vendas Hotmart";
 
 function doPost(e) {
   try {
     const dados = JSON.parse(e.postData.contents);
 
-    const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(NOME_ABA_RESPOSTAS);
+    const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(PVG_NOME_ABA_RESPOSTAS);
     sheet.appendRow([
       new Date(),
       dados.nome || "",
@@ -48,8 +63,8 @@ function doPost(e) {
  * Roda manualmente pra testar se a planilha/aba estão certas, sem precisar
  * mandar uma requisição de verdade.
  */
-function testarGravacao() {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(NOME_ABA_RESPOSTAS);
+function pvgTestarGravacao() {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(PVG_NOME_ABA_RESPOSTAS);
   sheet.appendRow([
     new Date(),
     "Comprador Teste",
