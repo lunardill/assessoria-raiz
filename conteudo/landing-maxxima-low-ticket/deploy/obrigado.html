@@ -85,7 +85,6 @@
     background:var(--paper); color:var(--ink);
   }
   .field select:focus, .field input:focus{ outline:2px solid var(--accent); outline-offset:1px; }
-  .hint{ font-size:.8rem; color:#7A857F; margin-top:6px; }
 
   .btn{
     display:inline-flex; align-items:center; justify-content:center; width:100%;
@@ -152,8 +151,7 @@
         </div>
         <div class="field">
           <label for="instagram">Qual o @Instagram da sua loja?</label>
-          <input type="text" id="instagram" name="instagram" placeholder="@sualoja" autocomplete="off">
-          <p class="hint">Se não tiver loja própria ainda, pode deixar em branco.</p>
+          <input type="text" id="instagram" name="instagram" placeholder="@sualoja" autocomplete="off" required>
         </div>
         <button type="submit" class="btn" id="submitBtn">Confirmar e liberar meu acesso</button>
         <p class="form-error" id="formError">Não conseguimos enviar agora. Tenta de novo em alguns segundos.</p>
