@@ -53,15 +53,28 @@
 
   main{ padding:36px 0 60px; }
 
-  .alert-card{
-    background:#8A1F1F; border-radius:16px; padding:26px 28px;
-    display:flex; gap:18px; align-items:flex-start; text-align:left;
-    margin-bottom:30px;
+  .progress-wrap{ max-width:480px; margin:0 auto 28px; }
+  .progress-track{
+    background:#DCE3EE; border-radius:999px; height:34px; overflow:hidden; position:relative;
   }
-  .alert-icon{ width:34px; height:34px; flex:none; margin-top:2px; }
-  .alert-eyebrow{ font-weight:700; font-size:1.02rem; color:#F6D449; margin:0 0 6px; }
-  .alert-body{ font-size:.94rem; line-height:1.5; color:#F5E7E7; margin:0; }
-  @media (max-width:480px){ .alert-card{ flex-direction:column; align-items:center; text-align:center; } }
+  .progress-fill{
+    height:100%; background:#2C5AA0; border-radius:999px 0 0 999px;
+    display:flex; align-items:center; justify-content:space-between; gap:10px;
+    padding:0 14px; min-width:fit-content;
+  }
+  .progress-label, .progress-pct{
+    color:#fff; font-weight:700; font-size:.72rem; letter-spacing:.03em; text-transform:uppercase;
+    white-space:nowrap; font-family:var(--font-body);
+  }
+  .warning-title{
+    font-family:var(--font-body); font-weight:700; font-size:clamp(1.1rem,3.4vw,1.4rem);
+    color:#B3261C; text-align:center; text-transform:uppercase;
+    margin:0 0 14px; text-wrap:balance;
+  }
+  .warning-body{
+    text-align:center; font-size:.98rem; color:var(--ink); margin:0 0 28px;
+    max-width:46ch; margin-inline:auto;
+  }
 
   .form-card{
     background:var(--surface);
@@ -126,13 +139,17 @@
   <main>
     <div class="container">
 
-      <div class="alert-card">
-        <svg class="alert-icon" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 21h20L12 2z" stroke="#F6D449" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 9v5" stroke="#F6D449" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="17" r="1" fill="#F6D449"/></svg>
-        <div>
-          <p class="alert-eyebrow">Não pule essa etapa</p>
-          <p class="alert-body">Leva menos de 30 segundos e é só isso que falta. Seu acesso ao Protocolo Visita Garantida já está sendo enviado pro seu e-mail de compra.</p>
+      <div class="progress-wrap">
+        <div class="progress-track">
+          <div class="progress-fill" style="width:92%">
+            <span class="progress-label">Quase concluído!</span>
+            <span class="progress-pct">92%</span>
+          </div>
         </div>
       </div>
+
+      <h2 class="warning-title">Atenção, não pule essa etapa.</h2>
+      <p class="warning-body">Você precisa preencher as respostas abaixo para que possa acessar o Protocolo Visita Garantida.</p>
 
       <form class="form-card" id="qualForm">
         <div class="field">
