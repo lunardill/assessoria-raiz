@@ -1,6 +1,6 @@
 /**
  * Avisa o grupo do WhatsApp toda vez que uma resposta nova cai na aba
- * "Respostas" (ver receber-respostas.gs, no mesmo projeto Apps Script).
+ * "Vendas Hotmart" (ver receber-respostas.gs, no mesmo projeto Apps Script).
  *
  * Mesmo padrão do script que já existe em
  * administrativo/automacoes/leadads-grupo-whatsapp/apps-script.js —
@@ -18,7 +18,7 @@
  * exemplo) chamando avisarWhatsappNovaResposta.
  */
 
-const NOME_ABA_QUALIFICACAO = "Respostas";
+const NOME_ABA_QUALIFICACAO = "Vendas Hotmart";
 const COLUNA_DATA = 1;
 const COLUNA_NOME = 2;
 const COLUNA_TELEFONE = 3;

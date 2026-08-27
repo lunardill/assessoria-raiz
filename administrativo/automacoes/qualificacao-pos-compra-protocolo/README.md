@@ -11,8 +11,7 @@ linha só, sem precisar cruzar dados de fontes diferentes.
 
 ## Passo a passo pra deixar no ar
 
-1. **Cria a planilha (ou usa uma já existente)**
-   - Cria uma aba chamada exatamente **`Respostas`**.
+1. **Planilha**: reaproveitando a planilha já existente, na aba **`Vendas Hotmart`**.
    - Cabeçalho na linha 1: `Data/Hora | Nome | Telefone | E-mail | Possui loja de carros? | Instagram da loja | Página`.
 
 2. **Cola os dois scripts**

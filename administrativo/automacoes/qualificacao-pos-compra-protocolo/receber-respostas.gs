@@ -4,7 +4,7 @@
  *
  * Como publicar:
  *   1. Cria uma planilha nova no Google Sheets (ex: "Qualificação — Protocolo Visita Garantida").
- *   2. Nela, cria uma aba chamada exatamente "Respostas" com o cabeçalho na linha 1:
+ *   2. Nela, cria uma aba chamada exatamente "Vendas Hotmart" com o cabeçalho na linha 1:
  *      Data/Hora | Nome | Telefone | E-mail | Possui loja de carros? | Instagram da loja | Página
  *   3. Extensões > Apps Script, apaga o conteúdo padrão e cola este arquivo inteiro.
  *   4. Implantar > Nova implantação > tipo "App da Web".
@@ -17,7 +17,7 @@
  *      senão a URL antiga continua rodando o código velho.
  */
 
-const NOME_ABA_RESPOSTAS = "Respostas";
+const NOME_ABA_RESPOSTAS = "Vendas Hotmart";
 
 function doPost(e) {
   try {
