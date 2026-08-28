@@ -189,6 +189,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var submitBtn = document.getElementById('submitBtn');
   var formError = document.getElementById('formError');
 
+  // Avisa o GTM assim que a pessoa toca no primeiro campo do formulário,
+  // antes mesmo de terminar de preencher. Só dispara uma vez.
+  var jaAvisouInicioForm = false;
+  form.addEventListener('focusin', function(){
+    if (jaAvisouInicioForm) return;
+    jaAvisouInicioForm = true;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ 'event': 'qualificacao_form_iniciada' });
+  });
+
   form.addEventListener('submit', function(e){
     e.preventDefault();
     formError.classList.remove('show');
