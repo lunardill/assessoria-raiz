@@ -17,6 +17,7 @@
 - [ ] Confirmar hex exato das cores da marca no design-guide
 - [ ] Confirmar fonte utilizada nos materiais da marca
 - [ ] Mover logo.png de dados/ para marca/ quando quiser organizar
+- [ ] Montar o relatório de funil dentro do GA4 (propriedade "Assessoria Raiz", G-1F7WPFZY4W) — Explorar → Análise detalhada de funil, com as 6 etapas do Protocolo Visita Garantida (página de venda → clique no botão → checkout → qualificação visualizada → qualificação enviada → obrigado). Esperando o catálogo de eventos/parâmetros da propriedade popular (nova, criada em 2026-08-27) pra não precisar criar dimensão personalizada à toa pro `page_location`.
 
 ## Método DEF — completar anotações (curso Vendas Pro em andamento)
 - [ ] Módulo 4 — Método DEF pra outbound/prospecção ativa
