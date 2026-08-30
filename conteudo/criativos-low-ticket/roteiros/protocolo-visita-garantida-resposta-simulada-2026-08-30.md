@@ -27,15 +27,15 @@
 
 ## Texto do card
 
-**Vendas de loja 👇**
+**Vendedor de carro 👇**
 
-**Meu cliente pergunta o preço no zap e depois some, me ajuda**
+**O cliente pergunta o preço do carro, o km, se aceita troca... e depois some. Me ajuda**
 
-Existe uma forma de fazer ele aparecer na loja no dia combinado, sem ficar implorando.
+Existe uma forma de fazer ele voltar pra ver o carro pessoalmente, sem você ficar mandando mensagem atrás dele.
 
-Eu criei o Protocolo Visita Garantida: o passo a passo pra tirar o cliente do WhatsApp e levar ele até a loja.
+Eu criei o Protocolo Visita Garantida: o passo a passo pra tirar esse cliente do WhatsApp e trazer ele pra fazer o test-drive na loja.
 
-Funciona sozinho ou com a equipe toda, pra multimarcas, seminovos ou concessionária.
+Funciona pra multimarcas, seminovos e concessionária, com um vendedor só ou equipe grande.
 
 **Toque em "Saiba Mais" e garanta o seu Protocolo Visita Garantida agora**
 
@@ -44,3 +44,4 @@ Funciona sozinho ou com a equipe toda, pra multimarcas, seminovos ou concession�
 ## Notas
 - Pergunta é simulada (prática comum do formato), mas o conteúdo da resposta usa só dado real do brief do produto.
 - Se quiser rodar com pergunta real de seguidor/DM, é só substituir a pergunta do topo, mantendo a resposta.
+- Ajustado pra usar vocabulário específico de loja de carro (km, troca, test-drive) em vez de linguagem genérica de "vendedor" — correção do Lucas em 2026-08-30, vale pros próximos roteiros dessa skill também.
