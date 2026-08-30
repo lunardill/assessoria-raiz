@@ -6,7 +6,7 @@
 **Perfil:** agencia
 **Atende clientes:** externos — foco em lojas de veículos, revendas, multimarcas e seminovos. A carteira também inclui outros nichos.
 **Equipe:** 2 sócios (50/50)
-- Lucas Lunardi: Comercial, Administrativo, Financeiro, Estratégia Comercial (não está na operação)
+- Lucas Lunardi: Comercial, Administrativo, Financeiro, Estratégia Comercial (não está na operação) — mais de 3 anos de experiência em treinamento comercial pra lojas de veículos (não usar "4 anos", correção feita em 2026-08-27)
 - Matheus Faria: Operação, Estratégia de Marketing, Sucesso do Cliente
 - Serviços audiovisuais terceirizados
 **Ferramentas:** Meta Ads, Google Ads, Google Meu Negócio, Google Sheets, Google Forms, Google Apps Script, WhatsApp Business, CRM próprio (customizável), Gamma, Lovable, ClickUp, Kiwify, Instagram, Autentique, Meetime, Sistema Raiz
