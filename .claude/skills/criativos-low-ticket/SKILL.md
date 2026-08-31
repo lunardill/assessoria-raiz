@@ -78,9 +78,12 @@ resultado em R$) e não tiver dado real disponível, marcar `[PREENCHER COM DADO
 avisar o usuário — nunca preencher com invenção. Isso é regra dura, igual à usada em `/conteudo`
 pros formatos que citam caso real.
 
-### Passo 5 — Salvar
+### Passo 5 — Entregar
 
-Salvar em `conteudo/criativos-low-ticket/roteiros/[produto]-[formato]-[data].md`.
+**Não salvar arquivo por padrão.** Entregar o roteiro direto no chat. Só salvar em
+`conteudo/criativos-low-ticket/roteiros/[produto]-[formato]-[data].md` se o usuário pedir
+explicitamente ("salva esse", "guarda isso"). Regra dada pelo Lucas em 2026-08-30 — antes disso a
+skill salvava tudo por padrão.
 
 ### Passo 6 — Registrar o teste
 
