@@ -6,13 +6,13 @@
 
 ## Estrutura PRSA
 
-**Gancho (visual):** foto do Lucas (ou imagem de contexto de loja/venda) com card de sticker de pergunta do Instagram no topo, seguido de blocos de texto tipo balão de resposta.
+**Gancho (visual):** selfie do Lucas num showroom/pátio de loja de carro, com um carro nítido no enquadramento atrás. Sticker "Faça uma pergunta" no topo.
 
-**Problema:** cliente pergunta o preço no WhatsApp e some depois.
+**Problema:** cliente já decidiu negociar só pelo WhatsApp, não quer ir na loja.
 
-**Rota:** existe um jeito de fazer ele aparecer na loja no dia combinado, sem implorar.
+**Rota:** dá pra trazer ele pra loja sim, negociar só por WhatsApp não é o único jeito.
 
-**Solução:** Protocolo Visita Garantida, aplicável sozinho ou com equipe, pra qualquer tipo de loja.
+**Solução:** Protocolo Visita Garantida — os 4 perfis de cliente, o roteiro dos 4 pilares, a cadência de 5 dias, e a quebra de objeção de financiamento.
 
 **Ação:** tocar em "Saiba Mais" e garantir o protocolo.
 
@@ -20,28 +20,31 @@
 
 ## Composição da imagem
 
-- Topo: sticker de pergunta estilo Instagram, label curto: **"Vendas de loja 👇"**
-- Balão branco (pergunta, letra do seguidor): pergunta simulada
-- Blocos pretos (resposta, sequenciais): resposta em 3-4 blocos curtos
-- Fechamento: CTA
+- Fundo: selfie do Lucas, showroom/pátio de loja, carro visível atrás
+- Sticker topo: **"Faça uma pergunta"**
+- Balão branco (objeção, 1ª pessoa): pergunta simulada
+- Transição em destaque: **"Veja só:"**
+- Bloco grande (fundo escuro): o que a oferta entrega
+- Bloco de reforço curto: contesta a objeção
+- CTA final (fundo claro)
 
 ## Texto do card
 
-**Vendedor de carro 👇**
+**Faça uma pergunta**
 
-**O cliente pergunta o preço do carro, o km, se aceita troca... e depois some. Me ajuda**
+**Impossível trazer cliente pra loja. Ele já decidiu que só quer negociar pelo WhatsApp**
 
-Existe uma forma de fazer ele voltar pra ver o carro pessoalmente, sem você ficar mandando mensagem atrás dele.
+**Veja só:**
 
-Eu criei o Protocolo Visita Garantida: o passo a passo pra tirar esse cliente do WhatsApp e trazer ele pra fazer o test-drive na loja.
+Eu tenho o Protocolo Visita Garantida, onde te entrego os 4 perfis de cliente, o roteiro dos 4 pilares com fala pronta pra copiar e colar, a cadência de 5 dias de contato, e ainda a quebra de objeção de quem insiste em fazer financiamento pelo zap.
 
-Funciona pra multimarcas, seminovos e concessionária, com um vendedor só ou equipe grande.
+É possível trazer ele pra loja sim, e negociar só por WhatsApp não é o único jeito.
 
-**Toque em "Saiba Mais" e garanta o seu Protocolo Visita Garantida agora**
+**Toque em "Saiba Mais" e garanta o seu Protocolo Visita Garantida!**
 
 ---
 
 ## Notas
-- Pergunta é simulada (prática comum do formato), mas o conteúdo da resposta usa só dado real do brief do produto.
-- Se quiser rodar com pergunta real de seguidor/DM, é só substituir a pergunta do topo, mantendo a resposta.
-- Ajustado pra usar vocabulário específico de loja de carro (km, troca, test-drive) em vez de linguagem genérica de "vendedor" — correção do Lucas em 2026-08-30, vale pros próximos roteiros dessa skill também.
+- Objeção é simulada (prática comum do formato), mas o conteúdo do bloco de entrega usa só dado real do brief do produto.
+- Estrutura de 6 blocos confirmada com o Lucas a partir do template real do Canva (sticker → objeção → "Veja só" → entrega → reforço → CTA) — atualizada em `banco-formatos.md`.
+- Vocabulário calibrado pra loja de carro (não "vendedor" genérico) — correção do Lucas em 2026-08-30.

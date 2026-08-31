@@ -181,11 +181,17 @@ prender atenção antes de entrar no Problema.
 # Formatos estáticos
 
 ## 12. Resposta simulada
-**Mecânica:** imagem única de alta qualidade simulando uma conversa ou caixinha de pergunta real (sticker de pergunta do Instagram, balões estilo WhatsApp). Quebra o padrão de anúncio corporativo tradicional. Fundo transmite autoridade/estilo de vida; texto curto e direto resolve uma objeção forte.
+**Mecânica:** imagem única de alta qualidade simulando uma conversa ou caixinha de pergunta real (sticker de pergunta do Instagram, balões estilo WhatsApp). Quebra o padrão de anúncio corporativo tradicional. Fundo é uma selfie do criador em ambiente que já entrega o nicho de cara (ex: academia pra emagrecimento, showroom/pátio de loja pra automotivo); texto curto e direto resolve uma objeção forte.
 
-**Estrutura:** Pergunta → Resposta (dor/solução) → prova/detalhe → CTA.
+**Estrutura exata dos blocos:**
+1. Sticker "Faça uma pergunta" (ou similar) no topo
+2. Balão branco com a objeção/dor da persona, na 1ª pessoa
+3. Transição curta em destaque: "Veja só:"
+4. Bloco grande (fundo escuro) listando o que a oferta entrega, de forma concreta
+5. Bloco de reforço curto contestando a objeção diretamente
+6. CTA final (fundo claro): "Toque em Saiba Mais e [ação]!"
 
-**Exemplo real:** card com foto do criador + blocos de texto encadeados respondendo "não consigo ir na sua imersão, mas quero começar no Low Ticket, me ajuda", terminando em "Toque em Saiba Mais".
+**Exemplo real:** selfie numa academia, objeção "Impossível emagrecer. Vida corrida, não tenho tempo" → "Veja só:" → lista do que o programa de detox entrega → "É possível emagrecer sim, e vida corrida não é desculpa." → "Toque em Saiba Mais e faça parte do Ciclo Detox 21!"
 
 ---
 

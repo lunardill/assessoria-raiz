@@ -20,16 +20,16 @@
 
 ## Composição da imagem
 
-- Headline no topo (verde, destaque): **"Vendedor de loja, escolha o seu lado"**
-- Texto esquerda (sobre a pessoa frustrada): **"Vive respondendo WhatsApp e a loja continua vazia"**
+- Headline no topo (verde, destaque): **"Vendedor de carro, escolha o seu lado"**
+- Texto esquerda (sobre a pessoa frustrada): **"Manda foto, km e tabela no zap e a loja continua vazia"**
 - Texto direita (sobre a pessoa calma): **"Aplica o Protocolo certo e recebe visita todo dia"**
 - Botão de CTA centralizado embaixo, sobre as duas ilustrações
 
 ## Texto do card
 
-**Vendedor de loja, escolha o seu lado**
+**Vendedor de carro, escolha o seu lado**
 
-Vive respondendo WhatsApp e a loja continua vazia
+Manda foto, km e tabela no zap e a loja continua vazia
 —
 Aplica o Protocolo certo e recebe visita todo dia
 

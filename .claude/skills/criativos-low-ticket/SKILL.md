@@ -96,6 +96,7 @@ Passo 2, evitando repetir sempre o mesmo.
 
 ## Regras
 
+- **Vocabulário sempre específico do nicho do produto, nunca genérico.** Pro Protocolo Visita Garantida, usar termos de loja de carro (km, troca, test-drive, financiamento, tabela) em vez de "vendedor"/"cliente" genérico — corrigido pelo Lucas em 2026-08-30 depois de um roteiro que soava como se falasse com qualquer vendedor. Vale pra qualquer produto novo mapeado nessa skill: usar o vocabulário real da persona do brief, não termo guarda-chuva.
 - **Tom segue o padrão validado de `banco-formatos.md`, não a regra geral de "tá" de preferencias.md** — ver nota de tom acima.
 - **Nunca inventar prova, número ou depoimento** — se não tiver dado real, marcar `[PREENCHER COM DADO REAL]` e avisar.
 - **Nunca deixar placeholder de gancho sem preencher** no roteiro final — todo `[DOR DA PERSONA]`, `[DESEJO DA PERSONA]` etc. do banco de formatos precisa virar texto real específico do produto antes de entregar.

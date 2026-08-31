@@ -20,21 +20,21 @@
 
 ## Composição da imagem
 
-- Headline no topo: **"Vendedor de loja, veja a diferença"**
-- Coluna esquerda (vermelho/X) — título: **"Sem o Protocolo"**
-- Coluna direita (verde/check) — título: **"Com o Protocolo"**
+- Headline no topo: **"Vendedor de carro, veja a diferença"**
+- Coluna esquerda (vermelho/X) — título: **"Sem aplicar o Protocolo"**
+- Coluna direita (verde/check) — título: **"Aplicando o Protocolo"**
 - Rodapé: botão de CTA em destaque
 
 ## Texto do card
 
-**Vendedor de loja, veja a diferença**
+**Vendedor de carro, veja a diferença**
 
-**Sem o Protocolo**
-❌ Cliente pergunta preço e some no WhatsApp
-❌ Perde venda que "tava praticamente fechada" porque ninguém aparece
-❌ Não sabe diferenciar comprador de verdade de curioso
+**Sem aplicar o Protocolo**
+❌ Cliente pergunta preço, km, se aceita troca... e some no WhatsApp
+❌ Perde venda que "tava praticamente fechada" porque ninguém aparece pro test-drive
+❌ Não sabe diferenciar comprador de verdade de curioso testando tabela
 
-**Com o Protocolo**
+**Aplicando o Protocolo**
 ✅ Sabe em segundos quem realmente vale a pena focar
 ✅ Garante que o cliente aparece na loja no dia combinado
 ✅ Fecha negociando cara a cara, onde a chance de vender é muito maior
