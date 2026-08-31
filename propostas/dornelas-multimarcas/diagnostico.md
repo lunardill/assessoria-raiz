@@ -6,7 +6,7 @@ Call de triagem conduzida com Lucas (irmão Victor também envolvido na operaç�
 
 ## 1. Contexto do negócio
 
-Loja aberta há 2 meses. A anotação da call registra "4" pra tempo trabalhando com venda de carros, sem deixar claro se é meses ou anos, mantenho literal por não ter certeza do dado.
+Loja aberta há 2 meses, mas Lucas tem 4 anos de experiência vendendo carro de forma particular antes de abrir a loja própria.
 
 Estrutura: loja é do pai (Gilberto) e do tio (Reinaldo), mas quem toca o dia a dia é Lucas e o irmão Victor. Equipe de 4 pessoas mais um vendedor. Estoque de 50 veículos, ticket médio de R$70-80 mil.
 
