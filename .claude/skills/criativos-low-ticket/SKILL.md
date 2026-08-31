@@ -52,6 +52,7 @@ Perguntar (se não tiver ficado claro): "Qual produto é esse criativo?"
 
 - Se o usuário já pediu um formato específico ("faz um de Teatrinho", "testa Selfie em movimento"), usar esse.
 - Se não especificou, listar os formatos de `banco-formatos.md` com uma linha de descrição cada (separando vídeo de estático) e perguntar qual testar — ou sugerir um com base no que ainda não foi testado pra esse produto (ver Passo 6).
+- **Regra fixa:** sempre que o usuário disser algo como "outro formato", "outro estilo", "faz mais um" sem especificar qual, nunca escolher sozinho e seguir direto — sempre perguntar qual formato ele quer, ou dar uma sugestão explícita (nomeando o formato) e esperar confirmação antes de escrever o roteiro. Regra dada pelo Lucas em 2026-08-30.
 
 ### Passo 3 — Escrever o roteiro com estrutura PRSA
 
