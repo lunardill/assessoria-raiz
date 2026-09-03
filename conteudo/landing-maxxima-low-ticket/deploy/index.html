@@ -192,7 +192,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .compare-tag{ padding:14px 16px; font-family:var(--font-mono); font-weight:600; font-size:.8rem; color:#fff; text-align:center; line-height:1.3; }
   .compare-tag--bad{ background:var(--negative); }
   .compare-tag--good{ background:var(--accent); }
-  .compare-img{ width:100%; display:block; }
+  .compare-img{ width:100%; height:auto; display:block; }
   @media (max-width:640px){ .compare{ flex-direction:column; } }
 
   /* funnel comparison */
@@ -212,7 +212,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (max-width:520px){ .result-grid{ column-count:1; } }
   .result-card{ background:transparent; break-inside:avoid; margin-bottom:28px; }
   .result-card .model{ font-family:var(--font-mono); font-weight:600; font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; margin-bottom:10px; color:#8B9A92; }
-  .result-img{ width:100%; display:block; border-radius:14px; }
+  .result-img{ width:100%; height:auto; display:block; border-radius:14px; }
   @media (max-width:520px){ .result-img--combo{ width:70%; margin:0 auto; } }
   .result-card .meta{ font-family:var(--font-mono); font-size:.76rem; color:#7A857E; display:flex; flex-direction:column; gap:2px; margin-bottom:12px; }
   .result-card .sale-label{ font-family:var(--font-mono); font-size:.7rem; letter-spacing:.06em; text-transform:uppercase; color:#8B9A92; display:block; margin-bottom:2px; }
@@ -411,7 +411,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .price-card .cash{ font-size:.92rem; color:#8A6A2E; margin-bottom:22px; }
   .price-card .cash-pill{ display:inline-block; margin:12px 0 24px; padding:9px 22px; border-radius:999px; background:var(--accent-soft); color:var(--accent-strong); font-weight:600; font-size:1.02rem; }
   .price-card .btn{ width:100%; font-size:.92rem; padding:19px 30px; }
-  .trust-badges{ width:100%; max-width:380px; margin:0 auto; display:block; }
+  .trust-badges{ width:100%; height:auto; max-width:380px; margin:0 auto; display:block; }
   .strike{ position:relative; display:inline-block; }
   .strike::after{ content:""; position:absolute; left:0; top:50%; height:2px; width:100%; background:#C0392B; transform-origin:left center; transform:translateY(-50%) scaleX(0); animation:strike-loop 3s ease-in-out infinite; will-change:transform, opacity; }
   @media (prefers-reduced-motion:reduce){ .strike::after{ animation:none; transform:translateY(-50%) scaleX(1); opacity:1; } }
