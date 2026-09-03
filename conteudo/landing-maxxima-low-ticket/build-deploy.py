@@ -92,10 +92,20 @@ def build_page(fname, prefix):
           f"({counter[0]} imagens extraídas)")
 
 
+def copy_static_files():
+    import shutil
+    for fname in ["robots.txt", "_headers"]:
+        src = os.path.join(BASE_DIR, fname)
+        if os.path.exists(src):
+            shutil.copy(src, os.path.join(DEPLOY_DIR, fname))
+            print(f"{fname}: copiado pra deploy/")
+
+
 def main():
     os.makedirs(IMAGES_DIR, exist_ok=True)
     for fname, prefix in PAGES:
         build_page(fname, prefix)
+    copy_static_files()
     print("\nPronto. Agora sobe a pasta deploy/ inteira no Cloudflare Pages"
           " (Implantações -> Criar implantação -> arrasta a pasta deploy).")
 
