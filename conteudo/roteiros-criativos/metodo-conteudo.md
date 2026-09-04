@@ -128,6 +128,7 @@ Quando um formato vira validado, ele passa a ser a sugestão padrão pra novos r
 | Data | Formato | Objetivo | Resultado | Status |
 |------|---------|----------|-----------|--------|
 | — | Trivial | Dono de loja tocando tráfego sozinho perde tempo/dinheiro | Roteiro escrito, ainda não gravado/postado | Em teste (0/3) |
+| 2026-09-04 | Trivial | Confiança — Raiz olha o negócio inteiro, não joga culpa na loja quando lead não vira venda | Roteiro escrito, aguardando gravação | Em teste (0/3) |
 
 ---
 
