@@ -62,3 +62,13 @@ Além das lojas de veículos, a Raiz passou a rodar campanha de captação de **
 - Mesma cadência da Meetime usada pras lojas de veículos, com 2 campos personalizados a mais (`faturamentoMedio`, `jaInvesteEmTrafego`).
 - 3 scripts clonados no mesmo Apps Script pra essa frente: `emailCaptacaoGeral.gs`, `whatsappCaptacaoGeral.gs`, `meetimeCaptacaoGeral.gs` — mesmo padrão de retry, alerta de falha e controle por última linha dos scripts das lojas de veículos, mas com contadores de propriedade separados (não colidem entre si).
 - Achado importante: a fórmula `IF` simples com intervalo fixo (ex: `B55:B1000`) quebra quando o intervalo referenciado é resultado de outra fórmula de array (`FILTER`) — nesses casos, refazer o cálculo direto da fonte com `FILTER` de novo, em vez de encadear em cima de outra coluna já calculada.
+
+## Campanhas de loja de veículos pausadas (atualizado 11/09/2026)
+As campanhas de captação pra lojas de veículos (Novo Forms) foram pausadas — não chega lead novo desse segmento por enquanto. Foco atual de captação é só a Captação Geral (empresas em geral). Os leads de loja de veículos que já estavam na Pipeline (linhas 55 em diante) não estão sendo trabalhados pelo time.
+
+## Integração Pipeline → CRM interno (atualizado 11/09/2026)
+O dev criou um Apps Script separado (`importarLeads`) que manda leads da Pipeline pro CRM interno (`app.assessoriaraiz.com.br`), via endpoint `/api/integrations/meta-lead-ads`. Roda a cada 5 min, controla duplicidade por coluna própria ("Importado CRM", carimbo por linha, mais robusto que os nossos contadores de última linha).
+- Só importa a partir da **linha 200** da Pipeline (`DATA_START_ROW`) — ou seja, só traz leads da Captação Geral, nunca trouxe os de loja de veículos (linhas 55-199). Confirmado testando busca no CRM: leads recentes de loja de veículos não aparecem lá. Não é urgente corrigir agora porque a campanha de loja tá pausada e ninguém trabalha o backlog, mas fica registrado caso a campanha de loja volte um dia — nesse caso, mudar `DATA_START_ROW` pra 55.
+- Só traz dado de cadastro (id, data, anúncio, campanha, e-mail, nome, telefone) — não sincroniza status de funil nem campos de qualificação.
+- Chave de API (`IMPORT_KEY`) fica hardcoded no script, não em Propriedades — diferente do padrão que a gente usa nos outros scripts. Vale considerar sugerir pro dev migrar.
+- CRM interno também tem um usuário "Claude" (conta criada pro Lucas compartilhar acesso comigo) cadastrado como Supervisor em `/team` — checar se o toggle de "recebendo leads" tá desligado, pra não entrar no rodízio de distribuição automática.
