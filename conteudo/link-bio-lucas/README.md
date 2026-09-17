@@ -12,10 +12,10 @@ Página de link na bio pro Instagram do Lucas, no mesmo espírito da que o Mathe
 3. Fale no WhatsApp → `https://wa.me/5554992013758`
 
 ## Deploy (Cloudflare Pages)
-Mesmo padrão do Protocolo Visita Garantida ([[protocolo-visita-garantida-funil]]):
-1. Criar projeto novo no Cloudflare Pages (ex: `link-bio-lucas`)
+Página pessoal do Lucas, não usa domínio da Raiz.
+1. Criar projeto novo no Cloudflare Pages (ex: `lucaslunardi`)
 2. Deploy manual: arrastar a pasta `deploy/` (nunca a pasta inteira do projeto)
-3. Domínio sugerido: `link.assessoriaraiz.com.br` — criar CNAME no Registro.br apontando pro projeto do Cloudflare Pages, igual foi feito pra `protocolo.assessoriaraiz.com.br`. Domínio raiz continua no Registro.br, sem migrar nameserver.
+3. Domínio: usar o subdomínio grátis que o próprio Cloudflare Pages gera (ex: `lucaslunardi.pages.dev`) — não precisa registrar nada nem mexer em DNS. É esse link que vai na bio do Instagram. Se um dia quiser migrar pra domínio próprio, dá pra apontar depois sem refazer a página.
 
 ## Tracking — o que falta configurar manualmente no GTM/GA4
 
