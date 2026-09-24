@@ -5,8 +5,8 @@ Fechamento) pra venda consultiva. Usado por `/vendedor` como base teórica de co
 negociação. Complementa `metodo-raiz-comercial.md`, que é a aplicação específica da Raiz (frases
 prontas, números, contrato, sinais de alerta do nicho de lojas de veículos).
 
-**Status:** curso em andamento. Módulo 4 (outbound) e módulo 7 (gatilhos mentais) ainda não têm
-anotação — ver seção "Pendências" no fim. Atualizar esse arquivo sempre que o Lucas mandar anotação
+**Status:** curso em andamento. Módulos 1, 2, 3, 5 e 6 anotados (revisão completa em 2026-09-23).
+Módulo 4 (outbound) e módulo 7 (gatilhos mentais) ainda não têm anotação — ver seção "Pendências" no fim. Atualizar esse arquivo sempre que o Lucas mandar anotação
 nova.
 
 ---
@@ -56,6 +56,16 @@ nova.
 PUV da Raiz: *"fazemos com que empresas criem raízes, cresçam com propósito e colham frutos"* — ver
 `metodo-raiz-comercial.md` pra frases e analogias completas já validadas.
 
+Versão completa, usada no "o quê" do Encantamento:
+- Geral: *"O Método RAIZ é uma metodologia validada no mercado, que faz com que negócios criem raízes,
+  cresçam com propósito e colham frutos, tendo gerado mais de 10 milhões em vendas."*
+- Lojas de carros: *"O Método RAIZ é uma metodologia validada no mercado, que faz com que lojas de
+  carros aumentem as vendas, tenham maior giro de estoque e previsibilidade, tendo gerado mais de 10
+  milhões em vendas."*
+
+A PUV também serve pra aumentar autoridade sobre o assunto e é a base da técnica "levar para o
+desconhecido" (ver Foco no preço).
+
 ---
 
 ## Os 4 perfis de cliente
@@ -83,10 +93,39 @@ espelhamento, textos enxutos, nunca deixar a pessoa esperando.
 **Ligação** — menor taxa de conexão (poucos atendem), mas melhor aproveitamento dos argumentos quando
 atende. A objeção nasce no "alô": 4 segundos é o tempo que a pessoa leva pra formar o primeiro
 veredito, e o que impacta nesse momento é o tom de voz. Eliminar pronome de tratamento, ser natural,
-atenção plena.
+atenção plena. Abertura: *"Opa, tudo bom? O {nome} está por aí?"*
+Em 15 minutos de ligação se resolve o que por mensagem levaria 4 ou 5 horas. Prospectar por ligação é
+difícil, por isso pouca gente faz, e quem se especializa passa a valer mais. Vale investir nisso.
 
 **Vídeochamada** — indicada pra high ticket (5k+), produto/serviço com elemento visual forte, ou venda
 complexa com muitas decisões envolvidas. Atenção a internet, cenário e fluidez da apresentação.
+Abaixo de 5k, ligação rende mais: vídeochamada diminui a quantidade de atendimentos.
+
+### Jab Jab Jab Direto (levar o lead pra uma ligação/reunião)
+
+A ligação é um meio, não um fim. A pergunta é: o que faria essa pessoa querer falar com você? Só dois
+sentimentos movem isso: medo de perder (possibilidade de rejeição) ou vontade de ganhar (ter alguma
+vantagem). O Neto recomenda o caminho da rejeição.
+
+**Pelo caminho da rejeição (recomendado):**
+1. Preparar o terreno
+2. **Jab 1** (situação): *"{nome}, você já atua com vendas?"*
+3. **Jab 2** (situação): *"{nome}, e hoje você atua com qual produto/mercado?"*
+4. **Jab 3** (impeditivo): *"Entendi {nome}, e me fala qual sua maior dificuldade pra fazer vendas 1:1?"*
+5. **Direto** (texto no WhatsApp): *"{nome}, posso te mandar um áudio breve? Consegue ouvir aí
+   rapidinho?"*
+
+Elementos do áudio: caso específico (a pessoa sente que está tendo um tratamento diferente, não o
+atendimento padrão), "fiquei preocupado", recuo estratégico, CTA pra ligação.
+
+É contraintuitivo: todo vendedor quer muito vender, e aqui você sinaliza que talvez não venda pra
+ela. É isso que faz a pessoa querer a reunião.
+
+**Pelo caminho da vantagem (alternativa):** elementos do áudio são cliente vip ou escolhido,
+exclusividade, pouco acesso, CTA pra ligação.
+
+Os exemplos do curso são genéricos (venda de curso de vendas). Adaptar as perguntas pro contexto do
+lead da Raiz.
 
 ---
 
@@ -132,6 +171,12 @@ Modelo:
 > sabemos que existem muitas propostas de facilidade no mercado. Então, até pra entender se realmente
 > nossa solução faz sentido ou não pra você, tudo bem se eu te fizer algumas perguntas?"*
 
+Modelo 2 (mesmos princípios):
+> *"{nome}, nesse momento meu contato tem como objetivo entender contigo se faz sentido avançarmos na
+> solução que trata de {o que a solução resolve}, porque isso é importante pra eu conhecer um pouco
+> mais dos seus desafios relacionados a {dor específica}. Tudo bem se eu te fizer algumas perguntas? E,
+> ao final, se eu entender que não conseguimos te ajudar, até posso te sugerir outro caminho."*
+
 ### Framework de perguntas
 
 Ordem de progressão dentro da Descoberta:
@@ -167,6 +212,23 @@ elimina follow-up eterno com quem nunca vai comprar. 3 partes: pedir autorizaç�
 justificar (cuidado com a experiência do cliente antes mesmo de virar cliente), explicar os 2 destinos
 possíveis no final (não seguir insistindo se não fizer sentido / seguir pra fechamento se fizer).
 
+Script completo:
+1. **Pedir:** *"{nome}, obrigado pelas respostas. Consegui entender certinho o que você busca. Antes
+   de te explicar melhor sobre a minha solução, tudo bem se fizermos um combinado breve?"*
+2. **Justificar:** *"{nome}, aqui na Raiz a gente toma muito cuidado na hora de fechar novos clientes.
+   Temos uma preocupação muito grande com sua experiência com a gente, antes mesmo de você virar
+   cliente. Por isso, esse combinado é pra te deixar muito à vontade durante nosso atendimento."*
+3. **Explicar:** *"Vai funcionar assim: nos próximos minutos eu vou te explicar como funciona nossa
+   solução, e você pode me interromper a qualquer momento, não quero que fique com dúvida, ok? Lá no
+   final, teremos 2 caminhos possíveis.*
+   *Caminho 1: se você não gostar da solução ou achar que ela não atende o que você busca, pode me
+   falar abertamente, que eu não vou ficar tentando te convencer. Nem vou ficar chateado. Pode ser?"*
+   (espera o sim, e pode completar com *"Que aí você até me ajuda a não ser aquele vendedor chato que
+   fica te ligando"*)
+   *"Caminho 2: se você gostar e a gente conseguir te ajudar a {dor}, você também me fala, ok? Nesse
+   caso eu sigo aqui mesmo pra finalizar a contratação e você virar um dos nossos clientes. Tudo bem
+   por você essa objetividade?"*
+
 Uma Descoberta bem feita pode representar até 80% da venda inteira. Fechar com escuta ativa de
 verdade, não como checklist — parafrasear o que a pessoa disse mostra que você prestou atenção.
 
@@ -190,6 +252,13 @@ emocional, fazer a pessoa se imaginar já com a dor resolvida.
 
 **Estrutura do diálogo:** o que vende → como entrega → o que a pessoa ganha → CTA → concordância
 ("perfeito, é exatamente isso que a gente busca oferecer" — reforça escuta ativa e conexão).
+
+- **O quê:** a PUV completa (ver seção PUV)
+- **Como:** o que muda na vida da pessoa usando a solução (*"Com isso você..."*)
+- **O que ganha:** a dor que você resolve, dita do jeito que muda a vida de quem está comprando
+- **CTA:** *"{nome}, você acredita que ter acesso a essa metodologia e o apoio de uma equipe
+  qualificada te ajudaria no seu objetivo?"*
+- **Concordância:** *"Perfeito! É exatamente isso que a gente aqui na Raiz busca oferecer."*
 
 **Inimigo comum** (opcional, reforça a ancoragem que vem no Fechamento): usar só no "o quê" e no "como"
 da estrutura acima.
@@ -291,6 +360,10 @@ objeções reais, não desculpas genéricas.
 3. **Pergunta aberta conflitante** — reconecta a pessoa com o custo de não agir. Ex: *"Eu te entendo,
    realmente é um investimento considerável... mas me tira uma dúvida: você já parou pra contabilizar
    quantas vendas e quanto dinheiro você já perdeu por não conseguir atrair a pessoa certa?"*
+   Outras: *"Qual era hoje sua expectativa de investimento pra atrair mais clientes? Pra ver se eu
+   realmente tenho uma forma de te ajudar ou não."* / *"Entendo, mas até pra ver se consigo te
+   ajudar... o que te impede hoje de tomar essa decisão? Me fala, que se eu conseguir te ajudar eu te
+   falo, e se não conseguir também te falo."*
 4. **Fechar com CTA.**
 
 Não é a objeção em si, é a forma como ela se manifesta que revela se é real ou desculpa.
@@ -343,6 +416,44 @@ sozinha significa que ela não te viu como autoridade capaz de ajudar na decisã
    ir criando pequenas confirmações onde o lead reafirma pra si mesmo que está pronto, que precisa e
    que quer aquilo. No final, um "vou pensar" soa incongruente com tudo que ele já confirmou antes.
    Perguntas do tipo *"você está comprometido a...?"*, *"você consegue...?"* durante a Descoberta.
+
+### "Preciso falar com meu sócio/esposa"
+
+O ideal é mapear o decisor ainda na Descoberta. Se isso não foi feito e a objeção apareceu no final,
+tem duas saídas:
+1. **Envolver o decisor na hora** e reiniciar o DEF com ele (a venda começa de novo).
+2. **Ensinar o lead a vender pro decisor**, passando o benefício e não só o preço. Ex: *"{nome},
+   quando você falar com seu sócio, ele vai dizer 'pô, mais uma despesa?'. Aí você chega nele e fala:
+   'tava pensando aqui, o que tu acha da gente anunciar nosso negócio na internet? Tu tem algo contra
+   a gente aparecer pra mais gente que quer o nosso serviço?'"*
+
+### "Tá caro"
+
+Significa coisas diferentes dependendo do momento:
+- **No início** (antes de ancorar e encantar): menos grave. A pessoa está usando uma referência que
+  criou na cabeça dela, não a sua. Fazer recuo estratégico pra ganhar tempo e ancorar, levando pro
+  desconhecido.
+- **No Fechamento:** sinal de erro no DEF, que existe justamente pra essa objeção não aparecer. "Tá
+  caro" aqui quer dizer "sua solução não vale esse preço", e não tem muito o que fazer, não dá pra
+  voltar e ancorar de novo.
+
+Não confundir com "não cabe no orçamento", "não consigo pagar" ou "preciso ver meu financeiro". Isso é
+outra coisa (fluxo de caixa), não "tá caro".
+
+### Red flags
+
+Toda objeção é uma red flag, mas nem toda red flag já é objeção. Vira objeção se não for tratada. Red
+flag é qualquer informação que, ignorada, coloca a venda em risco, e aparece ao longo de todo o
+atendimento.
+
+Quando aparecer, parar e investigar a causa com pergunta aberta que aumente o nível de consciência do
+lead. Ex: *"{nome}, quando você me diz que não tem disciplina, o que exatamente aconteceu naquela
+situação?"* As respostas viram insumo pro Encantamento.
+
+**Não resolver a dor na hora.** Se descobrir que a solução resolve a causa, segurar. Resolver na
+Descoberta atropela a estrutura e joga o atendimento pro Encantamento antes da hora. Anotar todas as
+red flags e causas, e resolver todas juntas no Encantamento. Resolvida no momento certo, a dor pesa
+mais, aumenta a ancoragem e dá a sensação de "isso foi feito pra mim".
 
 ---
 
