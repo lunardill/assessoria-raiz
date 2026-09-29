@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Manual de Follow-up</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --verde: #2C4A3C;
+    --verde-escuro: #22392E;
+    --creme: #E8D5A3;
+    --creme-claro: #F7F1E3;
+    --bolha: #EFE6D0;
+    --texto: #1F2A24;
+    --texto-suave: #5A6660;
+    --linha: #DCD2BC;
+  }
+  @page { size: A4; margin: 18mm 17mm 20mm; }
+  @page capa { margin: 0; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 10pt;
+    line-height: 1.55;
+    color: var(--texto);
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  h1, h2, h3, .num { font-variant-numeric: lining-nums; }
+  h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 600; margin: 0; }
+
+  /* Capa */
+  .capa {
+    page: capa;
+    height: 297mm;
+    background: var(--verde);
+    color: var(--creme);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 26mm 22mm 22mm;
+    break-after: page;
+  }
+  .capa img { width: 150px; }
+  .capa .rotulo {
+    font-size: 9pt; letter-spacing: 3px; text-transform: uppercase; opacity: .8; margin-bottom: 10mm;
+  }
+  .capa h1 { font-size: 46pt; line-height: 1.05; color: var(--creme); }
+  .capa .sub {
+    font-size: 13pt; color: var(--creme-claro); opacity: .9; margin-top: 8mm; max-width: 125mm; line-height: 1.5;
+  }
+  .capa .rodape {
+    font-size: 9pt; color: var(--creme); opacity: .75; border-top: 1px solid rgba(232,213,163,.35); padding-top: 5mm;
+  }
+
+  /* Seções */
+  .secao { break-before: page; }
+  .secao-topo {
+    border-bottom: 2px solid var(--creme);
+    padding-bottom: 4mm;
+    margin-bottom: 7mm;
+  }
+  .secao-topo .num-secao {
+    font-size: 8.5pt; letter-spacing: 2.5px; text-transform: uppercase; color: var(--texto-suave);
+  }
+  .secao-topo h2 { font-size: 24pt; color: var(--verde); margin-top: 1mm; }
+  .secao-topo p { color: var(--texto-suave); margin: 2mm 0 0; font-size: 10pt; }
+
+  /* Como usar */
+  .regras { counter-reset: regra; margin: 0; padding: 0; list-style: none; }
+  .regras li {
+    counter-increment: regra;
+    position: relative;
+    padding: 4mm 0 4mm 14mm;
+    border-bottom: 1px solid var(--linha);
+  }
+  .regras li::before {
+    content: counter(regra);
+    position: absolute; left: 0; top: 3.5mm;
+    width: 9mm; height: 9mm; border-radius: 50%;
+    background: var(--verde); color: var(--creme);
+    font-family: 'Playfair Display', serif; font-size: 12pt;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .regras strong { color: var(--verde); }
+  .nota-chaves {
+    margin-top: 8mm; background: var(--creme-claro); border-left: 3px solid var(--verde);
+    padding: 4mm 5mm; font-size: 9.5pt;
+  }
+  .nota-chaves code {
+    font-family: 'Inter', sans-serif; background: var(--bolha); padding: 0 1.5mm; border-radius: 2px; font-weight: 500;
+  }
+  .indice { margin-top: 9mm; }
+  .indice h3 { font-size: 13pt; color: var(--verde); margin-bottom: 3mm; }
+  .indice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1mm 8mm; font-size: 9pt; }
+  .indice-grid span { color: var(--texto-suave); display: inline-block; width: 7mm; }
+
+  /* Cards */
+  .card {
+    break-inside: avoid;
+    display: grid;
+    grid-template-columns: 13mm 1fr;
+    gap: 0 4mm;
+    padding: 5mm 0;
+    border-bottom: 1px solid var(--linha);
+  }
+  .card:last-child { border-bottom: none; }
+  .card .num {
+    font-family: 'Playfair Display', serif; font-size: 24pt; line-height: 1; color: var(--verde); font-weight: 600;
+  }
+  .card h3 { font-size: 13.5pt; color: var(--verde); margin-bottom: 1.5mm; }
+  .card .meta { font-size: 9pt; color: var(--texto-suave); margin: 0 0 1mm; }
+  .card .meta b { color: var(--texto); font-weight: 600; }
+  .bolha {
+    background: var(--bolha);
+    border-radius: 3mm 3mm 3mm 0.8mm;
+    padding: 3mm 4mm;
+    margin-top: 2.5mm;
+    font-size: 10pt;
+    max-width: 150mm;
+    white-space: pre-line;
+  }
+  .bolha-rotulo { font-size: 8pt; text-transform: uppercase; letter-spacing: 1.5px; color: var(--texto-suave); margin-top: 3mm; }
+
+  .aviso-secao {
+    background: var(--creme-claro); padding: 4mm 5mm; font-size: 9.5pt; margin-bottom: 4mm; border-left: 3px solid var(--creme);
+  }
+
+  /* Despedida */
+  .despedida {
+    break-inside: avoid;
+    background: var(--verde); color: var(--creme-claro);
+    padding: 8mm 9mm; margin-top: 2mm;
+  }
+  .despedida .num { font-family: 'Playfair Display', serif; font-size: 30pt; color: var(--creme); line-height: 1; }
+  .despedida h3 { color: var(--creme); font-size: 17pt; margin: 2mm 0 2mm; }
+  .despedida .meta { color: var(--creme-claro); opacity: .85; font-size: 9.5pt; }
+  .despedida .meta b { color: var(--creme); }
+  .despedida .bolha { background: var(--creme-claro); color: var(--texto); }
+
+  /* Cuidados */
+  .cuidados { margin: 0; padding: 0; list-style: none; }
+  .cuidados li { break-inside: avoid; padding: 4mm 0; border-bottom: 1px solid var(--linha); }
+  .cuidados li strong { color: var(--verde); display: block; font-size: 10.5pt; margin-bottom: 1mm; }
+  .assinatura {
+    margin-top: 12mm; display: flex; align-items: center; gap: 5mm;
+    background: var(--verde); color: var(--creme); padding: 6mm 8mm; break-inside: avoid;
+  }
+  .assinatura img { width: 60px; }
+  .assinatura p { margin: 0; font-size: 9.5pt; color: var(--creme-claro); }
+  .assinatura strong { color: var(--creme); font-family: 'Playfair Display', serif; font-size: 12pt; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<section class="capa">
+  <img src="logo.png" alt="Assessoria Raiz">
+  <div>
+    <div class="rotulo">Material de apoio comercial</div>
+    <h1>Manual de<br>Follow-up</h1>
+    <p class="sub">26 ideias pra retomar a conversa com o cliente que sumiu e trazer ele de volta pra loja.</p>
+  </div>
+  <div class="rodape">Assessoria Raiz · Crescimento comercial pra lojas de veículos</div>
+</section>
+
+<!-- COMO USAR -->
+<section>
+  <div class="secao-topo">
+    <div class="num-secao">Antes de começar</div>
+    <h2>4 regras de ouro</h2>
+    <p>Valem pra todas as mensagens deste manual.</p>
+  </div>
+  <ol class="regras">
+    <li><strong>Todo follow-up precisa de um motivo novo.</strong> Nunca mandar "e aí, vai fechar?" ou "alguma novidade?". O cliente precisa sentir que você tem algo a dizer, não que está cobrando.</li>
+    <li><strong>No máximo 2 parágrafos, sempre terminando com uma pergunta fácil.</strong> Mensagem longa não é lida. Pergunta difícil não é respondida.</li>
+    <li><strong>Peça antes de mandar áudio.</strong> E áudio de no máximo 1 minuto, com energia na voz.</li>
+    <li><strong>Intercale mensagem com ligação.</strong> Uma ligação de 5 minutos resolve o que levaria um dia inteiro de troca de mensagem.</li>
+  </ol>
+
+  <div class="nota-chaves">
+    O que está entre chaves é pra trocar: <code>{nome}</code> é o nome do cliente, <code>{carro}</code> é o modelo que ele olhou, <code>{loja}</code> é o nome da loja, <code>{vendedor}</code> é o seu nome. Adapte o texto pro seu jeito de falar. O que importa é a ideia por trás de cada mensagem.
+  </div>
+
+  <div class="indice">
+    <h3>O que tem aqui</h3>
+    <div class="indice-grid">
+      <div><span>01</span>Chegou carro parecido</div>
+      <div><span>14</span>Mudar de canal</div>
+      <div><span>02</span>Vídeo do carro</div>
+      <div><span>15</span>Áudio mudo</div>
+      <div><span>03</span>Condição nova</div>
+      <div><span>16</span>Cartaz de procurado</div>
+      <div><span>04</span>O carro foi vendido</div>
+      <div><span>17</span>Mensagem apagada</div>
+      <div><span>05</span>Simulação pronta</div>
+      <div><span>18</span>O carro manda o recado</div>
+      <div><span>06</span>Avaliação da troca</div>
+      <div><span>19</span>Reservado pra ele</div>
+      <div><span>07</span>Test drive com dia marcado</div>
+      <div><span>20</span>A chave na mão</div>
+      <div><span>08</span>Retomar algo da visita</div>
+      <div><span>21</span>Café pronto</div>
+      <div><span>09</span>Envolver quem decide junto</div>
+      <div><span>22</span>Status estilo iFood</div>
+      <div><span>10</span>Pergunta de um número</div>
+      <div><span>23</span>Enquete do WhatsApp</div>
+      <div><span>11</span>Conteúdo útil</div>
+      <div><span>24</span>Previsão do tempo</div>
+      <div><span>12</span>Data especial ou fim de mês</div>
+      <div><span>25</span>Onde está o Wally</div>
+      <div><span>13</span>Reativar lead antigo</div>
+      <div><span>26</span>A despedida</div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTE 1 -->
+<section class="secao">
+  <div class="secao-topo">
+    <div class="num-secao">Parte 1</div>
+    <h2>Os clássicos que funcionam</h2>
+    <p>Mensagens pro dia a dia, pra qualquer perfil de cliente.</p>
+  </div>
+
+  <div class="card"><div class="num">01</div><div>
+    <h3>Chegou carro parecido no estoque</h3>
+    <p class="meta"><b>Quando usar:</b> o cliente procurava um modelo que a loja não tinha, ou achou o carro caro.</p>
+    <div class="bolha">{nome}, lembrei de você agora. Acabou de entrar aqui um {carro}, bem na linha do que você procurava. Quer que eu te mande umas fotos?</div>
+  </div></div>
+
+  <div class="card"><div class="num">02</div><div>
+    <h3>Vídeo do carro que ele pediu</h3>
+    <p class="meta"><b>Quando usar:</b> o cliente perguntou de um carro específico e esfriou.</p>
+    <div class="bolha">{nome}, passei pelo {carro} agora e gravei um vídeo rapidinho mostrando ele por dentro e por fora. Posso te mandar?</div>
+  </div></div>
+
+  <div class="card"><div class="num">03</div><div>
+    <h3>Condição nova</h3>
+    <p class="meta"><b>Quando usar:</b> o preço baixou, entrou bônus na troca ou saiu taxa melhor no financiamento. Só se for verdade.</p>
+    <div class="bolha">{nome}, lembra do {carro}? Saiu uma condição nova nele essa semana e pensei em você na hora. Quer que eu te explique como ficou?</div>
+  </div></div>
+
+  <div class="card"><div class="num">04</div><div>
+    <h3>O carro dele foi vendido</h3>
+    <p class="meta"><b>Quando usar:</b> o carro que o cliente queria saiu da loja.</p>
+    <div class="bolha">{nome}, precisava te avisar: o {carro} que você viu foi vendido ontem. Mas não quero que você fique sem opção. Me fala uma coisa: o que mais pesava pra você nele, o modelo, o ano ou o preço?</div>
+  </div></div>
+
+  <div class="card"><div class="num">05</div><div>
+    <h3>Simulação pronta</h3>
+    <p class="meta"><b>Quando usar:</b> o cliente falou em financiar mas não mandou os dados.</p>
+    <div class="bolha">{nome}, deixei uma simulação pronta do {carro} com entrada de {valor}. Ficou uma parcela bem diferente do que muita gente imagina. Quer que eu te mande?</div>
+  </div></div>
+
+  <div class="card"><div class="num">06</div><div>
+    <h3>Avaliação do carro na troca</h3>
+    <p class="meta"><b>Quando usar:</b> o cliente tem carro pra dar de entrada e ainda não trouxe pra avaliar.</p>
+    <div class="bolha">{nome}, uma coisa que ajuda muito a gente fechar a conta certinha é ver seu carro de perto. Consegue passar aqui essa semana pra uma avaliação rápida? Leva uns 15 minutos.</div>
+  </div></div>
+
+  <div class="card"><div class="num">07</div><div>
+    <h3>Test drive com dia marcado</h3>
+    <p class="meta"><b>Quando usar:</b> o cliente demonstrou interesse, mas nunca veio.</p>
+    <div class="bolha">{nome}, que tal você sentir o {carro} na prática antes de decidir qualquer coisa? Fica melhor pra você sábado de manhã ou quinta no fim da tarde?</div>
+  </div></div>
+
+  <div class="card"><div class="num">08</div><div>
+    <h3>Retomar algo da visita</h3>
+    <p class="meta"><b>Quando usar:</b> o cliente veio na loja e não fechou. Use um detalhe que ele comentou.</p>
+    <div class="bolha">{nome}, fiquei pensando no que você comentou sobre {detalhe da visita, ex: espaço pro carrinho do bebê}. Separei duas opções que resolvem isso melhor. Posso te mostrar?</div>
+  </div></div>
+
+  <div class="card"><div class="num">09</div><div>
+    <h3>Envolver quem decide junto</h3>
+    <p class="meta"><b>Quando usar:</b> o cliente disse "vou ver com minha esposa", "meu marido" ou "meu pai".</p>
+    <div class="bolha">{nome}, conseguiu mostrar o {carro} pra {pessoa}? Se ajudar, posso gravar um vídeo mostrando os detalhes pra vocês verem juntos, ou marcar um horário pros dois virem aqui.</div>
+  </div></div>
+
+  <div class="card"><div class="num">10</div><div>
+    <h3>Pergunta de um número</h3>
+    <p class="meta"><b>Quando usar:</b> o cliente parou de responder faz alguns dias.</p>
+    <div class="bolha">{nome}, sei que a rotina é corrida, então vou facilitar. Me responde só com um número:
+
+1. Ainda quero o carro, quero ver essa semana
+2. Quero, mas mais pra frente
+3. Já resolvi</div>
+  </div></div>
+
+  <div class="card"><div class="num">11</div><div>
+    <h3>Conteúdo útil</h3>
+    <p class="meta"><b>Quando usar:</b> cliente em fase de pesquisa, comparando lojas.</p>
+    <div class="bolha">{nome}, como você está pesquisando carro, montei uma listinha rápida do que olhar antes de comprar um seminovo, pra não cair em cilada. Quer que eu te mande?</div>
+  </div></div>
+
+  <div class="card"><div class="num">12</div><div>
+    <h3>Data especial ou fim de mês</h3>
+    <p class="meta"><b>Quando usar:</b> feirão, fim de mês, data comemorativa. Só com condição real.</p>
+    <div class="bolha">{nome}, até sábado a gente está com uma condição especial aqui na loja, e o {carro} entrou nela. Lembrei de você. Ainda faz sentido pra você trocar de carro agora?</div>
+  </div></div>
+
+  <div class="card"><div class="num">13</div><div>
+    <h3>Reativar lead antigo</h3>
+    <p class="meta"><b>Quando usar:</b> o cliente sumiu faz 7 dias ou mais, ou já tinha dito não.</p>
+    <div class="bolha">{nome}, aqui é o {vendedor} da {loja}. A gente se falou há um tempo sobre o {carro}, mas acabou não andando. Trocar de carro ainda está nos seus planos?</div>
+  </div></div>
+
+  <div class="card"><div class="num">14</div><div>
+    <h3>Mudar de canal</h3>
+    <p class="meta"><b>Quando usar:</b> várias mensagens sem resposta.</p>
+    <div class="bolha">{nome}, acho que o WhatsApp não está sendo o melhor jeito de falar contigo. Posso te ligar rapidinho? Qual horário fica melhor?</div>
+  </div></div>
+</section>
+
+<!-- PARTE 2 -->
+<section class="secao">
+  <div class="secao-topo">
+    <div class="num-secao">Parte 2</div>
+    <h2>Fora da caixa</h2>
+    <p>Pra quebrar o padrão e arrancar uma reação de quem já não responde mais.</p>
+  </div>
+
+  <div class="aviso-secao">
+    Use só com cliente que sumiu depois de várias tentativas normais, nunca nos primeiros contatos. E uma por cliente: usada uma vez, quebra o padrão. Usada duas, vira palhaçada.
+  </div>
+
+  <div class="card"><div class="num">15</div><div>
+    <h3>Áudio mudo</h3>
+    <p class="meta"><b>Como fazer:</b> grave um áudio de 3 a 5 segundos sem falar nada e mande. O cliente quase sempre responde "não saiu nada no áudio". Aí você entra:</p>
+    <div class="bolha">Hahaha era só pra ver se você ainda estava vivo, {nome} 😅 Falando sério agora: ainda está procurando carro?</div>
+  </div></div>
+
+  <div class="card"><div class="num">16</div><div>
+    <h3>Cartaz de procurado estilo faroeste</h3>
+    <p class="meta"><b>Como fazer:</b> monte no Canva um cartaz de "PROCURA-SE" com o nome do cliente (sem foto dele) e o carro como recompensa. Mande o cartaz com a mensagem:</p>
+    <div class="bolha">PROCURA-SE: {nome}. Visto pela última vez olhando o {carro}. Recompensa: uma condição especial pra quem aparecer na loja até sábado 🤠</div>
+  </div></div>
+
+  <div class="card"><div class="num">17</div><div>
+    <h3>Mensagem apagada</h3>
+    <p class="meta"><b>Como fazer:</b> mande qualquer mensagem e apague pra todos na hora. Aparece "Mensagem apagada" e a curiosidade faz o cliente abrir a conversa. Se ele perguntar o que era:</p>
+    <div class="bolha">Tinha mandado sem querer uma foto do {carro} que ia pra outro cliente. Mas já que você apareceu: você ainda está de olho nele?</div>
+  </div></div>
+
+  <div class="card"><div class="num">18</div><div>
+    <h3>O carro manda o recado</h3>
+    <p class="meta"><b>Como fazer:</b> escreva como se o carro estivesse falando. Dá pra mandar junto uma foto dele no pátio.</p>
+    <div class="bolha">Oi {nome}, aqui é o {carro} prata, lá do pátio da {loja}. Todo dia chega gente olhando pra mim, mas eu estou esperando você. Vem me ver essa semana?</div>
+  </div></div>
+
+  <div class="card"><div class="num">19</div><div>
+    <h3>Reservado pra ele</h3>
+    <p class="meta"><b>Como fazer:</b> coloque um papel no para-brisa escrito "Reservado pra {nome}?", tire uma foto e mande.</p>
+    <div class="bolha">Fiz uma plaquinha aqui, mas só tiro o ponto de interrogação se você confirmar 😄 Passa aqui essa semana?</div>
+  </div></div>
+
+  <div class="card"><div class="num">20</div><div>
+    <h3>A chave na mão</h3>
+    <p class="meta"><b>Como fazer:</b> foto da sua mão segurando a chave do carro, com o pátio ao fundo.</p>
+    <div class="bolha">A chave do {carro} está aqui comigo. Só falta você pra dar uma volta nele. Sábado de manhã ou quinta no fim da tarde?</div>
+  </div></div>
+
+  <div class="card"><div class="num">21</div><div>
+    <h3>Café pronto</h3>
+    <p class="meta"><b>Como fazer:</b> foto de um café passado na loja.</p>
+    <div class="bolha">O café está pronto, {nome}, só falta você. Passa aqui pra gente conversar sobre o {carro}?</div>
+  </div></div>
+
+  <div class="card"><div class="num">22</div><div>
+    <h3>Status de pedido estilo iFood</h3>
+    <p class="meta"><b>Como fazer:</b> mande em formato de acompanhamento de entrega.</p>
+    <div class="bolha">Acompanhe seu carro novo 🚗
+✅ Carro escolhido
+✅ Condição separada
+⏳ Aguardando {nome} aparecer na loja
+
+Qual dia eu marco o próximo passo?</div>
+  </div></div>
+
+  <div class="card"><div class="num">23</div><div>
+    <h3>Enquete do WhatsApp</h3>
+    <p class="meta"><b>Como fazer:</b> use a função de enquete do próprio WhatsApp. É um clique pra responder, e quem está sem tempo responde mais.</p>
+    <div class="bolha">{nome}, e aí, como anda a troca de carro?
+( ) Ainda quero, bora conversar
+( ) Mais pra frente
+( ) Já comprei</div>
+  </div></div>
+
+  <div class="card"><div class="num">24</div><div>
+    <h3>Previsão do tempo</h3>
+    <p class="meta"><b>Como fazer:</b> print da previsão do fim de semana com sol.</p>
+    <div class="bolha">Sábado vai fazer sol, {nome}. Dia perfeito pra dar uma volta no {carro}. Te espero de manhã?</div>
+  </div></div>
+
+  <div class="card"><div class="num">25</div><div>
+    <h3>Onde está o Wally</h3>
+    <p class="meta"><b>Como fazer:</b> monte uma imagem estilo "Onde está o Wally?" com o nome do cliente.</p>
+    <div class="bolha">Procurei você em todo lugar, {nome} 😅 Ainda está pensando no {carro} ou já encontrou outro?</div>
+  </div></div>
+</section>
+
+<!-- PARTE 3 -->
+<section class="secao">
+  <div class="secao-topo">
+    <div class="num-secao">Parte 3</div>
+    <h2>A última mensagem</h2>
+    <p>Sempre fecha a sequência. Nenhuma outra vem depois dela.</p>
+  </div>
+
+  <div class="despedida">
+    <div class="num">26</div>
+    <h3>A despedida</h3>
+    <p class="meta"><b>Quando usar:</b> depois de várias tentativas sem resposta, como a última mensagem da sequência. Tira a pressão da conversa, e costuma trazer resposta de quem só estava adiando.</p>
+    <div class="bolha">{nome}, pela falta de resposta, imagino que trocar de carro não seja prioridade agora, e está tudo bem. Vou deixar seu atendimento em pausa por aqui. Quando quiser voltar a ver carro, é só me chamar que eu te ajudo.</div>
+  </div>
+
+  <div class="secao-topo" style="margin-top: 12mm;">
+    <div class="num-secao">Pra não errar</div>
+    <h2>Cuidados importantes</h2>
+  </div>
+  <ul class="cuidados">
+    <li><strong>Condição e urgência só se forem verdade (ideias 03, 04, 12 e 16).</strong> O comprador de carro já chega desconfiado. Uma promoção inventada queima a loja. No cartaz de procurado, se não tiver condição especial de verdade, troque a recompensa por "um café e um test drive".</li>
+    <li><strong>Anote o motivo do sumiço.</strong> A pergunta de um número (10) ajuda nisso. Quem responde "mais pra frente" está pesquisando: vale reativar em 15 a 30 dias, sem oferecer a melhor condição agora.</li>
+    <li><strong>As ideias fora da caixa dependem do perfil.</strong> Humor funciona bem com cliente mais jovem e descontraído. Com cliente mais formal ou mais velho, pode soar como falta de seriedade. Quem atendeu o cliente sabe pra qual perfil mandar.</li>
+    <li><strong>A mensagem apagada (17) é a mais arriscada.</strong> Se o cliente perceber que foi de propósito, perde a confiança no vendedor. Deixe só pra cliente já bem frio.</li>
+    <li><strong>O áudio mudo (15) quebra a regra de pedir antes de mandar áudio.</strong> É justamente por isso que chama atenção, mas só funciona com quem parou de responder. Com quem está conversando, soa estranho.</li>
+    <li><strong>Não repita ideia com o mesmo cliente.</strong> O manual é um cardápio, não uma sequência fixa. A única regra de ordem: a despedida (26) é sempre a última.</li>
+  </ul>
+
+  <div class="assinatura">
+    <img src="logo.png" alt="">
+    <div>
+      <strong>Assessoria Raiz</strong>
+      <p>Marketing, vendas e atendimento funcionando juntos.</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
