@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Programa de Indicação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Archivo:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --verde: #2C4A3C;
+    --verde-escuro: #1C3026;
+    --creme: #E8D5A3;
+    --fundo: #F4EDE0;
+    --card: #EADFC8;
+    --dourado: #A67C2E;
+    --texto: #22302A;
+    --suave: #5C655F;
+    --linha: #D6CAB1;
+  }
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--fundo); }
+  body {
+    font-family: 'Source Serif 4', serif;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    color: var(--texto);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  h1, h2, h3 { font-family: 'Fraunces', serif; font-weight: 600; margin: 0; }
+
+  .pagina {
+    width: 210mm;
+    height: 297mm;
+    padding: 22mm 20mm;
+    overflow: hidden;
+    break-after: page;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .pagina:last-child { break-after: auto; }
+
+  .rotulo {
+    font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 8pt;
+    letter-spacing: 2px; text-transform: uppercase; color: var(--dourado);
+  }
+  .titulo-secao { font-size: 24pt; line-height: 1.2; margin: 3mm 0 4mm; color: var(--texto); max-width: 135mm; }
+  .intro { color: var(--suave); max-width: 135mm; margin: 0 0 10mm; font-size: 11pt; }
+
+  /* Capa */
+  .capa {
+    background: linear-gradient(160deg, var(--verde) 0%, var(--verde-escuro) 100%);
+    color: var(--fundo);
+    padding: 28mm 24mm 24mm;
+    justify-content: space-between;
+  }
+  .capa img { width: 150px; }
+  .capa h1 { font-size: 40pt; line-height: 1.12; color: #F7F1E3; max-width: 150mm; }
+  .capa .texto-capa { font-size: 12pt; line-height: 1.65; color: #E9E2D2; max-width: 140mm; margin-top: 9mm; }
+  .capa .rodape {
+    font-family: 'Archivo', sans-serif; font-weight: 500; font-size: 8.5pt; color: var(--creme);
+    border-top: 1px solid rgba(232,213,163,.3); padding-top: 5mm;
+  }
+
+  /* Decisões */
+  .decisao {
+    display: grid; grid-template-columns: 14mm 1fr; gap: 0 4mm;
+    padding: 7mm 0; border-top: 1px solid var(--linha);
+  }
+  .decisao:last-child { border-bottom: 1px solid var(--linha); }
+  .decisao .n {
+    font-family: 'Fraunces', serif; font-style: italic; font-weight: 500; font-size: 26pt; line-height: 1; color: var(--dourado);
+  }
+  .decisao h3 { font-size: 14pt; margin-bottom: 2mm; }
+  .decisao p { margin: 0; }
+
+  /* Mecânicas */
+  .mecanicas { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+  .mec { background: var(--card); padding: 6mm 6mm 3mm; border: 1px solid var(--linha); }
+  .mec .rotulo { font-size: 7.5pt; }
+  .mec h3 { font-size: 16pt; margin: 1.5mm 0 3mm; }
+  .item { border-top: 1px solid var(--linha); padding: 2.6mm 0; }
+  .item .k {
+    font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 7pt; letter-spacing: 1.3px;
+    text-transform: uppercase; color: var(--suave); margin-bottom: .6mm;
+  }
+  .item .v { font-size: 9.8pt; line-height: 1.5; }
+  .opcional {
+    margin-top: 7mm; border: 1px dashed #BFB195; padding: 6mm 7mm;
+  }
+  .opcional h3 { font-size: 13.5pt; margin: 1.5mm 0 2mm; }
+  .opcional p { margin: 0; }
+
+  /* Grid de pontos */
+  .pontos { display: grid; grid-template-columns: 1fr 1fr; gap: 14mm 10mm; }
+  .ponto h3 {
+    font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 9.5pt; letter-spacing: .3px;
+    padding-bottom: 2.5mm; margin-bottom: 3.5mm; border-bottom: 2px solid var(--dourado); display: inline-block;
+  }
+  .ponto p { margin: 0; }
+
+  /* Passos */
+  .passos { list-style: none; padding: 0; margin: 0; counter-reset: passo; }
+  .passos li {
+    counter-increment: passo;
+    display: grid; grid-template-columns: 12mm 1fr; align-items: baseline;
+    padding: 4.5mm 0; border-bottom: 1px solid var(--linha); font-size: 11pt;
+  }
+  .passos li:first-child { border-top: 1px solid var(--linha); }
+  .passos li::before {
+    content: counter(passo);
+    font-family: 'Fraunces', serif; font-weight: 600; font-size: 14pt; color: var(--dourado);
+  }
+  .fechamento {
+    margin-top: auto;
+    background: linear-gradient(160deg, var(--verde) 0%, var(--verde-escuro) 100%);
+    padding: 8mm 9mm; display: flex; align-items: center; gap: 6mm;
+  }
+  .fechamento img { width: 64px; }
+  .fechamento strong { font-family: 'Fraunces', serif; font-size: 14pt; color: var(--creme); display: block; }
+  .fechamento span { font-family: 'Archivo', sans-serif; font-size: 9pt; color: #E9E2D2; }
+</style>
+</head>
+<body>
+
+<!-- 1. Capa -->
+<section class="pagina capa">
+  <img src="logo.png" alt="Assessoria Raiz">
+  <div>
+    <div class="rotulo" style="color: var(--creme);">Programa de indicação</div>
+    <h1 style="margin-top: 5mm;">Transforme quem já compra com vocês em quem vende por vocês</h1>
+    <p class="texto-capa">Indicação é o canal mais barato e mais qualificado que uma loja de veículos tem. O problema quase nunca é a vontade do cliente de indicar, é a loja não ter dado um motivo claro, um jeito fácil e um momento certo pra isso acontecer. Esse material reúne os modelos possíveis de programa de indicação e os pontos que vocês precisam pesar pra escolher o que faz mais sentido pra realidade de vocês.</p>
+  </div>
+  <div class="rodape">Preparado por Assessoria Raiz · 1 de setembro de 2026</div>
+</section>
+
+<!-- 2. Ponto de partida -->
+<section class="pagina">
+  <div class="rotulo">Ponto de partida</div>
+  <h2 class="titulo-secao">Três decisões antes de definir qualquer valor</h2>
+  <p class="intro">Todo programa de indicação nasce de três escolhas. Elas pesam mais no resultado final do que o valor do benefício em si.</p>
+
+  <div class="decisao"><div class="n">1</div><div>
+    <h3>Dinheiro ou crédito na loja</h3>
+    <p>Pix na hora que a venda fecha é o que mais motiva quem indica, principalmente cliente satisfeito que não tem motivo pra voltar tão cedo. Crédito em revisão, seguro ou acessório é mais barato pro caixa e mantém o valor dentro do negócio, mas só funciona bem se vocês tiverem recorrência de serviço. Sem isso, o cliente sente que ganhou vale-nada.</p>
+  </div></div>
+
+  <div class="decisao"><div class="n">2</div><div>
+    <h3>Só quem indica ganha, ou o indicado também</h3>
+    <p>Programa de mão dupla, com um mimo também pra quem foi indicado, reduz o desconforto de recomendar. Em ticket alto como carro, isso pesa: ninguém quer parecer que está empurrando venda pro amigo. Dar algo pros dois lados muda esse clima.</p>
+  </div></div>
+
+  <div class="decisao"><div class="n">3</div><div>
+    <h3>Quando o benefício é pago</h3>
+    <p>Só na venda fechada, nunca no lead. Pagar por visita ou contato quebra o programa: a loja acaba bancando indicação que nunca virou venda, e o caixa sente isso rápido.</p>
+  </div></div>
+</section>
+
+<!-- 3. Mecânicas -->
+<section class="pagina">
+  <div class="rotulo">Mecânicas</div>
+  <h2 class="titulo-secao">Duas formas de estruturar o benefício</h2>
+  <p class="intro">Não existe mecânica certa, existe a que combina com o caixa e a rotina de vocês. As duas abaixo são ponto de partida, ajustáveis conforme o ticket médio e a margem de cada venda.</p>
+
+  <div class="mecanicas">
+    <div class="mec">
+      <div class="rotulo">Mecânica A</div>
+      <h3>Pix direto</h3>
+      <div class="item"><div class="k">Como funciona</div><div class="v">Pix pro indicador assim que a venda do indicado fecha.</div></div>
+      <div class="item"><div class="k">Valor de referência</div><div class="v">Entre R$300 e R$800 por venda. Referência prática: 1% a 2% do valor do carro costuma doer bem no bolso de quem indica sem pesar na margem.</div></div>
+      <div class="item"><div class="k">Prós</div><div class="v">Motivação mais forte, fácil de explicar, não depende de vocês terem oficina ou revisão própria.</div></div>
+      <div class="item"><div class="k">Contras</div><div class="v">Sai do caixa direto, exige controle financeiro mais rígido.</div></div>
+      <div class="item"><div class="k">Indicado para</div><div class="v">Loja com caixa organizado e ticket médio alto o suficiente pra sustentar o valor.</div></div>
+    </div>
+    <div class="mec">
+      <div class="rotulo">Mecânica B</div>
+      <h3>Crédito em serviço</h3>
+      <div class="item"><div class="k">Como funciona</div><div class="v">Valor em crédito pra revisão, seguro, acessórios ou próxima compra.</div></div>
+      <div class="item"><div class="k">Valor de referência</div><div class="v">Pode ser mais generoso que o Pix. O custo real pra loja costuma ficar abaixo do valor percebido pelo cliente.</div></div>
+      <div class="item"><div class="k">Prós</div><div class="v">Mantém o dinheiro dentro do negócio, incentiva o cliente a voltar.</div></div>
+      <div class="item"><div class="k">Contras</div><div class="v">Só funciona se a loja tiver oferta de serviço relevante, motiva menos quem não pretende voltar tão cedo.</div></div>
+      <div class="item"><div class="k">Indicado para</div><div class="v">Loja com oficina, seguro ou parceria fixa de revisão.</div></div>
+    </div>
+  </div>
+
+  <div class="opcional">
+    <div class="rotulo">Camada opcional</div>
+    <h3>Mão dupla: o indicado também ganha</h3>
+    <p>Some ao Pix ou ao crédito um mimo pra quem foi indicado: tanque cheio, revisão grátis, acessório na entrega. Não precisa ser caro, o efeito vem de existir. Isso reduz o constrangimento de quem indica e melhora a primeira experiência de quem chega pela indicação.</p>
+  </div>
+</section>
+
+<!-- 4. Antes de colocar na rua -->
+<section class="pagina">
+  <div class="rotulo">Antes de colocar na rua</div>
+  <h2 class="titulo-secao" style="margin-bottom: 12mm;">O que decide se o programa vive ou morre</h2>
+
+  <div class="pontos">
+    <div class="ponto">
+      <h3>Rastreio</h3>
+      <p>O maior motivo de programa de indicação morrer não é o valor do benefício, é ninguém saber quem indicou quem. Precisa existir um jeito simples de registrar isso antes da visita: link, formulário curto ou cartão físico com o nome de quem indicou. Vendedor pergunta quem te indicou em toda visita nova, sem exceção.</p>
+    </div>
+    <div class="ponto">
+      <h3>Momento do pedido</h3>
+      <p>Cliente satisfeito não lembra de indicar sozinho. O pedido precisa estar amarrado a um momento: entrega do carro, avaliação boa no Google, revisão. Vale ter uma mensagem pronta pro vendedor mandar nesses momentos.</p>
+    </div>
+    <div class="ponto">
+      <h3>Regras claras</h3>
+      <p>Definir o que conta como indicação válida, pessoa que nunca visitou a loja antes, prazo de validade, e o que acontece se duas pessoas indicarem o mesmo cliente. Sem regra escrita, vira discussão caso a caso.</p>
+    </div>
+    <div class="ponto">
+      <h3>Cuidado jurídico</h3>
+      <p>Se o valor for em dinheiro, vale tratar como presente de agradecimento, não como comissão. Indicação ocasional entre conhecidos não é problema, mas prática recorrente e profissional de indicação remunerada pode esbarrar em regra de corretagem. Nomear certo o programa evita dor de cabeça.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Próximos passos -->
+<section class="pagina">
+  <div class="rotulo">Próximos passos</div>
+  <h2 class="titulo-secao" style="margin-bottom: 9mm;">Como colocar em pé</h2>
+
+  <ol class="passos">
+    <li>Definir o valor do benefício com base no ticket médio e na margem real de vocês</li>
+    <li>Escolher a mecânica: Pix, crédito ou os dois combinados</li>
+    <li>Montar o jeito de rastrear quem indicou</li>
+    <li>Criar a mensagem padrão que o vendedor manda nos momentos certos</li>
+    <li>Rodar um piloto de 60 a 90 dias e acompanhar quantas indicações entraram e viraram venda</li>
+    <li>Ajustar valor ou mecânica com base no resultado real</li>
+  </ol>
+
+  <div class="fechamento">
+    <img src="logo.png" alt="">
+    <div>
+      <strong>Assessoria Raiz</strong>
+      <span>Crescimento comercial pra loja de veículos</span>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
