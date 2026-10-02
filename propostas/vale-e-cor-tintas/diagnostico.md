@@ -5,7 +5,7 @@
 > Material baseado só nas anotações da call (respostas curtas, sem transcrição). Por isso não tem a seção 9 de sinais de venda. Os pontos de atenção mais importantes estão logo abaixo.
 
 **Pontos de atenção antes da proposta:**
-- **Meta fora da realidade.** Hoje Caxias fatura menos de R$20 mil/mês. Ele quer R$100 mil como "ideal" e R$200 a 300 mil/mês no próximo verão. Isso é 10 a 15 vezes o atual em poucos meses. Nem a loja de Vale Real, com 12 anos, passava de ~R$70 mil. Precisa reancorar em degraus na reunião de proposta, senão a Raiz herda uma expectativa impossível.
+- **Meta com prazo fora da realidade.** Hoje Caxias fatura menos de R$20 mil/mês. Ele quer R$100 mil como "ideal" e R$200 a 300 mil/mês no próximo verão. O mercado comporta: Vale Real tem ~5 mil habitantes e girava R$70 mil, Caxias tem ~600 mil. O problema é a velocidade. Marca desconhecida, loja com 3 meses e 10 a 15 vezes o faturamento atual em 3 a 6 meses. Reancorar o prazo em degraus na reunião de proposta, senão a Raiz herda uma expectativa impossível de cumprir no tempo que ele imagina.
 - **Ele pede alcance, a Raiz vende resultado.** O pedido dele é "levar o nome da loja pra todo público de Caxias". Se a proposta for medida só por alcance, ele vai julgar por "fiquei conhecido?", que é vago. Se for medida por venda, precisa deixar claro que reconhecimento de marca leva tempo. Alinhar as duas métricas no começo.
 - **Parte do faturamento atual pode não ser da loja.** A anotação diz que "o que gira hoje é por conta da empresa de pintura predial que ele tem". Se boa parte dos R$20 mil for a própria empresa dele comprando tinta, o varejo real é ainda menor. Confirmar.
 - **Temporada já começou.** Ele disse que as vendas maiores são de outubro a dezembro. Hoje é 02/10. A Raiz Firme prevê 2 a 3 reuniões de estratégia antes de subir campanha. Se o fechamento demorar, a temporada passa. Vale um setup mais enxuto pra ter campanha no ar ainda em outubro.
@@ -47,7 +47,7 @@ Quer começar imediato pra aproveitar o verão. Quer "estratégias pensadas pra 
 ## 4. Números
 
 - Faturamento atual Caxias: abaixo de R$20 mil/mês, puxado pela empresa de pintura predial dele
-- Faturamento em Vale Real (loja antiga): ~R$70 mil/mês
+- Faturamento em Vale Real (loja antiga): ~R$70 mil/mês, numa cidade de ~5 mil habitantes (Caxias tem ~600 mil)
 - Ticket CNPJ: R$8 a 15 mil. Ticket varejo: R$300 a R$1.000. Pintura de casa: ~R$2.000
 - Sazonalidade: vendas maiores de outubro a dezembro
 - Meta "ideal": R$100 mil/mês
@@ -80,8 +80,8 @@ Quer começar imediato pra aproveitar o verão. Quer "estratégias pensadas pra 
 ## 6. Objeções prováveis
 
 - **"Já fizemos anúncio e não deu resultado":** foi a esposa, com pouca verba, provavelmente sem estratégia nem medição. Não desmerecer o que ela fez (ela pode estar na reunião, cuida do financeiro). Usar o "gasto vs investimento": "se gasta e não retorna, é gasto. A diferença está em ter estratégia e medir cada etapa."
-- **Desconfiança de promessa:** ele já não gostou da promessa de outra empresa. Não prometer número de vendas nem "todo mundo em Caxias vai te conhecer". Usar o crescimento em degraus: 20 → 35 → 50 → 70 mil, voltando pro patamar de Vale Real antes de falar em 100. "Assim a gente trabalha com número, não com achismo."
-- **"Quero R$200 a 300 mil no verão":** não validar. Mostrar a conta de ticket (seção 4) e explicar que essa meta depende de B2B e vendedor externo funcionando, não só de anúncio. Melhor perder um pouco de entusiasmo na reunião do que perder o cliente no mês 3.
+- **Desconfiança de promessa:** ele já não gostou da promessa de outra empresa. Não prometer número de vendas nem "todo mundo em Caxias vai te conhecer". Usar o crescimento em degraus: 20 → 40 → 70 → 100 mil, com o patamar de Vale Real como primeiro marco. "Assim a gente trabalha com número, não com achismo."
+- **"Quero R$200 a 300 mil no verão":** concordar que o mercado comporta (Caxias é 120 vezes Vale Real) e discordar do prazo. Mostrar a conta de ticket (seção 4) e explicar que essa meta depende de B2B e vendedor externo funcionando, não só de anúncio. Os R$200 a 300 mil viram horizonte de 12 a 24 meses. Melhor perder um pouco de entusiasmo na reunião do que perder o cliente no mês 3.
 - **"Quero ficar conhecido" vs. venda:** perguntar direto o que ele vai olhar pra dizer que deu certo. Combinar métricas de cada fase: mês 1 com estrutura, GMN e campanha no ar; mês 2 e 3 com contatos e visitas vindos do anúncio; depois venda.
 - **Preço/fee:** não foi falado na call. Ele aceitou fácil subir a mídia de R$30 pra R$56/dia, bom sinal. Fazer a ancoragem com cada entrega separada (setup, tráfego, criativo presencial, treinamento, GMN) antes de mostrar o pacote.
 - **Prazo de 12 meses:** possível resistência por ser loja nova e caixa ainda baixo. Ter a flexibilização de 90 dias com renovação automática pronta.
@@ -95,7 +95,7 @@ Frase de abertura sugerida: "José, tu me disse que quer que o pessoal de Caxias
 
 Estrutura do plano:
 1. Diagnóstico espelhado com as palavras dele: loja nova, marca forte em Vale Real e desconhecida em Caxias, venda puxada pela empresa de pintura, diferencial do teste gratuito pouco explorado
-2. Conta da meta (seção 4) e degraus realistas até os R$100 mil
+2. Conta da meta (seção 4): o mercado de Caxias comporta os R$200 a 300 mil, o que muda é o prazo. Degraus realistas até os R$100 mil
 3. Três frentes:
    - **Casa arrumada:** GMN, Instagram e criativo presencial do teste gratuito
    - **Dois públicos:** consumidor final (visita e WhatsApp) e profissional/CNPJ (agenda do vendedor externo)
