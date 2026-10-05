@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Manual de Follow-up</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --verde: #2C4A3C;
+    --verde-escuro: #22392E;
+    --creme: #E8D5A3;
+    --creme-claro: #F7F1E3;
+    --bolha: #EFE6D0;
+    --texto: #1F2A24;
+    --texto-suave: #5A6660;
+    --linha: #DCD2BC;
+  }
+  @page { size: A4; margin: 18mm 17mm 20mm; }
+  @page capa { margin: 0; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 10pt;
+    line-height: 1.55;
+    color: var(--texto);
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  h1, h2, h3, .num { font-variant-numeric: lining-nums; }
+  h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 600; margin: 0; }
+
+  /* Capa */
+  .capa {
+    page: capa;
+    height: 297mm;
+    background: var(--verde);
+    color: var(--creme);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 26mm 22mm 22mm;
+    break-after: page;
+  }
+  .capa img { width: 150px; }
+  .capa .rotulo {
+    font-size: 9pt; letter-spacing: 3px; text-transform: uppercase; opacity: .8; margin-bottom: 10mm;
+  }
+  .capa h1 { font-size: 46pt; line-height: 1.05; color: var(--creme); }
+  .capa .sub {
+    font-size: 13pt; color: var(--creme-claro); opacity: .9; margin-top: 8mm; max-width: 125mm; line-height: 1.5;
+  }
+  .capa .rodape {
+    font-size: 9pt; color: var(--creme); opacity: .75; border-top: 1px solid rgba(232,213,163,.35); padding-top: 5mm;
+  }
+
+  /* Seções */
+  .secao { break-before: page; }
+  .secao-topo {
+    border-bottom: 2px solid var(--creme);
+    padding-bottom: 4mm;
+    margin-bottom: 7mm;
+  }
+  .secao-topo .num-secao {
+    font-size: 8.5pt; letter-spacing: 2.5px; text-transform: uppercase; color: var(--texto-suave);
+  }
+  .secao-topo h2 { font-size: 24pt; color: var(--verde); margin-top: 1mm; }
+  .secao-topo p { color: var(--texto-suave); margin: 2mm 0 0; font-size: 10pt; }
+
+  /* Como usar */
+  .regras { counter-reset: regra; margin: 0; padding: 0; list-style: none; }
+  .regras li {
+    counter-increment: regra;
+    position: relative;
+    padding: 4mm 0 4mm 14mm;
+    border-bottom: 1px solid var(--linha);
+  }
+  .regras li::before {
+    content: counter(regra);
+    position: absolute; left: 0; top: 3.5mm;
+    width: 9mm; height: 9mm; border-radius: 50%;
+    background: var(--verde); color: var(--creme);
+    font-family: 'Playfair Display', serif; font-size: 12pt;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .regras strong { color: var(--verde); }
+  .nota-chaves {
+    margin-top: 8mm; background: var(--creme-claro); border-left: 3px solid var(--verde);
+    padding: 4mm 5mm; font-size: 9.5pt;
+  }
+  .nota-chaves code {
+    font-family: 'Inter', sans-serif; background: var(--bolha); padding: 0 1.5mm; border-radius: 2px; font-weight: 500;
+  }
+  .indice { margin-top: 9mm; }
+  .indice h3 { font-size: 13pt; color: var(--verde); margin-bottom: 3mm; }
+  .indice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1mm 8mm; font-size: 9pt; }
+  .indice-grid span { color: var(--texto-suave); display: inline-block; width: 7mm; }
+
+  /* Cards */
+  .card {
+    break-inside: avoid;
+    display: grid;
+    grid-template-columns: 13mm 1fr;
+    gap: 0 4mm;
+    padding: 5mm 0;
+    border-bottom: 1px solid var(--linha);
+  }
+  .card:last-child { border-bottom: none; }
+  .card .num {
+    font-family: 'Playfair Display', serif; font-size: 24pt; line-height: 1; color: var(--verde); font-weight: 600;
+  }
+  .card h3 { font-size: 13.5pt; color: var(--verde); margin-bottom: 1.5mm; }
+  .card .meta { font-size: 9pt; color: var(--texto-suave); margin: 0 0 1mm; }
+  .card .meta b { color: var(--texto); font-weight: 600; }
+  .bolha {
+    background: var(--bolha);
+    border-radius: 3mm 3mm 3mm 0.8mm;
+    padding: 3mm 4mm;
+    margin-top: 2.5mm;
+    font-size: 10pt;
+    max-width: 150mm;
+    white-space: pre-line;
+  }
+  .bolha-rotulo { font-size: 8pt; text-transform: uppercase; letter-spacing: 1.5px; color: var(--texto-suave); margin-top: 3mm; }
+
+  .aviso-secao {
+    background: var(--creme-claro); padding: 4mm 5mm; font-size: 9.5pt; margin-bottom: 4mm; border-left: 3px solid var(--creme);
+  }
+
+  /* Despedida */
+  .despedida {
+    break-inside: avoid;
+    background: var(--verde); color: var(--creme-claro);
+    padding: 8mm 9mm; margin-top: 2mm;
+  }
+  .despedida .num { font-family: 'Playfair Display', serif; font-size: 30pt; color: var(--creme); line-height: 1; }
+  .despedida h3 { color: var(--creme); font-size: 17pt; margin: 2mm 0 2mm; }
+  .despedida .meta { color: var(--creme-claro); opacity: .85; font-size: 9.5pt; }
+  .despedida .meta b { color: var(--creme); }
+  .despedida .bolha { background: var(--creme-claro); color: var(--texto); }
+
+  /* Cuidados */
+  .cuidados { margin: 0; padding: 0; list-style: none; }
+  .cuidados li { break-inside: avoid; padding: 4mm 0; border-bottom: 1px solid var(--linha); }
+  .cuidados li strong { color: var(--verde); display: block; font-size: 10.5pt; margin-bottom: 1mm; }
+  .assinatura {
+    margin-top: 12mm; display: flex; align-items: center; gap: 5mm;
+    background: var(--verde); color: var(--creme); padding: 6mm 8mm; break-inside: avoid;
+  }
+  .assinatura img { width: 60px; }
+  .assinatura p { margin: 0; font-size: 9.5pt; color: var(--creme-claro); }
+  .assinatura strong { color: var(--creme); font-family: 'Playfair Display', serif; font-size: 12pt; font-weight: 600; }
+  .tag {
+    font-family: 'Inter', sans-serif; font-size: 7pt; font-weight: 600; letter-spacing: .8px;
+    text-transform: uppercase; padding: .6mm 2mm; border-radius: 2mm; vertical-align: middle; margin-left: 2mm;
+    white-space: nowrap;
+  }
+  .nota-chaves .tag { margin-left: 0; margin-right: 1.5mm; }
+  .tag-sm { background: var(--verde); color: var(--creme); }
+  .tag-pe { background: var(--creme); color: var(--verde-escuro); }
+  .indice { margin-top: 6mm !important; }
+  .regras li { padding-top: 3mm !important; padding-bottom: 3mm !important; }
+  .regras li::before { top: 2.5mm !important; }
+  .nota-chaves { margin-top: 6mm !important; }
+  .tag-ambos { background: transparent; color: var(--verde); border: 1px solid var(--verde); }
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<section class="capa">
+  <img src="logo.png" alt="Assessoria Raiz">
+  <div>
+    <div class="rotulo">Material de apoio comercial</div>
+    <h1>Manual de<br>Follow-up</h1>
+    <p class="sub">26 ideias pra retomar a conversa com o cliente que sumiu e trazer ele de volta pra loja, no sob medida e na pronta entrega.</p>
+  </div>
+  <div class="rodape">Assessoria Raiz · Crescimento comercial pra lojas de móveis</div>
+</section>
+
+<!-- COMO USAR -->
+<section>
+  <div class="secao-topo">
+    <div class="num-secao">Antes de começar</div>
+    <h2>4 regras de ouro</h2>
+    <p>Valem pra todas as mensagens deste manual.</p>
+  </div>
+  <ol class="regras">
+    <li><strong>Todo follow-up precisa de um motivo novo.</strong> Nunca mandar "e aí, vai fechar?" ou "conseguiu pensar?". O cliente precisa sentir que você tem algo a dizer, não que está cobrando.</li>
+    <li><strong>Sob medida e pronta entrega têm ritmos diferentes.</strong> Quem compra sofá decide em dias, então o follow-up é mais próximo. Quem faz planejado decide em semanas, junto com obra, mudança e parceiro, então o follow-up é mais espaçado e precisa acompanhar o momento dele.</li>
+    <li><strong>No máximo 2 parágrafos, sempre terminando com uma pergunta fácil.</strong> Mensagem longa não é lida. Pergunta difícil não é respondida.</li>
+    <li><strong>Peça antes de mandar áudio, e intercale com ligação.</strong> Áudio de até 1 minuto. Uma ligação de 5 minutos resolve o que levaria um dia inteiro de troca de mensagem.</li>
+  </ol>
+
+  <div class="nota-chaves">
+    O que está entre chaves é pra trocar: <code>{nome}</code> é o nome do cliente, <code>{móvel}</code> é a peça que ele olhou, <code>{ambiente}</code> é o cômodo do projeto (cozinha, quarto, sala), <code>{loja}</code> é o nome da loja, <code>{vendedor}</code> é o seu nome, <code>{projetista}</code> é quem desenha o projeto. Adapte o texto pro seu jeito de falar. O que importa é a ideia por trás de cada mensagem.
+    <br><br>
+    Cada ideia tem uma etiqueta: <span class="tag tag-sm">Sob medida</span> <span class="tag tag-pe">Pronta entrega</span> <span class="tag tag-ambos">Os dois</span>
+  </div>
+
+  <div class="indice">
+    <h3>O que tem aqui</h3>
+    <div class="indice-grid">
+      <div><span>01</span>Chegou peça parecida</div>
+      <div><span>14</span>Mudar de canal</div>
+      <div><span>02</span>Vídeo da peça</div>
+      <div><span>15</span>Áudio mudo</div>
+      <div><span>03</span>Ajuste no projeto</div>
+      <div><span>16</span>Cartaz de procurado</div>
+      <div><span>04</span>Como anda a obra</div>
+      <div><span>17</span>Mensagem apagada</div>
+      <div><span>05</span>Medição sem compromisso</div>
+      <div><span>18</span>O sofá manda o recado</div>
+      <div><span>06</span>Condição nova</div>
+      <div><span>19</span>Reservado pra ele</div>
+      <div><span>07</span>Peça de mostruário</div>
+      <div><span>20</span>Senta aqui</div>
+      <div><span>08</span>Retomar o que ele contou</div>
+      <div><span>21</span>Status estilo iFood</div>
+      <div><span>09</span>Envolver quem decide junto</div>
+      <div><span>22</span>Enquete do WhatsApp</div>
+      <div><span>10</span>Pergunta de um número</div>
+      <div><span>23</span>Foto do espaço vazio</div>
+      <div><span>11</span>Conteúdo útil</div>
+      <div><span>24</span>Qual tem mais a sua cara</div>
+      <div><span>12</span>Comparar orçamentos</div>
+      <div><span>25</span>O som da gaveta</div>
+      <div><span>13</span>Reativar cliente antigo</div>
+      <div><span>26</span>A despedida</div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTE 1 -->
+<section class="secao">
+  <div class="secao-topo">
+    <div class="num-secao">Parte 1</div>
+    <h2>Os clássicos que funcionam</h2>
+    <p>Mensagens pro dia a dia, pra qualquer perfil de cliente.</p>
+  </div>
+
+  <div class="card"><div class="num">01</div><div>
+    <h3>Chegou peça parecida <span class="tag tag-pe">Pronta entrega</span></h3>
+    <p class="meta"><b>Quando usar:</b> o cliente procurava uma peça que a loja não tinha, ou achou a que viu cara.</p>
+    <div class="bolha">{nome}, lembrei de você agora. Acabou de chegar aqui um {móvel} bem na linha do que você procurava. Quer que eu te mande umas fotos?</div>
+  </div></div>
+
+  <div class="card"><div class="num">02</div><div>
+    <h3>Vídeo da peça que ele olhou <span class="tag tag-pe">Pronta entrega</span></h3>
+    <p class="meta"><b>Quando usar:</b> o cliente perguntou de uma peça específica e esfriou.</p>
+    <div class="bolha">{nome}, passei pelo {móvel} agora e gravei um vídeo rapidinho mostrando os detalhes, o acabamento e o tamanho de perto. Posso te mandar?</div>
+  </div></div>
+
+  <div class="card"><div class="num">03</div><div>
+    <h3>Ajuste no projeto <span class="tag tag-sm">Sob medida</span></h3>
+    <p class="meta"><b>Quando usar:</b> o cliente recebeu o projeto e sumiu. Faça de fato um ajuste com base no que ele comentou.</p>
+    <div class="bolha">{nome}, fiquei pensando no seu projeto da {ambiente} e pedi pra {projetista} fazer um ajuste em {o que mudou, ex: aproveitar melhor o canto da pia}. Ficou bem melhor. Posso te mostrar?</div>
+  </div></div>
+
+  <div class="card"><div class="num">04</div><div>
+    <h3>Como anda a obra <span class="tag tag-sm">Sob medida</span></h3>
+    <p class="meta"><b>Quando usar:</b> cliente em reforma, construção ou esperando a chave do apartamento.</p>
+    <div class="bolha">{nome}, como anda a obra? Pergunto porque o planejado leva uns {prazo} pra ficar pronto depois de fechado, e o ideal é ele chegar junto com o fim da obra, pra você não ficar com a casa pronta e sem móvel. Quando você imagina que libera?</div>
+  </div></div>
+
+  <div class="card"><div class="num">05</div><div>
+    <h3>Medição sem compromisso <span class="tag tag-sm">Sob medida</span></h3>
+    <p class="meta"><b>Quando usar:</b> o cliente pediu orçamento por foto ou medida aproximada e travou.</p>
+    <div class="bolha">{nome}, orçamento com medida aproximada sempre fica no chute. Que tal a {projetista} passar aí pra medir certinho? Leva uns 30 minutos e aí o projeto sai do jeito exato do seu espaço. Fica melhor durante a semana ou no sábado?</div>
+  </div></div>
+
+  <div class="card"><div class="num">06</div><div>
+    <h3>Condição nova <span class="tag tag-ambos">Os dois</span></h3>
+    <p class="meta"><b>Quando usar:</b> entrou condição de parcelamento, desconto à vista ou brinde. Só se for verdade.</p>
+    <div class="bolha">{nome}, lembra do {móvel / projeto da {ambiente}}? Saiu uma condição nova esse mês e pensei em você na hora. Quer que eu te explique como ficou?</div>
+  </div></div>
+
+  <div class="card"><div class="num">07</div><div>
+    <h3>Peça de mostruário <span class="tag tag-pe">Pronta entrega</span></h3>
+    <p class="meta"><b>Quando usar:</b> a loja vai trocar o mostruário e tem peça com condição especial. Só se existir.</p>
+    <div class="bolha">{nome}, a gente vai trocar o mostruário e o {móvel} que você gostou vai sair com uma condição bem diferente. Te avisei antes de anunciar. Quer saber como ficou?</div>
+  </div></div>
+
+  <div class="card"><div class="num">08</div><div>
+    <h3>Retomar o que ele contou <span class="tag tag-ambos">Os dois</span></h3>
+    <p class="meta"><b>Quando usar:</b> o cliente contou alguma necessidade na conversa. Use as palavras dele.</p>
+    <div class="bolha">{nome}, fiquei pensando no que você comentou sobre {o que ele contou, ex: o cachorro que sobe no sofá}. Separei duas opções que resolvem isso bem melhor. Posso te mostrar?</div>
+  </div></div>
+
+  <div class="card"><div class="num">09</div><div>
+    <h3>Envolver quem decide junto <span class="tag tag-ambos">Os dois</span></h3>
+    <p class="meta"><b>Quando usar:</b> o cliente disse "vou ver com minha esposa", "meu marido" ou "meu sócio".</p>
+    <div class="bolha">{nome}, conseguiu mostrar o projeto pra {pessoa}? Se ajudar, posso marcar um horário pros dois virem ver aqui, ou fazer uma chamada rápida de vídeo e mostrar o projeto em 3D pra vocês juntos.</div>
+  </div></div>
+
+  <div class="card"><div class="num">10</div><div>
+    <h3>Pergunta de um número <span class="tag tag-ambos">Os dois</span></h3>
+    <p class="meta"><b>Quando usar:</b> o cliente parou de responder faz alguns dias.</p>
+    <div class="bolha">{nome}, sei que a rotina é corrida, então vou facilitar. Me responde só com um número:
+
+1. Ainda quero, bora conversar essa semana
+2. Quero, mas mais pra frente
+3. Já resolvi</div>
+  </div></div>
+
+  <div class="card"><div class="num">11</div><div>
+    <h3>Conteúdo útil <span class="tag tag-ambos">Os dois</span></h3>
+    <p class="meta"><b>Quando usar:</b> cliente em fase de pesquisa, comparando lojas.</p>
+    <div class="bolha">{nome}, como você está pesquisando, montei uma listinha rápida do que olhar antes de fechar {um planejado / um sofá}, pra não se arrepender depois. Quer que eu te mande?</div>
+  </div></div>
+
+  <div class="card"><div class="num">12</div><div>
+    <h3>Comparar orçamentos <span class="tag tag-sm">Sob medida</span></h3>
+    <p class="meta"><b>Quando usar:</b> o cliente disse que está cotando em outros lugares.</p>
+    <div class="bolha">{nome}, se você já recebeu outros orçamentos, me manda que eu te ajudo a comparar lado a lado. Em planejado, muita diferença de preço está no que não aparece: material da caixa, ferragem, montagem, garantia. Quer fazer isso?</div>
+  </div></div>
+
+  <div class="card"><div class="num">13</div><div>
+    <h3>Reativar cliente antigo <span class="tag tag-ambos">Os dois</span></h3>
+    <p class="meta"><b>Quando usar:</b> o cliente sumiu faz 15 dias ou mais (no sob medida, 30), ou já tinha dito não.</p>
+    <div class="bolha">{nome}, aqui é o {vendedor} da {loja}. A gente conversou há um tempo sobre {o móvel / o projeto da {ambiente}}, mas acabou não andando. Isso ainda está nos seus planos?</div>
+  </div></div>
+
+  <div class="card"><div class="num">14</div><div>
+    <h3>Mudar de canal <span class="tag tag-ambos">Os dois</span></h3>
+    <p class="meta"><b>Quando usar:</b> várias mensagens sem resposta.</p>
+    <div class="bolha">{nome}, acho que o WhatsApp não está sendo o melhor jeito de falar contigo. Posso te ligar rapidinho? Qual horário fica melhor?</div>
+  </div></div>
+</section>
+
+<!-- PARTE 2 -->
+<section class="secao">
+  <div class="secao-topo">
+    <div class="num-secao">Parte 2</div>
+    <h2>Fora da caixa</h2>
+    <p>Pra quebrar o padrão e arrancar uma reação de quem já não responde mais.</p>
+  </div>
+
+  <div class="aviso-secao">
+    Use só com cliente que sumiu depois de várias tentativas normais, nunca nos primeiros contatos. E uma por cliente: usada uma vez, quebra o padrão. Usada duas, vira palhaçada.
+  </div>
+
+  <div class="card"><div class="num">15</div><div>
+    <h3>Áudio mudo <span class="tag tag-ambos">Os dois</span></h3>
+    <p class="meta"><b>Como fazer:</b> grave um áudio de 3 a 5 segundos sem falar nada e mande. O cliente quase sempre responde "não saiu nada no áudio". Aí você entra:</p>
+    <div class="bolha">Hahaha era só pra ver se você ainda estava vivo, {nome} 😅 Falando sério agora: ainda está pensando no {móvel / projeto}?</div>
+  </div></div>
+
+  <div class="card"><div class="num">16</div><div>
+    <h3>Cartaz de procurado estilo faroeste <span class="tag tag-ambos">Os dois</span></h3>
+    <p class="meta"><b>Como fazer:</b> monte no Canva um cartaz de "PROCURA-SE" com o nome do cliente (sem foto dele). Mande o cartaz com a mensagem:</p>
+    <div class="bolha">PROCURA-SE: {nome}. Visto pela última vez sonhando com a {ambiente} nova. Recompensa: uma condição especial pra quem aparecer na loja até sábado 🤠</div>
+  </div></div>
+
+  <div class="card"><div class="num">17</div><div>
+    <h3>Mensagem apagada <span class="tag tag-ambos">Os dois</span></h3>
+    <p class="meta"><b>Como fazer:</b> mande qualquer mensagem e apague pra todos na hora. Aparece "Mensagem apagada" e a curiosidade faz o cliente abrir a conversa. Se ele perguntar o que era:</p>
+    <div class="bolha">Tinha mandado sem querer uma foto do showroom que ia pra outro cliente. Mas já que você apareceu: ainda está pensando no {móvel / projeto}?</div>
+  </div></div>
+
+  <div class="card"><div class="num">18</div><div>
+    <h3>O sofá manda o recado <span class="tag tag-pe">Pronta entrega</span></h3>
+    <p class="meta"><b>Como fazer:</b> escreva como se a peça estivesse falando. Mande junto uma foto dela na loja.</p>
+    <div class="bolha">Oi {nome}, aqui é o {móvel}, lá da vitrine da {loja}. Todo dia alguém senta em mim, mas eu estou esperando você. Vem me ver essa semana?</div>
+  </div></div>
+
+  <div class="card"><div class="num">19</div><div>
+    <h3>Reservado pra ele <span class="tag tag-pe">Pronta entrega</span></h3>
+    <p class="meta"><b>Como fazer:</b> coloque uma etiqueta escrita "Reservado pra {nome}?" na peça, tire uma foto e mande.</p>
+    <div class="bolha">Fiz uma etiqueta aqui, mas só tiro o ponto de interrogação se você confirmar 😄 Passa aqui essa semana?</div>
+  </div></div>
+
+  <div class="card"><div class="num">20</div><div>
+    <h3>Senta aqui <span class="tag tag-pe">Pronta entrega</span></h3>
+    <p class="meta"><b>Como fazer:</b> foto de um café em cima da mesa, ou ao lado do sofá que ele gostou.</p>
+    <div class="bolha">O café está pronto e o {móvel} está aqui te esperando, {nome}. Só falta você vir sentar nele. Qual dia fica bom?</div>
+  </div></div>
+
+  <div class="card"><div class="num">21</div><div>
+    <h3>Status de pedido estilo iFood <span class="tag tag-sm">Sob medida</span></h3>
+    <p class="meta"><b>Como fazer:</b> mande em formato de acompanhamento de entrega.</p>
+    <div class="bolha">Acompanhe sua {ambiente} nova 🛠️
+✅ Medidas anotadas
+✅ Projeto desenhado
+⏳ Aguardando {nome} aprovar
+
+Qual dia a gente marca pra fechar os detalhes?</div>
+  </div></div>
+
+  <div class="card"><div class="num">22</div><div>
+    <h3>Enquete do WhatsApp <span class="tag tag-ambos">Os dois</span></h3>
+    <p class="meta"><b>Como fazer:</b> use a função de enquete do próprio WhatsApp. É um clique pra responder, e quem está sem tempo responde mais.</p>
+    <div class="bolha">{nome}, e aí, como anda o {móvel / projeto}?
+( ) Ainda quero, bora conversar
+( ) Mais pra frente
+( ) Já resolvi</div>
+  </div></div>
+
+  <div class="card"><div class="num">23</div><div>
+    <h3>Foto do espaço vazio <span class="tag tag-sm">Sob medida</span></h3>
+    <p class="meta"><b>Como fazer:</b> peça uma foto do cômodo como está hoje. Quem manda já voltou pra conversa, e a foto vira assunto pra próxima mensagem.</p>
+    <div class="bolha">{nome}, me faz um favor? Tira uma foto da sua {ambiente} do jeito que ela está hoje e me manda. Quero mostrar pra {projetista} e te devolver uma ideia do que dá pra fazer nesse espaço.</div>
+  </div></div>
+
+  <div class="card"><div class="num">24</div><div>
+    <h3>Qual tem mais a sua cara <span class="tag tag-ambos">Os dois</span></h3>
+    <p class="meta"><b>Como fazer:</b> mande 3 fotos de ambientes ou peças com estilos diferentes. Se forem projetos de clientes, só com autorização deles.</p>
+    <div class="bolha">{nome}, separei três {ambientes / peças} com estilos bem diferentes. Qual desses tem mais a sua cara: 1, 2 ou 3?</div>
+  </div></div>
+
+  <div class="card"><div class="num">25</div><div>
+    <h3>O som da gaveta <span class="tag tag-sm">Sob medida</span></h3>
+    <p class="meta"><b>Como fazer:</b> vídeo de 10 segundos fechando uma gaveta ou porta com amortecedor no showroom, bem de perto.</p>
+    <div class="bolha">Esse é o som de uma gaveta que não bate, {nome} 🤫 Sua {ambiente} nova pode ser assim. Bora retomar o projeto?</div>
+  </div></div>
+</section>
+
+<!-- PARTE 3 -->
+<section class="secao">
+  <div class="secao-topo">
+    <div class="num-secao">Parte 3</div>
+    <h2>A última mensagem</h2>
+    <p>Sempre fecha a sequência. Nenhuma outra vem depois dela.</p>
+  </div>
+
+  <div class="despedida">
+    <div class="num">26</div>
+    <h3>A despedida</h3>
+    <p class="meta"><b>Quando usar:</b> depois de várias tentativas sem resposta, como a última mensagem da sequência. Tira a pressão da conversa, e costuma trazer resposta de quem só estava adiando.</p>
+    <div class="bolha">{nome}, pela falta de resposta, imagino que o {móvel / projeto} não seja prioridade agora, e está tudo bem. Vou deixar seu atendimento em pausa por aqui. Quando quiser retomar, é só me chamar que eu te ajudo.</div>
+  </div>
+
+  <div class="secao-topo" style="margin-top: 12mm;">
+    <div class="num-secao">Pra não errar</div>
+    <h2>Cuidados importantes</h2>
+  </div>
+  <ul class="cuidados">
+    <li><strong>Condição, mostruário e reserva só se forem verdade (ideias 06, 07, 16 e 19).</strong> Uma condição inventada queima a loja. No cartaz de procurado, se não tiver condição especial de verdade, troque a recompensa por "um café e um projeto sem compromisso".</li>
+    <li><strong>Prazo é promessa (ideia 04).</strong> Nunca prometa prazo de produção e montagem que a fábrica não cumpre. Atraso de planejado vira reclamação no Google e mata a indicação.</li>
+    <li><strong>Respeite o ritmo de cada venda.</strong> No pronta entrega, espaçar 2 a 3 dias entre mensagens. No sob medida, uma vez por semana, acompanhando a obra e a mudança. Cobrar planejado todo dia afasta.</li>
+    <li><strong>Foto de projeto de cliente só com autorização (ideia 24).</strong> Projeto pronto é a melhor prova que a loja tem, mas a casa é do cliente.</li>
+    <li><strong>As ideias fora da caixa dependem do perfil.</strong> Humor funciona bem com cliente mais descontraído. Com cliente mais formal, pode soar como falta de seriedade. Quem atendeu sabe pra qual perfil mandar.</li>
+    <li><strong>A mensagem apagada (17) é a mais arriscada.</strong> Se o cliente perceber que foi de propósito, perde a confiança. Deixe só pra cliente já bem frio.</li>
+    <li><strong>Não repita ideia com o mesmo cliente.</strong> O manual é um cardápio, não uma sequência fixa. A única regra de ordem: a despedida (26) é sempre a última.</li>
+  </ul>
+
+  <div class="assinatura">
+    <img src="logo.png" alt="">
+    <div>
+      <strong>Assessoria Raiz</strong>
+      <p>Marketing, vendas e atendimento funcionando juntos.</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
