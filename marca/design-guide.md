@@ -7,8 +7,8 @@
 
 ## Cores
 
-- **Fundo principal:** Verde-floresta escuro (aproximado: #2C4A3C) — confirmar hex exato com o designer ou arquivo de marca
-- **Cor de destaque / elementos sobre fundo escuro:** Creme/dourado (aproximado: #E8D5A3) — confirmar hex exato
+- **Fundo principal:** Verde-floresta escuro — **#22312F** (confirmado a partir de `dados/raiz150-01.png`)
+- **Cor de destaque / elementos sobre fundo escuro:** Creme/dourado — **#FCEAB9** (confirmado a partir de `dados/raiz150-01.png`)
 - **Fundo alternativo / versão clara:** branco ou creme claro
 - **Cor proibida:** cores neon, azul genérico, paleta de agência comum (laranja + azul, etc)
 
