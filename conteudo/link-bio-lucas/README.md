@@ -4,8 +4,7 @@ Página pessoal de link na bio pro Instagram do Lucas, no formato que o Matheus 
 
 ## Arquivos
 - `index.html` — a página em si (fonte)
-- `deploy/index.html` + `deploy/assets/` — cópia espelho, é essa pasta que sobe no Cloudflare Pages. Sempre que editar `index.html` ou os assets, copiar de novo pra `deploy/` antes de publicar.
-- `worker.js` — Cloudflare Worker que monta a página em `www.assessoriaraiz.com.br/bio-ig-lucas` (ver seção de domínio abaixo)
+- `deploy/index.html` + `deploy/assets/` — cópia espelho, é essa pasta que sobe no Cloudflare. Sempre que editar `index.html` ou os assets, copiar de novo pra `deploy/` antes de publicar.
 - `assets/avatar.jpg` — foto de perfil (recorte quadrado de `dados/WhatsApp Image 2026-08-25 at 22.18.15.jpeg`)
 - `assets/raiz-logo.png` — logo "RAIZ" recortado de `marca/logo.png`, fundo transparente
 - `assets/protocolo-logo.png` — logo do Protocolo Visita Garantida (ícone + wordmark completo), recortado de `dados/Gemini_Generated_Image_wn3kpuwn3kpuwn3k.jpeg` com remoção de fundo via chroma key
@@ -17,18 +16,20 @@ Página pessoal de link na bio pro Instagram do Lucas, no formato que o Matheus 
 4. Divisor "Tem uma loja de carros?"
 5. Card de destaque (verde, logo do Protocolo centralizado, preço R$67): **Quero aplicar na minha loja** → `https://protocolo.assessoriaraiz.com.br/`
 
-## Domínio: `www.assessoriaraiz.com.br/bio-ig-lucas`
+## Domínio: direto no `workers.dev`
 
-Decisão (mudou de ideia em relação à primeira versão): usar o domínio da Raiz com um path, não um domínio separado. O site principal já é o projeto Cloudflare Pages **`assessoriaraiz-site`** (confirmado via DNS: `www.assessoriaraiz.com.br` → CNAME → `assessoriaraiz-site.pages.dev`), mas os arquivos-fonte desse projeto não estão nesse workspace — provavelmente vivem em outro repositório ou máquina.
+Histórico da decisão: cogitamos usar `www.assessoriaraiz.com.br/bio-ig-lucas` (path no domínio da Raiz) via um Worker-ponte, mas não rolou — rotas de Worker só funcionam em zonas totalmente gerenciadas pelo Cloudflare, e `assessoriaraiz.com.br` continua com o DNS no Registro.br (só o `www` tem um CNAME pro Cloudflare Pages). Migrar a zona inteira pro Cloudflare resolveria, mas arriscaria o e-mail que já funciona nesse domínio — decisão de não mexer nisso.
 
-Pra não mexer no projeto do site principal (zero risco de quebrar algo lá), a solução foi um **Cloudflare Worker-ponte** que atua só na rota `/bio-ig-lucas*`:
+Decisão final: usar o link direto que o próprio Cloudflare gerou, sem domínio customizado.
 
-1. A página em si já está publicada (upload da pasta `deploy/` via "Upload your static files") — isso virou um **Worker com assets estáticos** (Cloudflare migrou esse fluxo, não é mais "Pages" clássico), rodando em `royal-brook-69cf.assessoriaraizz.workers.dev`
-2. Criar um segundo Worker no Cloudflare (Workers & Pages → Create → Worker), colar o conteúdo de `worker.js` (já aponta pra esse endereço acima), dar deploy
-3. Na aba **Settings → Domains & Routes** desse segundo Worker, adicionar a rota: `www.assessoriaraiz.com.br/bio-ig-lucas*`
-4. Testar `https://www.assessoriaraiz.com.br/bio-ig-lucas` — esse Worker repassa a request pro worker de assets por baixo dos panos, sem o usuário perceber
+**URL pública (é esse o link pra bio do Instagram):**
+```
+https://royal-brook-69cf.assessoriaraizz.workers.dev/
+```
 
-Pra atualizar a página depois: editar `index.html`/assets, copiar pra `deploy/` e fazer upload de novo no mesmo Worker de assets (`royal-brook-69cf...`) — não precisa tocar no Worker-ponte de novo (ele só faz o repasse, não guarda conteúdo). Se o endereço do Worker de assets mudar (recriar do zero, por exemplo), atualizar a constante `ORIGIN_HOST` no topo de `worker.js`.
+Publicado via upload direto da pasta `deploy/` em Workers & Pages → Create → Worker → "Upload your static files" (no painel novo do Cloudflare, upload de arquivo estático vira um Worker com assets, não mais um projeto "Pages" clássico).
+
+**Pra atualizar a página depois:** editar `index.html`/assets aqui, copiar pra `deploy/`, entrar nesse mesmo Worker no painel Cloudflare e fazer upload da pasta `deploy/` de novo.
 
 ## Tracking (GA4 pessoal, separado da Raiz)
 
