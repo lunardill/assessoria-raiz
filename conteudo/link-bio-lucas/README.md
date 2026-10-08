@@ -24,7 +24,7 @@ Decisão final: usar o link direto que o próprio Cloudflare gerou, sem domínio
 
 **URL pública (é esse o link pra bio do Instagram):**
 ```
-https://royal-brook-69cf.assessoriaraizz.workers.dev/
+https://lucaslunardi.assessoriaraizz.workers.dev/
 ```
 
 Publicado via upload direto da pasta `deploy/` em Workers & Pages → Create → Worker → "Upload your static files" (no painel novo do Cloudflare, upload de arquivo estático vira um Worker com assets, não mais um projeto "Pages" clássico).
