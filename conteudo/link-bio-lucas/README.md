@@ -5,9 +5,11 @@ Página pessoal de link na bio pro Instagram do Lucas, no formato que o Matheus 
 ## Arquivos
 - `index.html` — a página em si (fonte)
 - `deploy/index.html` + `deploy/assets/` — cópia espelho, é essa pasta que sobe no Cloudflare. Sempre que editar `index.html` ou os assets, copiar de novo pra `deploy/` antes de publicar.
-- `assets/avatar.jpg` — foto de perfil (recorte quadrado de `dados/WhatsApp Image 2026-08-25 at 22.18.15.jpeg`)
-- `assets/raiz-logo.png` — logo "RAIZ" recortado de `marca/logo.png`, fundo transparente
-- `assets/protocolo-logo.png` — logo do Protocolo Visita Garantida (ícone + wordmark completo), recortado de `dados/Gemini_Generated_Image_wn3kpuwn3kpuwn3k.jpeg` com remoção de fundo via chroma key
+- `assets/avatar.webp` — foto de perfil (recorte quadrado de `dados/WhatsApp Image 2026-08-25 at 22.18.15.jpeg`, 192x192)
+- `assets/raiz-logo.webp` — logo "RAIZ" recortado de `marca/logo.png`, fundo transparente, 110x95
+- `assets/protocolo-logo.webp` — logo do Protocolo Visita Garantida (ícone + wordmark completo), recortado de `dados/Gemini_Generated_Image_wn3kpuwn3kpuwn3k.jpeg` com remoção de fundo via chroma key, 329x100
+
+Imagens em WebP (convertidas de PNG/JPEG originais pra ficar mais leve — ~46 KB total em vez de ~230 KB) e redimensionadas pro tamanho real exibido em retina (2x), com `width`/`height` explícitos no HTML pra evitar layout shift.
 
 ## Estrutura da página (de cima pra baixo)
 1. Foto + nome
