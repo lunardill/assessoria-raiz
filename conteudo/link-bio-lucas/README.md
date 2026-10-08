@@ -1,40 +1,37 @@
 # Link na bio — Lucas Lunardi
 
-Página de link na bio pro Instagram do Lucas, no mesmo espírito da que o Matheus já usa (página simples com botões + tracking de clique por destino via GTM/GA4).
+Página pessoal de link na bio pro Instagram do Lucas, no formato que o Matheus já usa (foto, card de produto em destaque com preço, link institucional, card de cross-sell pro WhatsApp).
 
 ## Arquivos
 - `index.html` — a página em si (fonte)
-- `deploy/index.html` — cópia espelho, é essa pasta que sobe no Cloudflare Pages. Sempre que editar `index.html`, copiar de novo pra `deploy/` antes de publicar.
+- `deploy/index.html` + `deploy/assets/` — cópia espelho, é essa pasta que sobe no Cloudflare Pages. Sempre que editar `index.html` ou a foto, copiar de novo pra `deploy/` antes de publicar.
+- `assets/avatar.jpg` — foto de perfil (recorte quadrado de `dados/WhatsApp Image 2026-08-25 at 22.18.15.jpeg`, 480x480)
 
-## Links atuais (nessa ordem)
-1. Protocolo Visita Garantida → `https://protocolo.assessoriaraiz.com.br/`
-2. Conheça a Assessoria Raiz → `https://www.assessoriaraiz.com.br/`
-3. Fale no WhatsApp → `https://wa.me/5554992013758`
+## Estrutura da página
+1. Foto + nome + "Comercial · Assessoria Raiz"
+2. Card de destaque: **Protocolo Visita Garantida** (R$67 · acesso na hora) → `https://protocolo.assessoriaraiz.com.br/`
+3. Linha simples: **Conheça a Assessoria Raiz** → `https://www.assessoriaraiz.com.br/`
+4. Divisor "Tem uma empresa?"
+5. Card de cross-sell (fundo verde, estilo Raiz): **Quer vender mais com tráfego pago?** → `https://wa.me/5554992013758`
 
 ## Deploy (Cloudflare Pages)
 Página pessoal do Lucas, não usa domínio da Raiz.
 1. Criar projeto novo no Cloudflare Pages (ex: `lucaslunardi`)
-2. Deploy manual: arrastar a pasta `deploy/` (nunca a pasta inteira do projeto)
-3. Domínio: usar o subdomínio grátis que o próprio Cloudflare Pages gera (ex: `lucaslunardi.pages.dev`) — não precisa registrar nada nem mexer em DNS. É esse link que vai na bio do Instagram. Se um dia quiser migrar pra domínio próprio, dá pra apontar depois sem refazer a página.
+2. Deploy manual: arrastar a pasta `deploy/` inteira (ela já inclui `assets/`)
+3. Domínio: usar o subdomínio grátis que o próprio Cloudflare Pages gera (ex: `lucaslunardi.pages.dev`) — não precisa registrar nada nem mexer em DNS. É esse link que vai na bio do Instagram.
 
-## Tracking — o que falta configurar manualmente no GTM/GA4
+## Tracking (GA4 pessoal, separado da Raiz)
 
-A página já reaproveita o **mesmo container GTM** (`GTM-KDBRK7ZH`) e está pronta pra mandar dado pra **mesma propriedade GA4** ("Assessoria Raiz", `G-1F7WPFZY4W`) que já existe. Como é infraestrutura compartilhada com outros funis da Raiz, os nomes de evento usados aqui têm prefixo específico (`linkbio_`) pra não colidir com nada existente.
+Decisão: não reaproveitar o GTM/GA4 compartilhado da Raiz (`GTM-KDBRK7ZH` / `G-1F7WPFZY4W`), porque essa página é pessoal. A página já vem com `gtag.js` direto (sem GTM) e dispara 3 eventos customizados por clique:
+- `linkbio_click_protocolo`
+- `linkbio_click_lp_raiz`
+- `linkbio_click_whatsapp`
 
-**Eventos que a página já dispara (via `dataLayer.push`):**
-- `linkbio_click_protocolo` — clique no botão do Protocolo
-- `linkbio_click_lp_raiz` — clique no botão da Assessoria Raiz
-- `linkbio_click_whatsapp` — clique no botão do WhatsApp
+**Pendente:** o código ainda tem o ID placeholder `G-XXXXXXXXXX` em duas linhas do `<head>` de `index.html` (e precisa copiar pra `deploy/` depois). Passos que faltam, em andamento:
 
-Cada evento vem com o parâmetro `link_url` (a URL de destino).
+1. Lucas cria uma propriedade GA4 nova (conta Google pessoal, não a da Raiz) → copiar o Measurement ID (`G-...`)
+2. Substituir `G-XXXXXXXXXX` pelo ID real nas duas linhas do `<head>`
+3. Criar service account no Google Cloud + ativar Google Analytics Data API + dar acesso de "Leitor" pra essa service account na propriedade GA4 nova
+4. Instalar a skill `/ga4-ratos` (`git clone https://github.com/duduesh/ga4-ratos ~/.claude/skills/ga4-ratos`) pra conseguir puxar os dados e montar relatórios de cliques por destino, no mesmo estilo dos relatórios que o Matheus já tem.
 
-**O que precisa ser feito dentro do GTM (interface web, não dá pra automatizar por aqui):**
-1. Checar se a tag de **Configuração do GA4** existente nesse container dispara em "Todas as páginas" (sem restrição de hostname só pro `protocolo.assessoriaraiz.com.br`) — se estiver restrita, ou amplia o gatilho ou cria um gatilho novo de Hostname contém `link.assessoriaraiz.com.br` pra essa tag também disparar aqui e mandar o `page_view` normal.
-2. Criar 3 gatilhos de **Evento personalizado**, um pra cada nome acima (`linkbio_click_protocolo`, `linkbio_click_lp_raiz`, `linkbio_click_whatsapp`).
-3. Criar as tags de evento do GA4 correspondentes (reaproveitando a mesma tag de Configuração do GA4 já existente), uma pra cada gatilho, mandando o evento com esse mesmo nome pro GA4.
-4. Publicar o container (as mudanças no GTM só valem depois de "Enviar"/publicar uma versão nova).
-
-**Depois de configurado**, dá pra ver o desempenho em Explorar → funil ou tabela livre no GA4, filtrando pelos eventos `linkbio_click_*` — mesmo formato do relatório que o Matheus tem pra ele (cliques por destino, período, etc). Lembrete: propriedade GA4 recém-tocada pode levar até 24-48h pra processar dado em Exploração mesmo já aparecendo em Tempo real ([[ga4-propriedade-nova-comportamento]]).
-
-## Cuidado — infraestrutura compartilhada
-Esse GTM e essa propriedade GA4 já servem o Protocolo Visita Garantida e podem servir outros funis no futuro. Qualquer gatilho/tag novo aqui já nasce com nome específico o suficiente (`linkbio_*`) pra nunca colidir — ver [[infra-marketing-compartilhada-raiz]] antes de mexer em qualquer coisa genérica desse container.
+Ver `templates/ferramentas/catalogo.md` linha ~205 pra referência da skill.
