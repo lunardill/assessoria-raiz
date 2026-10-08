@@ -183,6 +183,21 @@
   .row-body p.sub{ margin:0; font-size:.78rem; color:var(--muted); line-height:1.4; }
   .row-arrow{ flex:0 0 auto; color:var(--muted); }
 
+  .row-link--dark{
+    background:var(--dark);
+    border-color:var(--dark-line);
+  }
+  .row-link--dark:hover{ border-color:var(--gold); }
+  .row-link--dark .row-body p.title{ color:#F3F1E7; }
+  .row-link--dark .row-body p.sub{ color:#9FB3A9; }
+  .row-link--dark .row-arrow{ color:var(--gold); }
+  .row-icon--logo{
+    background:none;
+    width:52px;
+    height:52px;
+  }
+  .row-icon--logo img{ width:48px; height:auto; display:block; }
+
   .divider{
     display:flex;
     align-items:center;
@@ -218,9 +233,9 @@
   <h1>Lucas Lunardi</h1>
 
   <div class="section">
-    <a class="row-link" href="https://www.assessoriaraiz.com.br/" onclick="return linkBioClick(this,'linkbio_click_lp_raiz')">
-      <div class="row-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15.5 0 18M12 3c-2.5 2.5-2.5 15.5 0 18"/></svg>
+    <a class="row-link row-link--dark" href="https://www.assessoriaraiz.com.br/" onclick="return linkBioClick(this,'linkbio_click_lp_raiz')">
+      <div class="row-icon row-icon--logo">
+        <img src="assets/raiz-logo.png" alt="Raiz">
       </div>
       <div class="row-body">
         <p class="title">Conheça a Assessoria Raiz</p>
