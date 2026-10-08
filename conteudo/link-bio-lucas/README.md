@@ -21,15 +21,14 @@ Página pessoal de link na bio pro Instagram do Lucas, no formato que o Matheus 
 
 Decisão (mudou de ideia em relação à primeira versão): usar o domínio da Raiz com um path, não um domínio separado. O site principal já é o projeto Cloudflare Pages **`assessoriaraiz-site`** (confirmado via DNS: `www.assessoriaraiz.com.br` → CNAME → `assessoriaraiz-site.pages.dev`), mas os arquivos-fonte desse projeto não estão nesse workspace — provavelmente vivem em outro repositório ou máquina.
 
-Pra não mexer no projeto do site principal (zero risco de quebrar algo lá), a solução foi um **Cloudflare Worker** que atua só na rota `/bio-ig-lucas*`:
+Pra não mexer no projeto do site principal (zero risco de quebrar algo lá), a solução foi um **Cloudflare Worker-ponte** que atua só na rota `/bio-ig-lucas*`:
 
-1. A página continua publicada normalmente como projeto Cloudflare Pages separado, nome sugerido `lucaslunardi` → gera `lucaslunardi.pages.dev`
-   - Deploy manual: arrastar a pasta `deploy/` inteira (já inclui `assets/`)
-2. Criar um Worker novo no Cloudflare (Workers & Pages → Create → Worker), colar o conteúdo de `worker.js`, dar deploy
-3. Na aba **Routes** do Worker (ou em Workers Routes da zona `assessoriaraiz.com.br`), adicionar a rota: `www.assessoriaraiz.com.br/bio-ig-lucas*` apontando pra esse Worker
-4. Testar `https://www.assessoriaraiz.com.br/bio-ig-lucas` — o Worker repassa a request pro `lucaslunardi.pages.dev` por baixo dos panos, sem o usuário perceber
+1. A página em si já está publicada (upload da pasta `deploy/` via "Upload your static files") — isso virou um **Worker com assets estáticos** (Cloudflare migrou esse fluxo, não é mais "Pages" clássico), rodando em `royal-brook-69cf.assessoriaraizz.workers.dev`
+2. Criar um segundo Worker no Cloudflare (Workers & Pages → Create → Worker), colar o conteúdo de `worker.js` (já aponta pra esse endereço acima), dar deploy
+3. Na aba **Settings → Domains & Routes** desse segundo Worker, adicionar a rota: `www.assessoriaraiz.com.br/bio-ig-lucas*`
+4. Testar `https://www.assessoriaraiz.com.br/bio-ig-lucas` — esse Worker repassa a request pro worker de assets por baixo dos panos, sem o usuário perceber
 
-Pra atualizar a página depois: só editar `index.html`/assets, copiar pra `deploy/` e re-publicar o projeto `lucaslunardi` no Pages — não precisa tocar no Worker de novo (ele só faz o repasse, não guarda conteúdo).
+Pra atualizar a página depois: editar `index.html`/assets, copiar pra `deploy/` e fazer upload de novo no mesmo Worker de assets (`royal-brook-69cf...`) — não precisa tocar no Worker-ponte de novo (ele só faz o repasse, não guarda conteúdo). Se o endereço do Worker de assets mudar (recriar do zero, por exemplo), atualizar a constante `ORIGIN_HOST` no topo de `worker.js`.
 
 ## Tracking (GA4 pessoal, separado da Raiz)
 
