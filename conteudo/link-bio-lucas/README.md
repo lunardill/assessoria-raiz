@@ -38,10 +38,8 @@ Decisão: não reaproveitar o GTM/GA4 compartilhado da Raiz (`GTM-KDBRK7ZH` / `G
 - `linkbio_click_whatsapp`
 - `linkbio_click_protocolo`
 
-**Propriedade GA4 pessoal:** "Lucas Lunardi - Link na Bio", Measurement ID `G-09PS1Y7FZN` — já configurado em `index.html` (e replicado em `deploy/`).
+**Propriedade GA4 pessoal:** "Lucas Lunardi - Link na Bio", Measurement ID `G-09PS1Y7FZN` — já configurado em `index.html` (e replicado em `deploy/`), já coletando dado.
 
-**Pendente pro dashboard de cliques/visitas:**
+**Dashboard de cliques/visitas: pausado por decisão do Lucas** (2026-10-08) — não vale a pena o esforço de service account + `/ga4-ratos` pra um uso que ele não daria muita bola agora. Se quiser retomar no futuro, falta:
 1. Criar service account no Google Cloud + ativar Google Analytics Data API + dar acesso de "Leitor" nessa propriedade GA4
-2. Instalar a skill `/ga4-ratos` (`git clone https://github.com/duduesh/ga4-ratos ~/.claude/skills/ga4-ratos`) pra puxar os dados e montar um dashboard de cliques/visitas, no mesmo estilo dos relatórios que o Matheus já tem (ver `templates/ferramentas/catalogo.md` linha ~205)
-
-Depois de conectado, dá pra gerar o dashboard de acompanhamento (cliques por destino, visitas por dia, etc.) puxando os dados dessa propriedade via `/ga4-ratos`.
+2. Instalar a skill `/ga4-ratos` (`git clone https://github.com/duduesh/ga4-ratos ~/.claude/skills/ga4-ratos`) pra puxar os dados e montar o dashboard, no mesmo estilo dos relatórios que o Matheus já tem (ver `templates/ferramentas/catalogo.md` linha ~205)
