@@ -5,9 +5,9 @@ Fechamento) pra venda consultiva. Usado por `/vendedor` como base teórica de co
 negociação. Complementa `metodo-raiz-comercial.md`, que é a aplicação específica da Raiz (frases
 prontas, números, contrato, sinais de alerta do nicho de lojas de veículos).
 
-**Status:** curso em andamento. Módulos 1, 2, 3, 5 e 6 anotados (revisão completa em 2026-09-23).
-Módulo 4 (outbound) e módulo 7 (gatilhos mentais) ainda não têm anotação — ver seção "Pendências" no fim. Atualizar esse arquivo sempre que o Lucas mandar anotação
-nova.
+**Status:** curso em andamento. Módulos 1, 2, 3, 5, 6 e 7 anotados (módulo 7 adicionado em
+2026-10-21). Módulo 4 (outbound) ainda não tem anotação — ver seção "Pendências" no fim. Atualizar
+esse arquivo sempre que o Lucas mandar anotação nova.
 
 ---
 
@@ -457,6 +457,34 @@ mais, aumenta a ancoragem e dá a sensação de "isso foi feito pra mim".
 
 ---
 
+## Gatilhos mentais
+
+Não têm momento fixo de uso: são "pitadas" dadas ao longo de todo o atendimento pra ajudar na tomada
+de decisão, não uma etapa separada do DEF. Usados errado (forçados, sem base real) geram desconfiança
+em vez de ajudar.
+
+| Gatilho | Base psicológica | Como aplicar |
+|---|---|---|
+| **Autoridade** | Cérebro treinado a respeitar autoridade | Trazer informação que o lead não domina (ele te procurou porque sabe pouco), dominar o que vende, se posicionar diferente via PUV |
+| **Familiaridade** | As pessoas compram de quem parece com elas | Rapport (espelhar tom de fala, ritmo, postura), achar pontos em comum, quebra-gelo |
+| **Desprendimento** | Necessidade primária de ser aceito | Sinalizar que você pode aceitar o lead ou não — é a base do recuo estratégico, aumenta a atenção da pessoa de forma inconsciente |
+| **Compromisso e coerência** | Ligado ao desprendimento. As pessoas evitam soar incongruentes com o que já disseram | Acordo de sinceridade e microcompromissos ao longo do atendimento |
+| **Oportunidade** | Medo de perder pesa mais que vontade de ganhar (maioria) | Efeito novidade: oferecer de novo algo que a pessoa já tinha perdido. Quem prefere ganhar é quem responde ao efeito novidade |
+| **Exclusividade** | Necessidade de ser tratado como especial | Expressões como "primeira mão", "por você ser...", "poucas vagas", "acesso restrito". Dificultar sem impossibilitar: se não fizer sentido pro lead, achar solução personalizada em vez de só negar |
+| **Reciprocidade** | Ajuda genuína gera sensação de dívida | Gerar valor antes de vender (entender se faz sentido pro lead, valorizar o tempo dele), educar, passar informação relevante. Funciona muito bem com material rico (aula, ebook, conteúdo) |
+| **História** | Atenção aumenta ao ouvir uma história | Usar analogias pra tangibilizar o que está sendo vendido. Evitar contar a própria história, a não ser que a transformação tenha relação direta com o que vende |
+| **Escassez** | Medo genuíno de ficar de fora | "Poucas vagas", "encerra amanhã", "último dia" — só funciona se for verdadeira, nunca escassez falsa. Reforça a análise de que agir é menos arriscado que ficar parado |
+| **Justificativa** | Pedido com motivo tem mais chance de ser aceito | Sempre complementar pergunta ou pedido com o porquê |
+| **Especificidade** | Ajuda o cérebro do lead a organizar informação em excesso | Ser específico nas mensagens (dia e horário exatos ao marcar algo), principalmente nos pontos críticos da solução que não podem ser esquecidos. Em atendimento por WhatsApp, menos é mais |
+| **Prova social** | Decisão apoiada em inteligência coletiva (efeito fila de restaurante) | Depoimentos no processo comercial |
+| **Contraste** | "O bom ao lado do ruim fica ótimo" | Base da ancoragem de fechamento e do inimigo comum. Medir bem a comparação (nem muito forte, nem muito fraca) — é o que elimina a objeção de preço |
+
+Os gatilhos de **desprendimento**, **compromisso e coerência** e **contraste** já estão incorporados
+nas técnicas descritas acima (recuo estratégico, microcompromissos, ancoragem). Os demais podem ser
+usados soltos, pontualmente, em qualquer fase do DEF.
+
+---
+
 ## Scripts (WhatsApp)
 
 **Características de um bom script:** linguagem falada (não gramatical, do jeito que você fala de
@@ -505,6 +533,5 @@ especificamente pro nosso produto e nosso cliente.
 ## Pendências
 
 - **Módulo 4 — Método DEF pra outbound/prospecção ativa** — sem anotação ainda, curso em andamento
-- **Módulo 7 — Gatilhos mentais** — sem anotação ainda, curso em andamento
 
-Atualizar essa seção e o conteúdo acima assim que o Lucas mandar as anotações desses módulos.
+Atualizar essa seção e o conteúdo acima assim que o Lucas mandar a anotação desse módulo.

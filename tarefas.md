@@ -21,8 +21,8 @@
 
 ## Método DEF — completar anotações (curso Vendas Pro em andamento)
 - [ ] Módulo 4 — Método DEF pra outbound/prospecção ativa
-- [ ] Módulo 7 — Gatilhos mentais
-Mandar as anotações desses módulos quando terminar, pra atualizar `_contexto/metodo-def.md` e a skill `/vendedor`.
+- [x] Módulo 7 — Gatilhos mentais (atualizado em 2026-10-21)
+Mandar as anotações do módulo 4 quando terminar, pra atualizar `_contexto/metodo-def.md` e a skill `/vendedor`.
 
 ## Processos pra mapear depois
 - [ ] (nenhum pendente no momento — voltar a rodar /mapear quando quiser organizar mais processos)
