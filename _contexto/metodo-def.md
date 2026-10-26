@@ -5,9 +5,10 @@ Fechamento) pra venda consultiva. Usado por `/vendedor` como base teórica de co
 negociação. Complementa `metodo-raiz-comercial.md`, que é a aplicação específica da Raiz (frases
 prontas, números, contrato, sinais de alerta do nicho de lojas de veículos).
 
-**Status:** curso em andamento. Módulos 1, 2, 3, 5, 6 e 7 anotados (módulo 7 adicionado em
-2026-10-21). Módulo 4 (outbound) ainda não tem anotação — ver seção "Pendências" no fim. Atualizar
-esse arquivo sempre que o Lucas mandar anotação nova.
+**Status:** acesso ao curso se esgotou em 2026-10-26. Módulos 1, 2, 3, 5, 6 e 7 anotados por completo.
+Módulo 4 ficou parcial (só Aula 1, sobre lançamentos — a Aula 2, que seria sobre outbound/prospecção
+ativa propriamente dita, não chegou a ser anotada e não há mais acesso pra completar). Sem mais
+anotação nova prevista, curso encerrado como está.
 
 ---
 
@@ -530,8 +531,26 @@ especificamente pro nosso produto e nosso cliente.
 
 ---
 
-## Pendências
+## Módulo 4 — DEF adaptado pra lançamentos (aula 1, parcial)
 
-- **Módulo 4 — Método DEF pra outbound/prospecção ativa** — sem anotação ainda, curso em andamento
+Esse módulo é sobre lançamento, não sobre outbound/prospecção ativa em si (apesar do nome do módulo
+no curso misturar os dois temas). Vale pra quem roda lançamento de produto/serviço com carrinho
+aberto, não pro outbound do dia a dia da Raiz.
 
-Atualizar essa seção e o conteúdo acima assim que o Lucas mandar a anotação desse módulo.
+Lançamento pega uma venda que seria consultiva e torna transacional. O DEF entra depois que a oferta
+foi feita, pra recuperar quem não comprou e potencializar quem demonstrou interesse (chegou no
+carrinho, não fechou).
+
+3 etapas do carrinho:
+
+| Etapa | Quando | Eficiência vs. persuasão | DEF usado |
+|---|---|---|---|
+| **Abertura** | 1º dia de carrinho | Eficiência > persuasão | DEF adaptado |
+| **Vale** | 2º dia até o fechamento | Persuasão > eficiência | DEF completo |
+| **Fechamento** | Período final, escassez | Eficiência > persuasão de novo | DEF adaptado |
+
+É na etapa do Vale que entra a venda consultiva de verdade, pra pegar quem está indeciso.
+
+**Pendência:** Aula 2 desse módulo (outbound/prospecção ativa) não foi anotada. Acesso ao curso se
+esgotou em 2026-10-26, sem previsão de retomar. Essa lacuna fica registrada aqui, não há mais ação
+pendente a cobrar.

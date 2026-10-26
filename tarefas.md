@@ -19,10 +19,10 @@
 - [ ] Mover logo.png de dados/ para marca/ quando quiser organizar
 - [ ] Conferir se o relatório de funil do GA4 já está exibindo dados (propriedade "Assessoria Raiz", G-1F7WPFZY4W, exploração "Funil"). Configuração 100% pronta — 6 etapas certas (página de venda → clique no botão → checkout → qualificação visualizada → qualificação enviada → obrigado), dimensão personalizada "Localização da página" (page_location) criada. Só falta o processamento do GA4 pegar as sessões de teste feitas em 2026-08-28 (pode levar algumas horas).
 
-## Método DEF — completar anotações (curso Vendas Pro em andamento)
-- [ ] Módulo 4 — Método DEF pra outbound/prospecção ativa
+## Método DEF — anotações (curso Vendas Pro)
 - [x] Módulo 7 — Gatilhos mentais (atualizado em 2026-10-21)
-Mandar as anotações do módulo 4 quando terminar, pra atualizar `_contexto/metodo-def.md` e a skill `/vendedor`.
+- [x] Módulo 4 — só Aula 1 (lançamentos), parcial. Acesso ao curso se esgotou em 2026-10-26, Aula 2
+  (outbound) não foi anotada e não vai ser (encerrado, ver `_contexto/metodo-def.md`)
 
 ## Processos pra mapear depois
 - [ ] (nenhum pendente no momento — voltar a rodar /mapear quando quiser organizar mais processos)
