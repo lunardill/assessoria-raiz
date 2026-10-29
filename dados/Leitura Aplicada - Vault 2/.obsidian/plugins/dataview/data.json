@@ -1,0 +1,9 @@
+{
+  "tableIdColumnName": "Livro",
+  "tableGroupColumnName": "Grupo",
+  "defaultDateFormat": "d 'de' MMMM 'de' yyyy",
+  "defaultDateTimeFormat": "d 'de' MMMM 'de' yyyy, HH:mm",
+  "warnOnEmptyResult": false,
+  "enableDataviewJs": true,
+  "enableInlineDataviewJs": false
+}

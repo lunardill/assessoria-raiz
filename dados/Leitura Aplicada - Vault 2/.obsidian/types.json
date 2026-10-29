@@ -1,0 +1,18 @@
+{
+  "types": {
+    "data_adicionado": "date",
+    "data_inicio": "date",
+    "data_fim": "date",
+    "situacao": "text",
+    "prioridade": "text",
+    "tema": "text",
+    "fonte": "text",
+    "autor": "text",
+    "posicao_fila": "number",
+    "capa": "text",
+    "paginas_total": "number",
+    "paginas_lidas": "number",
+    "data_prevista": "date",
+    "avaliacao": "number"
+  }
+}

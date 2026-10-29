@@ -1,0 +1,121 @@
+/* Painel de Leitura: visual dos blocos gerados por view.js */
+
+.plv { --plv-ouro: var(--la-gold, #a9781f); margin-bottom: 8px; }
+
+.plv-vazio, .plv-dica { color: var(--text-muted); font-size: 0.9em; padding: 6px 0; }
+.plv-dica { margin-bottom: 10px; }
+
+.plv-link { color: var(--link-color); text-decoration: none; cursor: pointer; }
+.plv-link:hover { text-decoration: underline; }
+
+/* abas */
+.plv-abas { display: flex; flex-wrap: wrap; gap: 4px; border-bottom: 1px solid var(--background-modifier-border); margin: 4px 0 16px; }
+.plv-abas .plv-aba {
+  background: none; box-shadow: none; border: none; border-radius: 0;
+  border-bottom: 2px solid transparent; margin-bottom: -1px;
+  padding: 6px 12px; height: auto; color: var(--text-muted);
+  font-size: var(--font-ui-small); cursor: pointer;
+  transition: color .15s, border-color .15s;
+}
+.plv-abas .plv-aba:hover { color: var(--text-normal); }
+.plv-abas .plv-aba.is-ativa { color: var(--text-normal); border-bottom-color: var(--interactive-accent); font-weight: 600; }
+.plv-abas .plv-aba:focus-visible { outline: 2px solid var(--interactive-accent); outline-offset: 2px; }
+
+/* galeria */
+.plv-galeria { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 18px 16px; }
+.plv-card { position: relative; display: flex; flex-direction: column; gap: 4px; cursor: pointer; outline: none; }
+.plv-card:focus-visible .plv-capa { outline: 2px solid var(--interactive-accent); outline-offset: 2px; }
+.plv-capa {
+  width: 100%; aspect-ratio: 2 / 3; border-radius: 6px; overflow: hidden;
+  background: var(--background-modifier-border); box-shadow: 0 2px 8px rgba(0, 0, 0, .18);
+  transition: transform .15s, box-shadow .15s;
+}
+.plv-card:hover .plv-capa, .plv-clicavel:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0, 0, 0, .22); }
+.plv-capa img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.plv-capa-vazia {
+  height: 100%; display: flex; align-items: center; justify-content: center; text-align: center;
+  padding: 10px; font-size: 13px; line-height: 1.3; color: var(--text-muted);
+}
+.plv-clicavel { cursor: pointer; }
+.plv-titulo { font-size: 13px; font-weight: 600; line-height: 1.3; }
+.plv-titulo-g { font-size: 1.05em; }
+.plv-titulo-g .plv-link { color: var(--text-normal); }
+.plv-autor, .plv-meta { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
+.plv-selo {
+  position: absolute; top: 6px; left: 6px; padding: 2px 8px; border-radius: 10px;
+  background: var(--interactive-accent); color: var(--text-on-accent);
+  font-size: 11px; font-weight: 700; font-variant-numeric: tabular-nums;
+}
+.plv-estrelas { color: var(--plv-ouro); font-size: 13px; letter-spacing: 1px; }
+
+/* lendo agora */
+.plv-lendo-grade {
+  display: flex; gap: 16px; overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; padding: 2px 2px 10px; scrollbar-width: thin;
+}
+.plv-lendo-grade > .plv-lendo-card { flex: 0 0 min(340px, 85%); scroll-snap-align: start; }
+.plv-lendo-card {
+  display: grid; grid-template-columns: 96px 1fr; gap: 14px; padding: 14px;
+  border: 1px solid var(--background-modifier-border); border-radius: 10px;
+  background: var(--background-primary-alt);
+}
+.plv-lendo-card .plv-capa { align-self: start; }
+.plv-lendo-info { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.plv-barra { height: 6px; border-radius: 3px; background: var(--background-modifier-border); overflow: hidden; margin-top: 4px; }
+.plv-barra-fill { height: 100%; background: var(--interactive-accent); transition: width .3s; }
+.plv-campos { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 2px; }
+.plv-campo { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-muted); }
+.plv-campo input { width: 5.5em; height: 26px; padding: 2px 6px; font-size: 13px; font-variant-numeric: tabular-nums; }
+.plv-ok { color: var(--color-green); font-size: 11px; }
+.plv-botao { align-self: flex-start; font-size: 12px; height: auto; padding: 4px 10px; margin-top: 2px; }
+
+/* tabelas */
+.plv-tabela-wrap { overflow-x: auto; }
+.plv-tabela { width: 100%; font-size: 0.92em; }
+.plv-tabela td, .plv-tabela th { white-space: nowrap; }
+.plv-tabela td:first-child { white-space: normal; min-width: 160px; }
+
+/* cronograma */
+.plv-crono {
+  display: flex; flex-direction: column; gap: 6px; overflow: auto; max-height: 340px;
+  overscroll-behavior: contain; scrollbar-width: thin; padding-right: 4px;
+}
+.plv-crono-cab { position: sticky; top: 0; z-index: 3; background: var(--background-primary); padding-bottom: 4px; }
+.plv-crono-linha { display: grid; grid-template-columns: 150px calc(var(--plv-meses, 12) * 90px); gap: 10px; align-items: center; width: max-content; }
+.plv-crono-nome {
+  position: sticky; left: 0; z-index: 2; align-self: stretch; display: flex; align-items: center;
+  font-size: 12px; line-height: 1.25; overflow: hidden; white-space: nowrap;
+  background: var(--background-primary); box-shadow: 6px 0 6px -6px rgba(0, 0, 0, .25);
+}
+.plv-crono-nome .plv-link { overflow: hidden; text-overflow: ellipsis; }
+.plv-trilho { position: relative; height: 16px; border-radius: 4px; background: var(--background-primary-alt); }
+.plv-crono-cab .plv-trilho { background: none; height: 18px; }
+.plv-mes { position: absolute; top: 0; font-size: 11px; color: var(--text-faint); border-left: 1px solid var(--background-modifier-border); padding-left: 3px; text-transform: capitalize; white-space: nowrap; }
+.plv-bloco { position: absolute; top: 3px; height: 10px; border-radius: 5px; }
+.plv-concluido { background: var(--interactive-accent); }
+.plv-bloco.plv-lendo { background: var(--plv-ouro); }
+.plv-bloco.plv-pausado { background: var(--text-faint); }
+.plv-previsto { background: transparent; border: 1.5px dashed var(--plv-ouro); box-sizing: border-box; }
+.plv-hoje { position: absolute; top: -2px; bottom: -2px; width: 2px; background: var(--color-red); opacity: .6; }
+.plv-legenda { display: flex; flex-wrap: wrap; gap: 14px; font-size: 11px; color: var(--text-muted); margin-top: 6px; }
+.plv-leg-item { display: inline-flex; align-items: center; gap: 5px; }
+.plv-leg-cor { display: inline-block; width: 16px; height: 8px; border-radius: 4px; }
+.plv-leg-cor.plv-lendo { background: var(--plv-ouro); }
+.plv-leg-cor.plv-pausado { background: var(--text-faint); }
+
+/* explorar */
+.plv-grupos { display: flex; flex-direction: column; gap: 14px; }
+.plv-grupo-nome { font-weight: 600; font-size: 0.95em; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+.plv-conta { font-size: 11px; font-weight: 600; color: var(--text-muted); background: var(--background-modifier-border); border-radius: 10px; padding: 1px 7px; }
+.plv-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.plv-chip {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 13px;
+  padding: 3px 10px; border-radius: 14px; border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary-alt);
+}
+.plv-chip-sit { font-size: 11px; color: var(--text-faint); }
+
+@media (prefers-reduced-motion: reduce) {
+  .plv-capa, .plv-barra-fill, .plv-aba { transition: none; }
+  .plv-card:hover .plv-capa, .plv-clicavel:hover { transform: none; }
+}

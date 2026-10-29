@@ -1,0 +1,13 @@
+{
+  "alwaysUpdateLinks": true,
+  "promptDelete": false,
+  "newFileLocation": "folder",
+  "propertiesInDocument": "visible",
+  "foldHeading": true,
+  "foldIndent": true,
+  "readableLineLength": true,
+  "newFileFolderPath": "Ideias",
+  "userIgnoreFilters": [
+    "Painel de controle/Imagens/"
+  ]
+}
